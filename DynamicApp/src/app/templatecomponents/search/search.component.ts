@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PagedataService } from '../../services/pagedata.service';
-// declare var $: JQueryStatic;
+declare var $: JQueryStatic;
 
 @Component({
   selector: 'app-search',
@@ -10,7 +10,7 @@ import { PagedataService } from '../../services/pagedata.service';
 export class SearchComponent implements OnInit {
 
   @Input() SearchNo: number = 0;
-  quickSearchtext:string="";
+  quickSearchtext: string = "";
 
   constructor(private pagedataService: PagedataService, ) { }
 
@@ -24,9 +24,9 @@ export class SearchComponent implements OnInit {
       session =>
         setTimeout(() => {
           this.pagedataService.searchData = session.data;
-          // var WH = $(window).height();
-          // var SH = $('body').prop("scrollHeight")+500;
-          // $('html, body').stop().animate({ scrollTop: SH - WH }, 1000);
+          var WH = $(window).height();
+          var SH = $('body').prop("scrollHeight") + 500;
+          $('html, body').stop().animate({ scrollTop: SH - WH }, 1000);
         }, 500)
     );
   }
