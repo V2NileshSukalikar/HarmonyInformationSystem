@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-sm-7">
                     <div class="company-logo">
-                        <a href="index.html"><img src="{{globalservice.GlobalData?.Logo}}" /></a>
+                        <a href="index.html"><img class="img-responsive" src="{{globalservice.GlobalData?.Logo}}" /></a>
                     </div>
                     <h1 style="display: inline;">{{globalservice.GlobalData?.Title}}</h1>
                 </div>
@@ -154,8 +154,8 @@
             </ul>
 
             <ul class="list-unstyled navigation">
-                <li class="active" *ngFor="let item of globalservice.GlobalData?.Menu">
-                    <a [routerLink]="['/page',item.Value]" routerLinkActive="active" (click)="setlink(['/page',item.Value])" [class.disabled]="isDisabled(['/page',item.Value])">{{item.Name}} 
+                <li  [class.active] ="isDisabled(['/page',item.Value])" *ngFor="let item of globalservice.GlobalData?.Menu">
+                    <a [routerLink]="['/page',item.Value]" routerLinkActive="active" (click)="setlink(['/page',item.Value])" >{{item.Name}} 
                     <span class="nav-icon"><span class="fa fa-home"></span></span></a></li>
             </ul>
             <img src="src/images/customer-support.jpg" class="hidden-xs">

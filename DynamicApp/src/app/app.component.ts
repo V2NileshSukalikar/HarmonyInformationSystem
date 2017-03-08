@@ -27,7 +27,7 @@ export class AppComponent {
 
   isDisabled(link) {
 
-    return this.globalservice.selectedlink = link.join('/');
+    return this.globalservice.selectedlink === link.join('/');
   }
 
 }
