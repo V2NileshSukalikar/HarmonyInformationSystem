@@ -1,73 +1,47 @@
-   <div class="row">
-                    <div class="col-sm-12">
-                        <div class="the-box mt-none search-provider text-center">
-                            <h3 class="text-uppercase">Search Provider</h3>
-                            <ul class="list-inline sorting-word hidden-xs">
-                                <li><a href="#">#</a></li>
-                                <li><a href="#">A</a></li>
-                                <li><a href="#">B</a></li>
-                                <li><a href="#">C</a></li>
-                                <li><a href="#">D</a></li>
-                                <li><a href="#">E</a></li>
-                                <li><a href="#">F</a></li>
-                                <li><a href="#">G</a></li>
-                                <li><a href="#">H</a></li>
-                                <li><a href="#">I</a></li>
-                                <li><a href="#">J</a></li>
-                                <li><a href="#">K</a></li>
-                                <li><a href="#">L</a></li>
-                                <li><a href="#">M</a></li>
-                                <li><a href="#">N</a></li>
-                                <li><a href="#">O</a></li>
-                                <li><a href="#">P</a></li>
-                                <li><a href="#">Q</a></li>
-                                <li><a href="#">R</a></li>
-                                <li><a href="#">S</a></li>
-                                <li><a href="#">T</a></li>
-                                <li><a href="#">U</a></li>
-                                <li><a href="#">V</a></li>
-                                <li><a href="#">W</a></li>
-                                <li><a href="#">X</a></li>
-                                <li><a href="#">Y</a></li>
-                                <li><a href="#">Z</a></li>
-                            </ul>
-                            <p class="hidden-xs">Quickly find a service provider by entering key words (such as name, service or ZIP code) and then press <b><i>"Search"</i></b>.</p>
-                            <div class="input-group search-btn">
-                                <input type="text" class="form-control" placeholder="Search Provider Here . . . .">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
-                                </span>
-                            </div>
-                            <div class="clear-fix"></div>
-                            <span>Notice a Missing Provider <a href="#"><b><i>Click Here</i></b></a></span>
-                        </div>
-                    </div>
-                    <div class="clear-fix"></div>
 
-                    <div class="col-lg-8">
-                        <div class="the-box welcome-section">
-                            <h1 class="heading">Welcome to the North Central Ohio ADRN. </h1>
-                            <div>
-                                <img src="images/welcome-img.jpg" />
-                                <div class="img-content">
-                                    ADRN - Aging and Disability Resource Network - The Area Agency has been designated by the Ohio Department of Aging (ODA) as the lead agency in our 9 county area to develop an ADRN.  An ADRN is a group of partners who are either referral sources or resources for older or disabled adults and their Care givers.  The primary role of the ADRN is to streamline access to long-term care services by making the consumer experience as seamless as possible.  At this point the Area Agency on Aging is in "phase one" in developing the ADRN which involves recruiting partners and obtaining Memorandums of Understanding with each partner Agency.
-                                </div>
-                            </div>
-                            <div class="clear-fix"></div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4">
-                        <div class="the-box login-section">
-                            <form>
-                                <ul class="list-unstyled">
-                                    <li><input type="email" class="form-control" placeholder="Email"></li>
-                                    <li><input type="email" class="form-control" placeholder="Password"></li>
-                                    <li><div class="checkbox"><input id="checkbox" class="styled" type="checkbox"><label for="checkbox">Remember me</label></div></li>
-                                    <li><a href="#">Create a Consumer Account</a> &nbsp;/ <a href="#">Create a Provider Account</a></li>
-                                    <li class="login-button text-right"><button>Forgot Password</button><button type="submit">LogIn</button></li>
-                                </ul>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+<h4>orientation {{pagedata?.Orientation}}</h4>
+<div class="row">
+  <div *ngFor="let item of pagedataobj;let i=index" class="row">
+    <div *ngFor="let dataitem of item" [style.width]="dataitem.width + '%'" style="float:left;min-width: 170px;border:1px solid gray;">
+      <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'">
+      </app-html>
+      <app-coc [CocData]="dataitem.Data" *ngIf="dataitem.Data.Type=='COC'"></app-coc>
+      <app-search [SearchNo]="dataitem.Data.Search" *ngIf="dataitem.Data.Type=='Search'"></app-search>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="row" id="section2">
+
+  <h1>Search Data</h1>
+  <div *ngFor="let item of pagedataService.searchData">
+
+
+    <a href=""><span class="search_provider_hyperlink" title="item.ProviderName">{{item.ProviderName}}</span></a>
+    <a data-provider-id="4c922a32-43f1-4a34-b122-f221a3812562"><span class="clickfordetails" title="A - 1 Cleaning"> (Click for details) </span></a>
+    <div class="fetchData"><span>{{item.Address}}</span></div>
+    <div class="fetchData"><span title="item.Phone">{{item.Phone}}</span></div>
+    <div>
+      <div class="fetchData"><span><strong>Website: </strong><a  target="_blank"><span class="websiteLink">{{item.WebSite}}</span></a>
+        </span>
+      </div>
+      <div class="fetchData"><strong>Detailed Description: </strong><span title="">{{item.LongDescription}}</span></div>
+      <div class="fetchData"><strong>Notes: </strong><span title="Test">{{item.Neighborhood}}</span></div>
+      <div class="fetchData"><strong>Services: </strong>
+        <table>
+          <tr *ngFor="let ser of item.Service">
+            <td>{{serv}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <hr>
+  </div>
+  {{pagedataService.searchData.lenght}}
+  <div *ngIf="pagedataService.searchData.length==0">
+
+    <h4>Record not found</h4>
+  </div>
+</div>
