@@ -1,0 +1,279 @@
+/* ------------------------- font-sm */
+.font-sm {
+    font-size: 14px;
+}
+
+
+
+
+
+/* ------------------------- font-md */
+.font-md, .font-md .form-control {
+    font-size: 16px;
+}
+
+    .font-md .popular-tags a {
+        font-size: 12px;
+    }
+
+    .font-md .footer-content, .font-md .h6, .font-md h6 {
+        font-size: 14px;
+    }
+
+    .font-md .h4, .font-md h4 {
+        font-size: 22px;
+    }
+
+    .font-md h1 {
+        font-size: 27px;
+    }
+
+
+
+
+
+/* ------------------------- font-lg */
+.font-lg, .font-lg .form-control {
+    font-size: 18px;
+}
+
+    .font-lg .popular-tags a {
+        font-size: 13px;
+    }
+
+    .font-lg .footer-content {
+        font-size: 15px;
+    }
+
+    .font-lg .h6, .font-lg h6 {
+        font-size: 16px;
+    }
+
+    .font-lg .h4, .font-lg h4 {
+        font-size: 22px;
+    }
+
+    .font-lg h1 {
+        font-size: 29px;
+    }
+
+
+
+
+
+/* ------------------------ green-theme */
+.green-theme a:hover {
+    color: #2E3323;
+}
+
+.green-theme nav {
+    background: #4E583B;
+}
+
+.green-theme header, .green-theme .navigation li .nav-icon, .green-theme .navigation li:hover, .green-theme .navigation li.active {
+    background: #2E3323;
+}
+
+.green-theme .listing-style li i, .green-theme .theme-palette-close:hover, .green-theme .theme-indicator, .green-theme .scroll-top:hover, .green-theme .provider-details li span.fa, .green-theme .provider-details li span.glyphicon, .green-theme .theme-palette-trigger:hover .glyphicon {
+    color: #94CE25;
+}
+
+.green-theme .font-control span, .green-theme .navigation li:hover .nav-icon, .green-theme .navigation li.active .nav-icon, .green-theme .heading:after, .green-theme .icon-circle, .green-theme .sorting-word li a, .green-theme .listing-style.listing-icon-lg li i, .green-theme .search-btn:hover .btn {
+    background: #94CE25;
+}
+
+    .green-theme a, .green-theme footer:hover, .green-theme .listing-style li a:hover, .green-theme .theme-text, .green-theme .font-control span:hover, .green-theme .sorting-word li a:hover {
+        color: #70AB00;
+    }
+
+.green-theme .navigation li:hover, .green-theme .navigation li.active, .green-theme .scroll-top:hover {
+    border-color: #94CE25;
+}
+
+.green-theme button:hover, .green-theme .btn-style:hover, .green-theme .popular-tags a:hover, .green-theme .pagination > .active > a {
+    border-color: #94CE25;
+    background-color: #94CE25;
+}
+
+.green-theme .font-control span.font-contrast {
+    font-size: 20px;
+    color: #333;
+    background: #94CE25;
+    background: -moz-linear-gradient(left, #94CE25 0%, #94CE25 49%, #fff 49%, #fff 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #94CE25), color-stop(49%, #94CE25), color-stop(49%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(left, #94CE25 0%, #94CE25 49%, #fff 49%, #fff 100%);
+    background: -o-linear-gradient(left, #94CE25 0%, #94CE25 49%, #fff 49%, #fff 100%);
+    background: -ms-linear-gradient(left, #94CE25 0%, #94CE25 49%, #fff 49%, #fff 100%);
+    background: linear-gradient(to right, #94CE25 0%, #94CE25 49%, #fff 49%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6290c', endColorstr='#f16f5c', GradientType=1 );
+}
+
+.green-theme .form-control:focus, .green-theme .checkbox input[type="checkbox"]:focus + label::before, .green-theme .checkbox input[type="radio"]:focus + label::before, .green-theme select:focus {
+    border-color: #83C10C;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(112, 171, 0,.3);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(112, 171, 0,.3);
+}
+
+
+
+
+
+/* ---------------------- orange-theme */
+.orange-theme a:hover {
+    color: #44392E;
+}
+
+.orange-theme nav {
+    background: #75573B;
+}
+
+.orange-theme header, .orange-theme .navigation li .nav-icon, .orange-theme .navigation li:hover, .orange-theme .navigation li.active {
+    background: #3A2F25;
+}
+
+.orange-theme .listing-style li i, .orange-theme .theme-palette-close:hover, .orange-theme .theme-indicator, .orange-theme .scroll-top:hover, .orange-theme .provider-details li span.fa, .orange-theme .provider-details li span.glyphicon, .orange-theme .theme-palette-trigger:hover .glyphicon {
+    color: #ff871c;
+}
+
+.orange-theme .font-control span, .orange-theme .navigation li:hover .nav-icon, .orange-theme .navigation li.active .nav-icon, .orange-theme .heading:after, .orange-theme .icon-circle, .orange-theme .sorting-word li a, .orange-theme .listing-style.listing-icon-lg li i, .orange-theme .search-btn:hover .btn {
+    background: #ff871c;
+}
+
+    .orange-theme a, .orange-theme footer:hover, .orange-theme .listing-style li a:hover, .orange-theme .theme-text, .orange-theme .font-control span:hover, .orange-theme .sorting-word li a:hover {
+        color: #ff871c;
+    }
+
+.orange-theme .navigation li:hover, .orange-theme .navigation li.active, .orange-theme .scroll-top:hover {
+    border-color: #ff871c;
+}
+
+.orange-theme button:hover, .orange-theme .btn-style:hover, .orange-theme .popular-tags a:hover, .orange-theme .pagination > .active > a {
+    border-color: #ff871c;
+    background-color: #ff871c;
+}
+
+.orange-theme .font-control span.font-contrast {
+    background: #ff871c;
+    background: -moz-linear-gradient(left, #ff871c 0%, #ff871c 49%, #fff 49%, #fff 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #ff871c), color-stop(49%, #ff871c), color-stop(49%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(left, #ff871c 0%, #ff871c 49%, #fff 49%, #fff 100%);
+    background: -o-linear-gradient(left, #ff871c 0%, #ff871c 49%, #fff 49%, #fff 100%);
+    background: -ms-linear-gradient(left, #ff871c 0%, #ff871c 49%, #fff 49%, #fff 100%);
+    background: linear-gradient(to right, #ff871c 0%, #ff871c 49%, #fff 49%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6290c', endColorstr='#f16f5c', GradientType=1 );
+}
+
+.orange-theme .form-control:focus, .orange-theme .checkbox input[type="checkbox"]:focus + label::before, .orange-theme .checkbox input[type="radio"]:focus + label::before, .orange-theme select:focus {
+    border-color: #FBB06C;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,141,44,.2);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249,141,44,.2);
+}
+
+
+
+
+/* ------------------------ purple-theme */
+.purple-theme a:hover {
+    color: #412E42;
+}
+
+.purple-theme nav {
+    background: #6D4D6D;
+}
+
+.purple-theme header, .purple-theme .navigation li .nav-icon, .purple-theme .navigation li:hover, .purple-theme .navigation li.active {
+    background: #39253A;
+}
+
+.purple-theme .listing-style li i, .purple-theme .theme-palette-close:hover, .purple-theme .theme-indicator, .purple-theme .scroll-top:hover, .purple-theme .provider-details li span.fa, .purple-theme .provider-details li span.glyphicon, .purple-theme .theme-palette-trigger:hover .glyphicon {
+    color: #D95BDE;
+}
+
+.purple-theme .font-control span, .purple-theme .navigation li:hover .nav-icon, .purple-theme .navigation li.active .nav-icon, .purple-theme .heading:after, .purple-theme .icon-circle, .purple-theme .sorting-word li a, .purple-theme .listing-style.listing-icon-lg li i, .purple-theme .search-btn:hover .btn {
+    background: #D95BDE;
+}
+
+    .purple-theme a, .purple-theme footer:hover, .purple-theme .listing-style li a:hover, .purple-theme .theme-text, .purple-theme .font-control span:hover, .purple-theme .sorting-word li a:hover {
+        color: #C233C7;
+    }
+
+.purple-theme .navigation li:hover, .purple-theme .navigation li.active, .purple-theme .scroll-top:hover {
+    border-color: #D95BDE;
+}
+
+.purple-theme button:hover, .purple-theme .btn-style:hover, .purple-theme .popular-tags a:hover, .purple-theme .pagination > .active > a {
+    border-color: #D95BDE;
+    background-color: #D95BDE;
+}
+
+.purple-theme .font-control span.font-contrast {
+    background: #D95BDE;
+    background: -moz-linear-gradient(left, #D95BDE 0%, #D95BDE 49%, #fff 49%, #fff 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #D95BDE), color-stop(49%, #D95BDE), color-stop(49%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(left, #D95BDE 0%, #D95BDE 49%, #fff 49%, #fff 100%);
+    background: -o-linear-gradient(left, #D95BDE 0%, #D95BDE 49%, #fff 49%, #fff 100%);
+    background: -ms-linear-gradient(left, #D95BDE 0%, #D95BDE 49%, #fff 49%, #fff 100%);
+    background: linear-gradient(to right, #D95BDE 0%, #D95BDE 49%, #fff 49%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6290c', endColorstr='#f16f5c', GradientType=1 );
+}
+
+.purple-theme .form-control:focus, .purple-theme .checkbox input[type="checkbox"]:focus + label::before, .purple-theme .checkbox input[type="radio"]:focus + label::before, .purple-theme select:focus {
+    border-color: #DB94DE;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(195, 96, 199,0.2);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(195, 96, 199,0.2);
+}
+
+
+
+
+
+/* ------------------------ red-theme */
+.red-theme a:hover {
+    color: #792719;
+}
+
+.red-theme nav {
+    background: #674742;
+}
+
+.red-theme header, .red-theme .navigation li .nav-icon, .red-theme .navigation li:hover, .red-theme .navigation li.active {
+    background: #382320;
+}
+
+.red-theme .listing-style li i, .red-theme .theme-palette-close:hover, .red-theme .theme-indicator, .red-theme .scroll-top:hover, .red-theme .provider-details li span.fa, .red-theme .provider-details li span.glyphicon, .red-theme .theme-palette-trigger:hover .glyphicon {
+    color: #E53D20;
+}
+
+.red-theme .font-control span, .red-theme .navigation li:hover .nav-icon, .red-theme .navigation li.active .nav-icon, .red-theme .heading:after, .red-theme .icon-circle, .red-theme .sorting-word li a, .red-theme .listing-style.listing-icon-lg li i, .red-theme .search-btn:hover .btn {
+    background: #e93e21;
+}
+
+    .red-theme a, .red-theme footer:hover, .red-theme .listing-style li a:hover, .red-theme .theme-text, .red-theme .font-control span:hover, .red-theme .sorting-word li a:hover {
+        color: #F13F21;
+    }
+
+.red-theme .navigation li:hover, .red-theme .navigation li.active, .red-theme .scroll-top:hover {
+    border-color: #E13C1F;
+}
+
+.red-theme button:hover, .red-theme .btn-style:hover, .red-theme .popular-tags a:hover, .red-theme .pagination > .active > a {
+    border-color: #e93e21;
+    background-color: #e93e21;
+}
+
+.red-theme .font-control span.font-contrast {
+    background: #e93e21;
+    background: -moz-linear-gradient(left, #e93e21 0%, #e93e21 49%, #fff 49%, #fff 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #e93e21), color-stop(49%, #e93e21), color-stop(49%, #fff), color-stop(100%, #fff));
+    background: -webkit-linear-gradient(left, #e93e21 0%, #e93e21 49%, #fff 49%, #fff 100%);
+    background: -o-linear-gradient(left, #e93e21 0%, #e93e21 49%, #fff 49%, #fff 100%);
+    background: -ms-linear-gradient(left, #e93e21 0%, #e93e21 49%, #fff 49%, #fff 100%);
+    background: linear-gradient(to right, #e93e21 0%, #e93e21 49%, #fff 49%, #fff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6290c', endColorstr='#f16f5c', GradientType=1 );
+}
+
+.red-theme .form-control:focus, .red-theme .checkbox input[type="checkbox"]:focus + label::before, .red-theme .checkbox input[type="radio"]:focus + label::before, .red-theme select:focus {
+    border-color: #F7A2A2;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 175, 166, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(228, 175, 166, .6);
+}

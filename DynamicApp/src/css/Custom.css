@@ -1,0 +1,105 @@
+﻿
+.Search-Result .provider-details h4 {
+    margin-bottom: 15px;
+}
+
+/*------------------------- tab css */
+@media (max-width:1024px) {
+    .modifyButton {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.font-md {
+    font-size: 16px;
+}
+
+.font-lg {
+    font-size: 18px;
+}
+
+/*------gray theme-----------*/
+/*-----------calender css-----------------*/
+.contrast-theme .k-block, .contrast-theme .k-header, .contrast-theme .k-grid-header, .contrast-theme .k-toolbar, .contrast-theme .k-grouping-header, .contrast-theme .k-pager-wrap, .contrast-theme .k-button, .contrast-theme .k-draghandle, .contrast-theme .k-treemap-tile, html .contrast-theme .km-pane-wrapper .k-header {
+    background: #333;
+}
+
+.contrast-theme .k-link:link, .contrast-theme .k-link:visited, .contrast-theme .k-nav-current.k-state-hover .k-link {
+    color: #fff;
+}
+
+.contrast-theme .k-header, .contrast-theme .k-grid-header-wrap, .contrast-theme .k-grid .k-grouping-header, .contrast-theme .k-grid-header, .contrast-theme .k-pager-wrap, .contrast-theme .k-pager-wrap .k-textbox, .contrast-theme .k-pager-wrap .k-link, .contrast-theme .k-grouping-header .k-group-indicator, .contrast-theme .k-gantt-toolbar .k-state-default {
+    border-color: #666;
+}
+
+    .contrast-theme .k-block, .contrast-theme .k-widget, .contrast-theme .k-input, .contrast-theme .k-textbox, .contrast-theme .k-group, .contrast-theme .k-content, .contrast-theme .k-header, .contrast-theme .k-filter-row > th, .contrast-theme .k-editable-area, .contrast-theme .k-separator, .contrast-theme .k-colorpicker .k-i-arrow-s, .contrast-theme .k-textbox > input, .contrast-theme .k-autocomplete, .contrast-theme .k-dropdown-wrap, .contrast-theme .k-toolbar, .contrast-theme .k-group-footer td, .contrast-theme .k-grid-footer, .contrast-theme .k-footer-template td, .contrast-theme .k-state-default, .contrast-theme .k-state-default .k-select, .contrast-theme .k-state-disabled, .contrast-theme .k-grid-header, .contrast-theme .k-grid-header-wrap, .contrast-theme .k-grid-header-locked, .contrast-theme .k-grid-footer-locked, .contrast-theme .k-grid-content-locked, .contrast-theme .k-grid td, .contrast-theme .k-grid td.k-state-selected, .contrast-theme .k-grid-footer-wrap, .contrast-theme .k-pager-wrap, .contrast-theme .k-pager-wrap .k-link, .contrast-theme .k-pager-refresh, .contrast-theme .k-grouping-header, .contrast-theme .k-grouping-header .k-group-indicator, .contrast-theme .k-panelbar > .k-item > .k-link, .contrast-theme .k-panel > .k-item > .k-link, .contrast-theme .k-panelbar .k-panel, .contrast-theme .k-panelbar .k-content, .contrast-theme .k-treemap-tile, .contrast-theme .k-calendar th, .contrast-theme .k-slider-track, .contrast-theme .k-splitbar, .contrast-theme .k-dropzone-active, .contrast-theme .k-tiles, .contrast-theme .k-toolbar, .contrast-theme .k-tooltip, .contrast-theme .k-button-group .k-tool, .contrast-theme .k-upload-files {
+        border-color: #666;
+    }
+
+        /*header hover color change*/
+        .contrast-theme .k-state-hover, .contrast-theme .k-state-hover:hover, .contrast-theme .k-splitbar-horizontal-hover:hover, .contrast-theme .k-splitbar-vertical-hover:hover, .contrast-theme .k-list > .k-state-hover, .contrast-theme .k-scheduler .k-scheduler-toolbar ul li.k-state-hover, .contrast-theme .k-pager-wrap .k-link:hover, .contrast-theme .k-dropdown .k-state-focused, .contrast-theme .k-filebrowser-dropzone, .contrast-theme .k-mobile-list .k-item > .k-link:active, .contrast-theme .k-mobile-list .k-item > .k-label:active, .contrast-theme .k-mobile-list .k-edit-label.k-check:active, .contrast-theme .k-mobile-list .k-recur-view .k-check:active {
+            color: #003f59;
+            background-color: #000;
+            border-color: #000;
+        }
+
+.contrast-theme .k-state-selected.k-state-hover > .k-link {
+    color: #fff;
+}
+/*header selected color change*/
+.contrast-theme .k-state-selected:link, .contrast-theme .k-state-selected:visited, .contrast-theme .k-list > .k-state-selected, .contrast-theme .k-list > .k-state-highlight, .contrast-theme .k-panel > .k-state-selected, .contrast-theme .k-ghost-splitbar-vertical, .contrast-theme .k-ghost-splitbar-horizontal, .contrast-theme .k-draghandle.k-state-selected:hover, .contrast-theme .k-scheduler .k-scheduler-toolbar .k-state-selected, .contrast-theme .k-scheduler .k-today.k-state-selected, .contrast-theme .k-marquee-color {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.contrast-theme .k-state-selected > .k-link, .contrast-theme .k-panelbar > li > .k-state-selected, .contrast-theme .k-panelbar > li.k-state-default > .k-link.k-state-selected {
+    color: #000;
+}
+/*for calender date box border*/
+.contrast-theme .k-scheduler-times tr, .contrast-theme .k-scheduler-times th, .contrast-theme .k-scheduler-table td, .contrast-theme .k-scheduler-header th, .contrast-theme .k-scheduler-header-wrap, .contrast-theme .k-scheduler-times {
+    border-color: #333;
+}
+
+.contrast-theme .k-scheduler-layout, .contrast-theme .k-scheduler-table {
+    background-color: #000;
+}
+
+.contrast-theme .k-state-disabled, .contrast-theme .k-state-disabled .k-link, .contrast-theme .k-state-disabled .k-button, .contrast-theme .k-other-month, .contrast-theme .k-other-month .k-link, .contrast-theme .k-dropzone em, .contrast-theme .k-tile-empty strong, .contrast-theme .k-slider .k-draghandle {
+    color: #333;
+}
+
+.contrast-theme .k-event, .contrast-theme .k-task-complete {
+    color: #fff;
+    border-color: #333;
+}
+
+.contrast-theme .k-button:hover, .contrast-theme .k-button.k-state-hover {
+    color: #003f59;
+    background-color: #a5a5a5;
+    border-color: #a5a5a5;
+}
+
+.contrast-theme .k-button {
+    color: #dcdcdc;
+    border-color: #333;
+}
+
+.contrast-theme .k-scheduler-table .k-today, .contrast-theme .k-today > .k-scheduler-datecolumn, .contrast-theme .k-today > .k-scheduler-groupcolumn {
+    background-color: #fff;
+    color: #000;
+}
+
+.contrast-theme .k-nonwork-hour {
+    background-color: #555;
+}
+
+.contrast-theme .k-nav-current.k-state-hover:hover, .contrast-theme .k-nav-current.k-state-hover a, .contrast-theme .k-nav-current.k-state-hover a:hover {
+    background-color: #333;
+}
+
+.contrast-theme .k-state-default.k-nav-current.k-state-hover, .contrast-theme .k-state-default.k-nav-current.k-state-hover:hover, .contrast-theme .k-state-default.k-nav-current.k-state-hover a, .contrast-theme .k-state-default.k-nav-current.k-state-hover a:hover, .contrast-theme .k-state-default.k-nav-current.k-state-hover a:hover span {
+    background-color: #333;
+}

@@ -1,0 +1,6277 @@
+body
+{
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+a
+{
+    cursor: pointer;
+}
+a:hover
+{
+    text-decoration: underline;
+}
+a:visited
+{
+    line-height: normal;
+}
+a:focus
+{
+    outline: 1px dotted #CC9900;
+    border: 0 none;
+}
+input:focus
+{
+    outline: 1px solid #CC9900;
+}
+:focus
+{
+    outline: 0;
+    outline-color: #efefef;
+    outline-style: dotted;
+    outline-width: 1px;
+}
+img
+{
+    border: 0;
+}
+h4
+{
+    margin: 0;
+}
+
+/*------------------------- common css */
+input[type='text'], input[type='password']
+{
+    height: 28px;
+    text-indent: 5px;
+    line-height: normal;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input[type='file']
+{
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    padding: 5px;
+}
+input[type="text"]:disabled, input[type='password']:disabled
+{
+    background: rgba(204, 204, 204, 0.9);
+}
+input[type='text']:focus, input[type='password']:focus, #ctl00_MSO_ContentDiv .ms-rtestate-write:focus, textarea:focus
+{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+input:-webkit-autofill, input:-webkit-autofill:focus
+{
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input[type='submit'], input[type="button"], button, .butStyle
+{
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-color: #ccc;
+    font-weight: bold; 
+    background: #B9BBC6;
+}
+.input-btn-margin
+{
+    margin-right: 5px;
+}
+.input-btn-marginL5
+{
+    margin-left: 5px;
+}
+.input-btn-marginL
+{
+    margin-left: 10px;
+}
+.input-btn-marginT
+{
+    margin-top: 10px;
+}
+textarea
+{
+    padding: 8px;
+    width: 51.5%;
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(204, 204, 204);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 70px;
+    background-image: none;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    resize: none;
+}
+select
+{
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(204, 204, 204);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    height: 30px;
+    background-image: none;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    word-wrap: normal;
+}
+select[disabled]
+{
+    background: rgba(204, 204, 204, 0.9);
+}
+.ms-rteThemeForeColor-2-0
+{
+    color: #333;
+}
+.resultHeader
+{
+    height: 25px;
+    margin-top: 25px;
+    padding: 4px 0 2px 12px;
+}
+.rgCaption
+{
+    background: #f2f2f2;
+    border-bottom: 1px solid #999;
+    font-weight: normal;
+    padding: 12px;
+    text-align: left;
+    margin: 0;
+}
+.header_bg
+{
+    display: block;
+}
+.ms-WPBody h3
+{
+    font-weight: bold;
+    margin: 0;
+}
+.ms-WPBody a:hover
+{
+    text-decoration: none;
+}
+.ms-WPBody th a:link
+{
+    text-decoration: none;
+    font-weight: bold;
+}
+body.v4master
+{
+    overflow-y: auto;
+}
+body, p, input, select, blockquote, .option_bg, .table_provider_reg_text, .modalBackground, .assessment_box fieldset, .RadGrid .rgGroupHeader td.grp_button p a, .mc_rgCaption_mc, .rgCaption, span.titleSpan, .ms-rte-layoutszone-outer .titleSpan, .home_inner_left > .titleSpan, .ms-rte-layoutszone-inner > .title > span, .ms-wpContentDivSpace > span.titleSpan, .RadListBox_Default .rlbText, .RadListBox_Default .rlbItem, .RadListBox_Default .rlbButtonText, .RadListBox_Default .rlbEmptyMessage, .RadMenu.RadMenu_Default, .RadMenu.RadMenu_Default a.rmLink, .RadMenu.RadMenu_Default > ul > li > a, .RadGrid_Default, .RadGrid_Default .rgMasterTable, .RadGrid_Default .rgDetailTable, .RadGrid_Default .rgGroupPanel table, .RadGrid_Default .rgCommandRow table, .RadGrid_Default .rgEditForm table, .RadGrid_Default .rgPager table, .GridToolTip_Default, .ms-WPBody #skm_LockPane, .consumer-details-box li span, .smallFont a, .mediumFont a, .largeFont a, .ms-WPBody td, .ms-WPBody a:link, .smallFont div h4 span, .inner_2col, .chatuserHeader, .ms-standardheader, .ms-WPBody table.ms-listviewtable > tbody > tr > td.ms-stylebox, .ms-WPBody, textarea, .ms-vh, .ms-vh2, .ms-vh-icon, .ms-vh-icon-empty, .ms-vhImage, .ms-gb, .ms-gb2, .ms-gbload, .ms-vb, .ms-vb2, .ms-vb-tall, .ms-vb-user, .ms-vh2-nograd, .ms-vh3-nograd, .ms-vh2-nograd-icon, .ms-vh2-nofilter-icon, .ms-pb, .ms-pb-selected, .ms-ph, .RadScheduler_Default, .RadScheduler_Default a, .RadScheduler_Default input, .RadScheduler_Default select, .RadScheduler_Default textarea, .ms-formbodysurvey, .ms-formlabel, .ms-descriptiontext, .RadGrid_Default .rgFilterBox, html body .RadInput_Default .riTextBox, html body .RadInputMgr_Default, .RadComboBox_Default, .RadComboBox_Default .rcbInput, .RadComboBoxDropDown_Default, .ajax__tab_xp .ajax__tab_body, .ajax__tab_tab, .ms-formvalidation, .ms-formtoolbar
+{
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+.login_error_msg, sub, .formHolder label sup, .compulsory sup, .errormsg_css, .error_normal, .chat-startup sup, .uploadlicense-error
+{
+    color: red;
+}
+.RadMenu
+{
+    z-index: 5 !important;
+}
+
+/* ------------ Small Font -------- */
+.smallFont, .smallFont p, .smallFont div, .smallFont select, .smallFont table td, .smallFont fieldset, .smallFont li, .smallFont a, .smallFont input, .smallFont label, .smallFont textarea, .smallFont th, .s4-ql .smallFont ul.root > li > .menu-item, .smallFont .RadMenu_Default a.rmLink, .smallFont .RadListBox_Default .rlbText, .RadScheduler .smallFont .rsDateHeader, .RadScheduler .rsHeader.smallFont h2, .smallFont .ms-acal-display, .smallFont h5.ms-WPBody, .smallFont h3.ms-WPBody, .smallFont .box_2col legend span, .smallFont .box_2col_2 legend span, input, sub, .smallFont .error_normal, h4.search_pro_title, .securityQ span, .whatsthispageWrap > div, .option_bg input, .option_bg input, .ms-standardheader .ms-formvalidation, .chat-startup sup, .chat-startup-table span, .chat-startup-table span label, span.ms-WPBody, .inner_box_2col.smallFont > span, .smallFont > strong.ms-WPBody > span, .formContainer.smallFont > .formHolder label sup, .compulsory sup, .smallFont .rcbInput, .smallFont .ajax__tab_tab, .smallFont .ms-formvalidation, .ms-formtoolbar, .smallFont.ms-standardheader, .smallFont .ms-descriptiontext, .RadMenu_Default.smallFont .rmActive.rmVertical .rmText, html body .smallFont .RadInput_Default .riTextBox, .smallFont .sendComment div > label, .smallFont .ms-MenuUILabel
+{
+    font-size: 16px;
+}
+/*.smallFont .consumer-details-box li span
+{
+    font-size: 18px;
+}
+*/
+.smallFont .whatsthispageWrap > a, .smallFont .welcomeAdmin .welcomeText, .smallFont .box_2col legend, .smallFont .box_2col_2 legend, html body .RadInputMgr_Default, .RadGrid .rgFilterBox, .RadScheduler .rsDateHeader
+{
+    font-size: 18px;
+}
+.smallFont div h4 span, .inner_2col, .chatuserHeader
+{
+    font-size: 18px;
+}
+.smallFont div h1, .smallFont span.titleSpan, .smallFont div h3 span, .smallFont .rgCaption, .smallFont .ms-rte-layoutszone-outer .titleSpan, .title h1
+{
+    font-size: 24px;
+}
+
+/* ------------ Medium Font -------- */
+.mediumFont, .mediumFont p, .mediumFont div, .mediumFont select, .mediumFont table td, .mediumFont fieldset, .mediumFont li, .mediumFont a, .mediumFont input, .mediumFont label, .mediumFont textarea, .mediumFont th, .s4-ql .mediumFont ul.root > li > .menu-item, .mediumFont .RadMenu_Default a.rmLink, .mediumFont .RadListBox_Default .rlbText, .RadScheduler .mediumFont .rsDateHeader, .RadScheduler .rsHeader.mediumFont h2, .mediumFont .ms-acal-display, .mediumFont h5.ms-WPBody, .mediumFont h3.ms-WPBody, .mediumFont .box_2col legend span, .mediumFont .box_2col_2 legend span, .formHolder, span.ms-WPBody, .inner_box_2col.mediumFont > span, .mediumFont > strong.ms-WPBody > span, .formContainer.mediumFont > .formHolder label sup, .compulsory sup, .mediumFont .error_normal, .mediumFont .rcbInput, .mediumFont .ajax__tab_tab, .mediumFont .ms-formvalidation, .ms-formtoolbar, .mediumFont.ms-standardheader, .mediumFont .ms-descriptiontext, .RadMenu_Default.mediumFont .rmActive.rmVertical .rmText, html body .mediumFont .RadInput_Default .riTextBox, .mediumFont .sendComment div > label, .mediumFont .ms-MenuUILabel
+{
+    font-size: 20px;
+}
+.mediumFont .whatsthispageWrap > a, .mediumFont .welcomeAdmin .welcomeText, .mediumFont .box_2col legend, .mediumFont .box_2col_2 legend
+{
+    font-size: 22px;
+}
+/*
+.mediumFont div h4 span, .mediumFont .consumer-details-box li .consumer_name, .largeFont .consumer-details-box li span
+{
+    font-size: 22px;
+}
+*/
+.mediumFont div h1, .mediumFont span.titleSpan, .mediumFont div h3 span, .mediumFont .rgCaption, .mediumFont .ms-rte-layoutszone-outer .titleSpan
+{
+    font-size: 26px;
+}
+/*.mediumFont .ms-MenuUILabel
+{
+    font-size: 10pt;
+}*/
+/* ------------ Large Font -------- */
+.largeFont, .largeFont p, .largeFont div, .largeFont select, .largeFont table td, .largeFont fieldset, .largeFont li, .largeFont a, .largeFont input, .largeFont label, .largeFont textarea, .largeFont th, .s4-ql .largeFont ul.root > li > .menu-item, .largeFont .RadMenu_Default a.rmLink, .largeFont .RadListBox_Default .rlbText, .RadScheduler .largeFont .rsDateHeader, .RadScheduler .rsHeader.largeFont h2, .largeFont .ms-acal-display, .largeFont h5.ms-WPBody, .largeFont h3.ms-WPBody, .largeFont .box_2col legend span, .largeFont .box_2col_2 legend span, .largeFont select, span.ms-WPBody, .inner_box_2col.largeFont > span, .largeFont > strong.ms-WPBody > span, .formContainer.largeFont > .formHolder label sup, .compulsory sup, .largeFont .error_normal, .largeFont .rcbInput, .largeFont .ajax__tab_tab, .largeFont .ms-formvalidation, .ms-formtoolbar, .largeFont.ms-standardheader, .largeFont .ms-descriptiontext, .RadMenu_Default.largeFont .rmActive.rmVertical .rmText, html body .largeFont .RadInput_Default .riTextBox, .largeFont .sendComment div > label, .largeFont .ms-MenuUILabel
+{
+    font-size: 24px;
+}
+.largeFont .whatsthispageWrap > a, .largeFont div h4 span, .largeFont .welcomeAdmin .welcomeText, .largeFont .box_2col legend, .largeFont .box_2col_2 legend, .largeFont .consumer-details-box li .consumer_name, .rgCaption, .mc_rgCaption_mc
+{
+    font-size: 26px;
+}
+.largeFont div h1, .largeFont span.titleSpan, .largeFont div h3 span, .largeFont .rgCaption, .largeFont .ms-rte-layoutszone-outer .titleSpan
+{
+    font-size: 28px;
+}
+/*
+.ms-dlgTitle, .smallFont .consumer-details-box li .consumer_name, .mediumFont .consumer-details-box li span
+{
+    font-size: 26px;
+}
+*/
+.RadGrid_Default, .RadGrid_Default .rgMasterTable, .RadGrid_Default .rgDetailTable, .RadGrid_Default .rgGroupPanel table, .RadGrid_Default .rgCommandRow table, .RadGrid_Default .rgEditForm table, .RadGrid_Default .rgPager table, .GridToolTip_Default, .RadScheduler_Default, .RadScheduler_Default a, .RadScheduler_Default input, .RadScheduler_Default select, .RadScheduler_Default textarea, .RadMenu_Default, .RadMenu_Default a.rmLink
+{
+    line-height: normal;
+}
+/*
+.largeFont .providerWrap > div > fieldset, .mediumFont .providerWrap > div > fieldset {
+    width: 98%;
+}
+.largeFont .ms-MenuUILabel
+{
+    font-size: 12pt;
+}*/
+.clearfix
+{
+    zoom: 1;
+}
+.clearfix:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    float: none;
+    height: 0;
+    visibility: hidden;
+}
+fieldset legend
+{
+    font-weight: bold;
+}
+.fLeft, .float_left
+{
+    float: left;
+}
+.right, .printHide .input_button.right
+{
+    float: right;
+}
+.hideTag
+{
+    display: none;
+}
+.s4-title h1
+{
+    display: none;
+}
+.ms-formtoolbar
+{
+    float: left;
+    width: auto;
+}
+/*  
+table.ms-toolbar td:first-child {
+    display: none;
+}
+*/
+span.ms-RadioText
+{
+    margin: 5px 0 5px 0;
+    float: left;
+}
+span.titleSpan, .ms-rte-layoutszone-outer .titleSpan, .home_inner_left > .titleSpan, .ms-rte-layoutszone-inner > .title > span, .ms-wpContentDivSpace > span.titleSpan
+{
+    font-weight: normal;
+    float: none;
+    display: block;
+    margin-bottom: 10px;
+}
+.width_full
+{
+    width: 100%;
+}
+.ms-WPTitle, .ms-cui-topBar2 h2, #s4-topheader2 h2, .menu-vertical h2, .ms-quicklaunchouter h2
+{
+    display: none;
+}
+.ms-WPHeader .ms-WPMenuDiv, .ms-WPHeaderTdMenu
+{
+    display: none;
+}
+.login_error_msg
+{
+    margin-bottom: 15px;
+    display: block;
+}
+.printHide
+{
+    clear: both;
+}
+.ms-rte-layoutszone-inner
+{
+    padding: 0;
+}
+.ms-WPHeader
+{
+    display: none;
+}
+.newuser
+{
+    line-height: 27px;
+}
+
+/*---------------Chat Report Section*/
+.chatReportSelection
+{
+    border: none;
+    margin-bottom: 10px;
+}
+fieldset.chatReportSelection > select
+{
+    width: 100px;
+}
+.hoursFromNowWrap select
+{
+    float: left;
+    margin-right: 20px;
+}
+.chatReportSelection > .hoursFromNowWrap > select
+{
+    width: auto;
+}
+.sendEmailBtn, .butbottommar
+{
+    margin-bottom: 10px;
+}
+tr.ms-viewheadertr > th.ms-vh:hover, tr.ms-viewheadertr > th.ms-vh2:hover
+{
+    border-color: #A0A3B2;
+    background: #DFE0E5;
+}
+.ms-vh2, .ms-vh div a:link, .ms-vh2 div a:link
+{
+    font-weight: bold;
+}
+tr. ms-viewheadertr > th .s4-ctx-show:hover
+{
+    background: #A0A3B2;
+}
+.inner_box fieldset
+{
+    float: left;
+    width: 50%;
+    border: none;
+}
+.ms-WPBody.noindex fieldset
+{
+    margin: 0 0 15px 0;
+}
+h5.ms-WPBody
+{
+    margin: 0;
+}
+#exportExcel
+{
+    float: right;
+    margin-top: 10px;
+}
+.chatReportSelection > div
+{
+    float: left;
+    margin-left: 25px;
+}
+.chatReportSelection > select
+{
+    float: left;
+    width: 110px;
+}
+.chatReportSelection > div > span.valid_msg_cg
+{
+    clear: both;
+    margin-left: 105px;
+    float: left;
+    width: auto;
+}
+.chatReportSelection label, .chatReportSelection span
+{
+    line-height: 21px;
+    margin-right: 25px;
+    float: left;
+}
+/*commented this to fix the issue of text wrapping in dropdown of agent name
+.chatReportSelection > div > span
+{
+  width: 80px;
+}*/
+.chatReportSelection .selectDayBlock > img
+{
+    float: left;
+    margin: 0 5px 0 5px;
+}
+.chatReportSelection .selectDayBlock > input[type="text"]
+{
+    width: 80px;
+}
+a#ctl00_m_g_9f51bd40_37ab_4374_a4cc_d9948ac33698_ctl00_lnkAdvanceVisible, a#ctl00_m_g_9f51bd40_37ab_4374_a4cc_d9948ac33698_ctl00_lnkAdvancHide
+{
+    text-decoration: underline;
+}
+.chatnote
+{
+    margin-top: 10px;
+}
+/*-------------------------Chat History*/
+.RadGrid_Default .rgCommandCell
+{
+    border: none;
+    padding: 10px;
+}
+.RadGrid_Default .rgRow td
+{
+    border-width: 0 0 0 0;
+    padding-left: 5px;
+}
+.RadGrid_Default td.rgPagerCell
+{
+    border-color: #828282;
+    border-right: 1px solid #828282;
+}
+
+/*------------------------- Manage Consumer Seetings*/
+.mc_rgCaption_mc
+{
+    background: #f2f2f2;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-weight: normal;
+    padding: 12px;
+    text-align: left;
+    margin: 0;
+}
+.numText
+{
+}
+
+/*------------------------- CGD Page Config css */
+.RadGrid_Default th, .RadGrid_Default td
+{
+    border: none;
+    padding: 2px 0;
+}
+.ddlSequence
+{
+    width: 57px;
+}
+.rgrollmgt .rgExpandCol
+{
+    display: none;
+}
+.rgMasterTable td
+{
+    padding-left: 3px;
+    white-space: normal;
+    word-break: normal;
+    word-wrap: break-word;
+    line-height: normal;
+}
+.RadGrid_Default .rgMasterTable .rgRow td
+{
+    padding-right: 0px;
+}
+/*------------------------- forms css Left form & Right form */
+fieldset.left_form
+{
+    clear: both;
+}
+.right_form
+{
+    margin: 0;
+    width: 50%;
+    padding-top: 0px;
+}
+.mandatory_normal_div
+{
+    float: left;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+.box_2col_2
+{
+    border-radius: 7px;
+    margin: 10px 0 5px;
+    padding: 12px;
+}
+.check_div
+{
+    width: 25%;
+    float: left;
+    margin-top: 5px;
+}
+.mandatory_normal_div .mandatory_normal
+{
+    padding-right: 0;
+    width: 12px;
+}
+.mandatory_normal
+{
+    background: url(/media%20library/his.cgdirect/mandatory.png) no-repeat scroll right top transparent;
+    padding-right: 10px;
+    float: left;
+}
+.right_form input, .left_form input
+{
+    width: 51.5%;
+    float: left;
+}
+.right_form span
+{
+    width: auto;
+}
+.mandatory_normal_div label
+{
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    -x-system-font: none;
+    float: left;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+}
+.DueDate
+{
+    width: 27%;
+}
+.mandatory_normal_div span
+{
+    float: left;
+}
+.left_form span
+{
+    width: auto;
+    float: left;
+}
+.right_form span
+{
+    width: auto;
+    float: left;
+}
+input[type="radio"][disabled], input[type="checkbox"][disabled]
+{
+    color: gray;
+}
+.check_div > span > input[type="radio"]
+{
+    margin: 0px 8px 0 6px;
+    width: auto;
+}
+.check_div > span > input[type="checkbox"]
+{
+    margin: 2px 2px 0 6px;
+    width: auto;
+}
+.left_form .select_multi
+{
+    margin: 0;
+    width: 51.5%;
+    border: 1px solid #CCCCCC;
+}
+.right_form .select_multi
+{
+    margin: 0;
+    width: 53.5%;
+    border: 1px solid #CCCCCC;
+}
+.select_multi
+{
+    border: 1px solid #CCCCCC;
+    height: 150px;
+    margin: 0px 10px 0 0;
+}
+.select_multi span.rlbText
+{
+    float: none;
+    white-space: nowrap !important;
+}
+.check_div label
+{
+    width: auto;
+}
+.right_form label
+{
+    width: auto;
+    float: left;
+}
+.check_div input
+{
+    height: auto;
+    float: left;
+}
+.check_div span
+{
+    background: none;
+}
+.left_form select
+{
+    margin-bottom: 2px;
+    width: 51.5%;
+}
+.blue_hr
+{
+    margin: 2px 0;
+    height: 1px;
+    border: 0px none;
+    clear: both;
+}
+.blue_hr_left
+{
+    width: 96%;
+}
+.blue_hr_right
+{
+    width: 98%;
+}
+.blue_hr_fullwidth
+{
+    width: 98%;
+}
+hr
+{
+    color: #BAC5DE;
+    height: 2px;
+}
+.inner_box .blue_hr
+{
+    margin-bottom: 10px;
+}
+.Include_Provider input
+{
+    height: auto;
+    margin: 0;
+    width: 20px;
+    padding: 0px;
+}
+table
+{
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr
+{
+    border: none;
+}
+.Include_Provider
+{
+    margin-top: 10px;
+}
+.right_form > .blue_hr
+{
+    width: 95%;
+}
+.ms-WPBody > span
+{
+    margin-bottom: 5px;
+}
+.table_heading
+{
+    border: 1px solid #000000;
+}
+.table_provider_reg_text td
+{
+    padding: 4px;
+}
+.vspace
+{
+    height: 10px;
+    clear: both;
+}
+.vspace2
+{
+    height: 30px;
+    clear: both;
+}
+.vspace3
+{
+    height: 20px;
+    clear: both;
+}
+.samsDueDate input[type="radio"]
+{
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+}
+input[type="checkbox"], input[type="radio"]
+{
+    vertical-align: middle;
+    margin: 0px 8px 0px 6px;
+}
+.provider_check input[type="checkbox"]
+{
+    width: auto;
+    margin: 0 5px 0 0;
+}
+
+/*----------------forgot password*/
+.title span
+{
+    float: left;
+    margin: 0 0 10px 0;
+}
+.email_example
+{
+    margin-left: 160px;
+}
+sub
+{
+    line-height: 0.8;
+    position: absolute;
+}
+
+/*----------------Reset password*/
+.restmsg
+{
+    margin-left: 160px;
+}
+.resetpass_error
+{
+    float: left;
+    clear: both;
+    margin-left: 18%;
+    margin-top: 5px;
+}
+
+/*------------------------- forms css CONTACT CARE MANAGER Request for Service */
+.select_user
+{
+    margin: 0 0 20px 0;
+    clear: both;
+}
+.select_user span
+{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.width_label
+{
+    width: 160px;
+    float: left;
+}
+textarea.width_300
+{
+    width: 282px;
+    float: left;
+}
+input.width_300
+{
+    width: 297px;
+    border: 1px solid #d1d1d1;
+}
+.limited_word_msg
+{
+    margin-left: 160px;
+    clear: both;
+}
+.formContainer
+{
+    float: left;
+    width: 50%;
+}
+.formHolder label sup, .compulsory sup
+{
+    line-height: 0.8;
+    position: absolute;
+}
+.formHolder input[type="text"]
+{
+    width: 51.5%;
+    float: left;
+}
+.formHolder textarea
+{
+    width: 48.5%;
+    float: left;
+}
+.ccManbutton, .regservicbutton, .enrollreqbutton
+{
+    float: left;
+    margin-left: 415px;
+}
+.formHolder select, .formHolder select[disabled]
+{
+    width: 51.5%;
+}
+.formHolder select[disabled]
+{
+    color: rgb(204, 204, 204);
+    background: rgba(204, 204, 204, 0.5);
+}
+.box_2col p
+{
+    margin: 10px 0;
+}
+.inner_box .blue_hr
+{
+    margin-bottom: 10px;
+}
+.formHolder input[type="password"]
+{
+    float: left;
+    width: 51.5%;
+}
+.cgGender input
+{
+    border: 0 none;
+    height: auto;
+    margin: 3px 8px 0 6px;
+    padding: 0;
+    width: auto;
+}
+.inner_2col select
+{
+    width: 299px;
+}
+#wrapper
+{
+    height: auto;
+    margin: 0px auto;
+}
+#wrapper .right_col fieldset:first-child
+{
+    margin-top: 0;
+    clear: both;
+}
+#wrapper .right_col fieldset
+{
+    margin-bottom: 15px;
+}
+
+.right_col
+{
+    width: 100%;
+    float: left;
+    height: auto;
+}
+.errormsg_css
+{
+    float: left;
+    clear: both;
+    margin-left: 160px;
+    margin-bottom: 5px;
+}
+.sucessmsg_css
+{
+    color: #5F8F00;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+}
+.formHolder
+{
+    clear: both;
+    width: 100%;
+    float: left;
+}
+.valid_msg_cg
+{
+    margin-top: 5px;
+    margin-left: 42%;
+}
+.cBoth, .clear_both, .ClearBoth
+{
+    clear: both;
+}
+.emailColumnSeq
+{
+    padding-right: 0%;
+    width: 30%;
+    float: left;
+    margin-right: 5%;
+    border-right: 1px solid #000;
+}
+.emailColumnSeq table
+{
+    width: 97%;
+}
+.emailColumnSeq table select
+{
+    width: 80%;
+    margin: 5px 0;
+}
+.mrgnNew
+{
+    width: 100%;
+}
+.emailtablesubmit
+{
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.configSection
+{
+    float: left;
+    width: 64%;
+}
+.emailColumnSeq table td
+{
+    text-align: center;
+}
+.emailOptions
+{
+    clear: both;
+}
+.emailOptions li
+{
+    height: 30px;
+}
+.defaultEmailAdd, .emailOptions span
+{
+    float: left;
+    width: 25%;
+}
+.configSection ul
+{
+    float: left;
+    width: 66%;
+}
+.configSection ul li label
+{
+    float: left;
+    width: 23%;
+}
+.configSection ul li input[type="checkbox"]
+{
+    float: left;
+}
+.ms-WPBody th
+{
+    text-align: center;
+    height: 25px;
+}
+.RadGrid_Default .rgAltRow td
+{
+    border: none;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+.table_provider_reg_text td span
+{
+}
+.but_mar_left160
+{
+    margin-left: 160px;
+}
+.but_mar_left150
+{
+    margin-left: 150px;
+}
+
+.inner_2col span.width_auto
+{
+}
+
+.consumersucess
+{
+    color: #5F8F00;
+}
+.inner_2col span.checkbox
+{
+}
+.error_normal
+{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.upload_lable
+{
+    height: 26px;
+    margin-right: 5px;
+}
+fieldset .inner_2col .upload_lable
+{
+    height: 26px;
+    margin-right: 5px;
+    width: 300px;
+}
+fieldset .inner_2col.upload-licence-error
+{
+    float: left;
+    clear: both;
+    margin-left: 305px;
+}
+
+.upload_but
+{
+    margin-left: 10px;
+}
+.inner_2col input
+{
+    float: left;
+}
+#quickSearchPanel #btnQuickSearch
+{
+    float: none;
+}
+.clear_none select
+{
+    float: left;
+}
+/*------------------------- forms css ProviderRegistration*/
+.inner_2col
+{
+    margin: 25px 0 5px;
+}
+.two_col
+{
+    width: 47%;
+    float: left;
+    margin-right: 0px;
+}
+.form_info
+{
+    float: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.overflow_auto
+{
+    overflow: auto;
+    border: 1px solid #d1d1d1;
+    height: 762px;
+    width: 98%;
+    float: left;
+}
+.securityQ span
+{
+    float: left;
+    width: auto;
+}
+.securityQ .mandatory_field_provider label
+{
+}
+.mandatory_field_provider span
+{
+    background: url(/media%20library/his.cgdirect/mandatory.png) no-repeat scroll right top transparent;
+    float: left;
+    padding-right: 10px;
+}
+.nobg_img
+{
+    background: none;
+}
+fieldset.securityQ.std_span label
+{
+    width: 42%;
+}
+.two_col fieldset
+{
+    width: 100%;
+}
+.box_2col label
+{
+    float: left;
+    width: 160px;
+}
+.box_2col span label
+{
+    width: auto;
+}
+.left_form label
+{
+    width: auto;
+    float: left;
+}
+.right_form label
+{
+    width: auto;
+    float: left;
+}
+.formHolder label
+{
+    float: left;
+    width: 42%;
+    word-wrap: break-word;
+}
+.overflow_auto label
+{
+    line-height: 21px;
+}
+.two_col label
+{
+    float: left;
+    width: auto;
+}
+.two_col input
+{
+    float: left;
+}
+select.textbox
+{
+    width: 52%;
+}
+.textbox
+{
+    width: 51.5%;
+}
+.box_2col .security
+{
+    color: #191919;
+    float: left;
+    width: 49%;
+}
+.box_2col fieldset
+{
+    border: 0px none;
+    margin: 0 20px 7px 0;
+    float: left;
+    clear: both;
+}
+.inner_box fieldset
+{
+    float: left;
+    width: 46%;
+    border: none;
+}
+.table_provider_reg_text
+{
+    border: 1px solid #d1d1d1;
+    margin: 0px 3px;
+    width: 108%;
+}
+
+.provider-prof .inner_2col span.valid_msg
+{
+    margin-top: 5px;
+    margin-left: 42%;
+}
+.nexthalf .nobg_img
+{
+    margin-left: 42%;
+    clear: both;
+    background: none;
+}
+.valid_msg
+{
+    margin-top: 5px;
+    clear: both;
+    margin-left: 167px;
+    float: left;
+}
+.two_col span
+{
+    width: auto;
+    float: left;
+}
+.width_label
+{
+    width: 160px;
+    float: left;
+}
+.mandatory_field
+{
+    background: url(/_layouts/1033/images/mandatory.png) no-repeat right top;
+}
+.mandatory_field_provider
+{
+    width: 42%;
+}
+.mc_emailselect
+{
+    margin-top: -10px;
+}
+
+/*------------------------- forms css Provider Search*/
+h4.search_pro_title
+{
+    /* line-height: 17px;*/
+    line-height: normal;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.viewsearch_margin
+{
+    margin: 10px 0;
+    float: right;
+}
+#ctl00_m_g_9f51bd40_37ab_4374_a4cc_d9948ac33698_ctl00_pnlSearch
+{
+    clear: both;
+}
+.inner_2col_search
+{
+    margin: 0px 0 5px;
+}
+
+.search_col_left select
+{
+    width: 57%;
+    border: 1px solid #D1D1D1;
+}
+.search_col_left.as_select_state select
+{
+    width: auto;
+    float: left;
+}
+.search_col_left > div > .smallSelect
+{
+    width: 50px;
+}
+.whatsthispageWrap
+{
+    position: relative;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.grey_hr
+{
+    margin: 2px 0;
+    height: 1px;
+    background: #E5E5E5;
+    border: 0px none;
+}
+.search_col_left input
+{
+    width: 57%;
+    border: 1px solid #D1D1D1;
+}
+.RadListBox_Default .rlbGroup
+{
+    border: none;
+}
+.provider_search_result
+{
+    width: 75px;
+}
+.RadListBox
+{
+    min-width: 218px;
+    width: 56.5%;
+}
+.RadListBox.RadListBoxScrollable.select_multi smallFont, .inner_2col_search .select_multi, span.lblCount + .select_multi
+{
+    max-height: 150px;
+}
+#icons_right_link
+{
+    margin: 15px 0 5px;
+    display: block;
+}
+.pro_search_top_panel
+{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+.ms-WPBody a:link
+{
+    line-height: 17px;
+    text-decoration: underline;
+}
+.mrgnNT
+{
+    margin-top: -7px;
+}
+.data_details table tr
+{
+    height: 17px;
+    padding: 5px;
+}
+.ms-WPBody TD
+{
+    color: #333333;
+}
+.data_details td
+{
+    border: 0px none;
+}
+.pro_search_divider_line
+{
+    border-bottom: 1px solid #ccc;
+}
+.search_hd2
+{
+    color: #ca6401;
+    font-weight: normal;
+}
+.search_provider_hyperlink, .clickfordetails, .websiteLink
+{
+    color: #1017f6;
+    font-weight: bold;
+	text-decoration: underline;
+}
+.websiteLink
+{
+    font-weight: normal;    
+}
+.smallFont .clickfordetails
+{
+    font-size:12px;    
+}
+.mediumFont .clickfordetails
+{
+    font-size:16px;    
+}
+.largeFont .clickfordetails
+{
+    font-size:20px;    
+}
+.providerListResults .search_hd2
+{
+    font-weight: bold;
+}
+.search_hd
+{
+    width: 160px;
+}
+.RadGrid_Default
+{
+    color: #333333;
+    clear: both;
+}
+.RadGrid_Default .rgDetailTable
+{
+    border: none;
+}
+.invalidformat
+{
+    clear: both;
+    float: left;
+    margin-left: 18%;
+}
+.upload-error-margin
+{
+    margin-bottom: 2px;
+    margin-left: 18%;
+    margin-top: 5px;
+}
+.upload-licence-error
+{
+    float: left;
+    clear: both;
+    margin-left: 305px;
+    margin-top: 5px;
+}
+
+/*------------------------- Chat css */
+.chat-wrap
+{
+    display: block;
+    float: left;
+    height: 525px;
+    width: 99.8%;
+}
+.chatuserHeader
+{
+    padding: 6px;
+    font-weight: bold;
+}
+input.chat-button
+{
+    border: medium none;
+    border-radius: 0.3em 0.3em 0.3em 0.3em;
+    cursor: pointer;
+    float: left;
+    height: 35px;
+    margin: 9% 0 0 3%;
+    outline: medium none;
+    width: 65px;
+}
+.PChat
+{
+    float: right;
+    margin-right: 5%;
+}
+
+/*------------------------- Reports css */
+.data_display_button
+{
+    margin: 12px 0 0 5px;
+}
+.RadGrid_Default th, .RadGrid_Default td
+{
+    border: none;
+}
+
+/*------------------------- Option Keyword Mapping css */
+.RadGrid .rgGroupHeader td.grp_button p
+{
+    float: left;
+    margin: 3px 0;
+    width: 100%;
+}
+.RadGrid .rgGroupHeader td.grp_button p a
+{
+    float: right;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: .3em;
+    font-weight: bold;
+    border: none;
+}
+.RadGrid .rgHeader, .RadGrid th.rgResizeCol, .tblWhatPage th
+{
+    height: 25px;
+    font-weight: bold;
+    background-image: none;
+}
+.RadGrid_Default .rgHeader .rgSortAsc
+{
+    background-position: 3px -247px;
+    height: 15px;
+}
+.RadGrid_Default .rgHeader .rgSortDesc
+{
+    background-position: 3px -197px;
+    height: 15px;
+}
+/*------------------------- header css */
+.s4-title
+{
+    padding: 0px 5px 0 5px;
+    overflow: hidden;
+}
+.s4-titlelogo
+{
+    clear: both;
+    padding: 0;
+    text-align: left;
+}
+.s4-titlelogo a
+{
+    float: left;
+}
+#divSignIn
+{
+    float: right;
+    margin: 0;
+}
+.ribbonRow
+{
+    display: none;
+    padding: 10px 0;
+}
+.ms-welcomeMenu.ms-SpLinkButtonInActive
+{
+    border: solid 1px rgba(256,256,256,.6);
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+}
+.ms-welcomeMenu.ms-SpLinkButtonActive
+{
+    border: solid #BAC5DE 1px;
+    background: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    color: #fff;
+}
+.ms-welcomeMenu
+{
+    padding: 8px 17px 8px;
+    border-radius: 3px;
+    margin: 0;
+}
+body #s4-topheader2
+{
+    background: none;
+    border: 0px none;
+    min-height: 42px;
+}
+.s4-toplinks
+{
+    padding: 7px 5px 0 0;
+    float: right;
+}
+.s4-toplinks, .s4-title
+{
+    background: none;
+}
+.s4-toplinks ul.rmRootGroup
+{
+    border: none;
+    background: transparent;
+}
+.s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink
+{
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+    padding: 3px 10px 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #dfe0e5;
+}
+.s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink:hover, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink.rmSelected
+{
+    border: 1px solid #fff;
+    color: #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body #s4-ribboncont
+{
+    border-bottom: rgb(60, 60, 60);
+    background: #393c39;
+    background-image: linear-gradient(#393c39, #4a4d52);
+    background: linear-gradient(#393c39, #4a4d52);
+}
+.ms-browseTab.ms-cui-tt-s > a.ms-cui-tt-a
+{
+    border-color: #97A8CE;
+    background: #fff;
+}
+.ms-siteactionsmenuhover
+{
+    background: transparent;
+    border-color: #758BBE;
+    border-bottom: none;
+}
+.ms-siteactionsmenuinner, .ms-siteactionsmenuhover
+{
+    padding: 5px 4px 0px 2px;
+}
+.ms-cui-TabRowLeft, .ms-cui-tt-a
+{
+    margin-top: 18px;
+}
+.s4-trc-container-menu
+{
+    float: right;
+}
+
+/*------------------------- footer css */
+.footer
+{
+    height: auto;
+    width: 100%;
+    float: left;
+    padding-bottom: 10px;
+    min-width: 760px;
+}
+.footer p
+{
+    margin: 0;
+    padding: 13px 15px 0px 15px;
+    display: inline-block;
+}
+
+.footer .footer-content
+{
+    display: inline;
+}
+
+.footer .footer-content a
+{
+    color: #fff;
+}
+
+
+
+/*------------------------- left navigation css */
+body #s4-leftpanel
+{
+    width: 200px;
+}
+body #s4-leftpanel-content
+{
+    padding: 0 0 20px;
+    border: none;
+}
+.s4-ql ul.root .static .menu-item
+{
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 7px 6px 15px;
+}
+/*.s4-ql ul.root .static .menu-item:hover
+{
+    background: #fff;
+    color: #111;
+}*/
+.ms-quickLaunch
+{
+    padding-top: 0;
+}
+#s4-leftpanel-content .fontSizer.smallFont img
+{
+    width: auto;
+    margin: 0;
+}
+.fontSizer
+{
+    padding: 5px 0 25px 11px;
+}
+.fontSizer a
+{
+    padding: 3px;
+}
+.s4-ql ul.root ul
+{
+    margin: 0px 0px 0px 0px;
+}
+.s4-ql ul.root ul > li
+{
+    font-weight: normal;
+}
+.s4-recentchanges
+{
+    padding: 5px 0px 0 0;
+    display: none;
+}
+.pageTellAFriend a
+{
+    background: url(/media%20library/his.wrc/friend.png) no-repeat left center;
+    display: block;
+    padding-left: 30px;
+    margin-left: 15px;
+    color: #111;
+    text-decoration: underline;
+}
+.pagePrint a
+{
+    background: url(/media%20library/his.wrc/print.png) no-repeat left center;
+    display: block;
+    padding-left: 34px;
+    margin-left: 13px;
+    color: #111;
+    text-decoration: underline;
+}
+.pageFav a
+{
+    background: url(/media%20library/his.wrc/favorites.png) no-repeat left center;
+    display: block;
+    padding-left: 31px;
+    margin-left: 11px;
+    color: #111;
+    text-decoration: underline;
+}
+.BackMemberSite a
+{
+    display: block;
+    padding-left: 31px;
+    background: url(/media%20library/his.wrc/backarr.png) 0% 50% no-repeat;
+    margin-left: 11px;
+    color: #111;
+    text-decoration: underline;
+}
+.pagePrint
+{
+    margin-top: 15px;
+}
+.pageFav
+{
+    margin: 15px 0 0 5px;
+}
+.BackMemberSite
+{
+    margin: 15px 0 30px 5px;
+}
+.s4-ql a.selected
+{
+    border-color: transparent !important;
+    background: transparent;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.30) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.30)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a3000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+/*Provider Search result*/
+.rgMasterTable span
+{
+    /*white-space: nowrap !important;*/
+}
+/*------------------------- inner left navigation css */
+.RadMenu .rmVertical .rmLink, .RadMenu .rmHorizontal .rmVertical .rmLink
+{
+    float: none;
+    background: transparent;
+}
+.RadMenu .rmHorizontal .rmVertical .rmText
+{
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    white-space: normal;
+    line-height: normal;
+}
+.RadMenu a.rmImageOnly img.rmLeftImage, .RadMenu .rmRootGroup a.rmImageOnly
+{
+    width: 100%;
+    height: 1px;
+}
+.RadMenu.RadMenu_Default.rmleftnav .rmHorizontal .rmRootLink span.rmText
+{
+    display: block;
+    padding: 3px 0 3px 0px;
+    white-space: normal;
+}
+.RadMenu_Default .rmHorizontal .rmRootLink span.rmText
+{
+    display: block;
+}
+.RadMenu_Default.tabmenu_static .rmHorizontal .rmRootLink span.rmText
+{
+    color: #333;
+}
+.RadMenu_Default.tabmenu_static .rmHorizontal .rmRootLink.rmSelected span.rmText
+{
+    color: #fff;
+}
+.leftcol .rmHorizontal .rmSlide
+{
+    padding-left: 13px;
+    display: block !important;
+    position: static;
+    float: none;
+    margin: 0px;
+    width: auto;
+    height: auto;
+    overflow: visible !important;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical
+{
+    visibility: visible;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical
+{
+    display: block;
+    position: static;
+    float: none;
+    background: transparent;
+    border: none;
+}
+.leftcol .rmHorizontal > li > a > span
+{
+    display: block;
+    float: none;
+    padding: 0 0 0 15px;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical > li.rmLast .rmLeftImage
+{
+    display: none;
+}
+.RadMenu_Default ul.rmHorizontal .rmLeftImage
+{
+    margin: 4px -4px 0 6px;
+}
+.s4-notdlg.leftcol .RadMenu .rmHorizontal .rmItem
+{
+    clear: both;
+    float: left;
+    width: 100%;
+}
+.s4-notdlg.leftcol .RadMenu ul.rmRootGroup
+{
+    background: transparent;
+    border: none;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.RadMenu a.rmImageOnly img.rmLeftImage
+{
+    margin-left: 10px;
+}
+.RadMenu_Default .rmHorizontal .rmItem > a.rmRootLink
+{
+    cursor: pointer;
+    width: 94%;
+    line-height: normal;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical
+{
+    visibility: visible;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical > li
+{
+    padding: 0 0 0 2px;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical > li > a
+{
+    padding: 5px 0 5px 5px;
+    cursor: pointer;
+}
+.leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:hover
+{
+    padding: 5px 0 5px 5px;
+}
+.s4-ca .RadGrid_Default
+{
+    clear: both;
+    border: none;
+}
+.RadMenu > ul
+{
+    top: 5px;
+}
+.RadMenu.RadMenu_Default > ul > li > a
+{
+    display: block;
+    background-image: none; /*    background: #EEECE1;*/
+    font-weight: bold;
+}
+.s4-ql ul > li > a:hover, .s4-ql ul.root > li > a:hover, .s4-qlheader:hover, .RadMenu_Default a.rmExpanded:hover
+{
+    background-color: #fff;
+}
+.RadMenu_Default a.rmExpanded
+{
+    background-color: transparent;
+}
+/*------------------------- login panel css */
+.login_container .float_left
+{
+    width: 28%;
+}
+.left_webcol
+{
+    float: left;
+    width: 50%;
+}
+.right_webcol
+{
+    float: left;
+    width: 50%;
+}
+.home_right_top
+{
+    margin-left: 10px;
+}
+.home_box, .wp_box
+{
+    background: #DFE0E5;
+    border: 2px solid #536FAE;
+    border-radius: 7px;
+    padding: 15px;
+}
+.login_container input
+{
+    margin-left: 0px;
+    float: right;
+    width: 60%;
+}
+.home_login fieldset
+{
+    border: none;
+    margin: 0 0 11px 0;
+    padding: 0;
+}
+.home_login fieldset label
+{
+    line-height: 20px;
+}
+.home_login table
+{
+    width: 100%;
+}
+.forgot
+{
+    width: 65%;
+    float: left;
+    margin-top: 5px;
+}
+.ms-WPHeader td, .ms-fakewptitle
+{
+    border-bottom: none;
+}
+.s4-wpTopTable .ms-WPHeader, .float_left.width_full .ms-WPBorder
+{
+    border: none;
+}
+
+/*------------------------- container css */
+body #MSO_ContentTable
+{
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+body #s4-simple-card a img
+{
+    outline: none;
+}
+.s4-ca
+{
+    margin-left: 200px;
+    background: none;
+}
+ul.alphalist
+{
+    padding: 0;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.alphalist li
+{
+    list-style: none;
+    float: left;
+    padding: 3px;
+}
+.ms-wpContentDivSpace
+{
+    margin: 0;
+}
+.box_2col
+{
+    border-radius: 7px;
+    padding: 12px;
+}
+fieldset .inner_2col
+{
+    margin-top: 0px;
+}
+.inner_2col.search_by_areas_served > div
+{
+    display: inline-flex;
+    align-items: center;
+}
+.inner_2col fieldset
+{
+    border: none;
+}
+.ms-bodyareacell .float_left.width_full
+{
+    margin-top: 20px;
+}
+.quicklink_container
+{
+    width: 100%;
+    float: left;
+}
+.quicklink
+{
+    padding-right: 22px;
+    float: left;
+    margin-bottom: 20px;
+}
+.my_enroll_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_home1_b_05.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.self_assessment_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_home1_b_08.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.schedule_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_calendar.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.cont_care_mang_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_home1_b_13.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.my_assessments_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_home1_b_03.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.new_user_icon
+{
+    background-image: url(/media%20library/his.cgdirect/wa_home1_b_14.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+.quicklink p
+{
+    margin-top: 5px;
+    width: 65%;
+    float: left;
+    line-height: normal;
+}
+.service_suspension_icon
+{
+    background-image: url(/media%20library/his.cgdirect/req_forprovideraccount.png);
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 47px;
+    float: left;
+    margin-right: 5px;
+}
+input.search_pro
+{
+    /*width: 16.5%;*/
+    margin-right: 10px;
+}
+.ms-WPBorder, .ms-WPBorderBorderOnly
+{
+    border-style: none;
+}
+.whatsthispageWrap > div
+{
+    word-wrap: break-word;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    display: none;
+    background: rgb(255, 255, 255);
+    border: 1px solid #555;
+    padding: 3px 5px;
+    z-index: 9999;
+}
+.outerToggleBlock .closeBtn
+{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 0px 3px;
+    position: absolute;
+    top: -5px;
+    right: -3px;
+    cursor: pointer;
+}
+.s4-wpcell:hover .ms-WPHeader td, .s4-wpActive .ms-WPHeader td, .s4-wpcell .ms-WPSelected .ms-WPHeader td
+{
+    border-bottom: none;
+}
+.ms-viewheadertr th
+{
+    padding-top: 5px;
+}
+.ms-itmhover td
+{
+    padding-top: 5px;
+}
+.title
+{
+    line-height: 26px;
+}
+.title h1
+{
+    font-weight: normal;
+}
+.title p
+{
+    font-weight: normal;
+    margin: 1% 0;
+}
+.ms-wikicontent a
+{
+    color: #333;
+}
+.topics .themeBg
+{
+    margin-right: 2%;
+}
+.topics img
+{
+    width: 5em;
+    height: 5em;
+    vertical-align: middle;
+}
+
+.ms-acal-header
+{
+    background: #e8eff6;
+    height: 30px;
+    margin: 0;
+    padding: 7px 10px 0 10px;
+}
+.address li:first-child
+{
+    font-weight: bold;
+}
+.article p, .paragraph
+{
+    line-height: 1.4em;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+li
+{
+    padding: 10px 0;
+}
+.formContainer
+{
+    margin-bottom: 15px;
+    float: left;
+}
+.formContainer li
+{
+    padding: 12px 0;
+}
+.formContainer h4
+{
+    margin: 0;
+    padding: 0;
+    text-indent: 5px;
+}
+
+/*-------------------------- SERVICE CALENDAR CSS ------------------------------------*/
+.despBlock
+{
+    margin-bottom: 10px;
+    padding: 0 15px;
+    margin-top: 7px;
+}
+.despBlock ul
+{
+    margin: 0;
+}
+.despBlock ul li
+{
+    float: left;
+    border: none;
+    padding: 0;
+}
+.despBlock ul li input[type="text"]
+{
+    border: none;
+    width: 200px;
+    background: transparent;
+    padding-right: 15px;
+    box-shadow: none;
+}
+.despBlock ul li .largeFont input[type="text"]
+{
+    width: 220px;
+}
+.input-color
+{
+    position: relative;
+}
+.input-color input
+{
+    padding-left: 20px;
+}
+.input-color .color-box
+{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+}
+.CalendarItem1
+{
+    background: #457fbd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#457fbd), to(#054386));
+    background: -moz-linear-gradient(top, #457fbd, #054386);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#457fbd', endColorstr='#054386');
+}
+.CalendarItem2
+{
+    background: #45bdb1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#45bdb1), to(#06877a));
+    background: -moz-linear-gradient(top, #45bdb1, #06877a);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45bdb1', endColorstr='#06877a');
+    color: #000000;
+}
+.CalendarItem3
+{
+    background: #9659c4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9659c4), to(#632194));
+    background: -moz-linear-gradient(top, #9659c4, #632194);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9659c4    ', endColorstr='#632194');
+    color: #000000;
+}
+.CalendarItem4
+{
+    background: #ccce75;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ccce75), to(#a4a646));
+    background: -moz-linear-gradient(top, #ccce75, #a4a646);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccce75', endColorstr='#a4a646');
+    color: #000000;
+}
+.CalendarItem5
+{
+    background: #9fc65d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9fc65d), to(#6e9726));
+    background: -moz-linear-gradient(top, #9fc65d, #6e9726);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9fc65d', endColorstr='#6e9726');
+    color: #000000;
+}
+.CalendarItem6
+{
+    background: #c65da5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c65da5), to(#972675));
+    background: -moz-linear-gradient(top, #c65da5, #972675);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c65da5    ', endColorstr='#972675');
+    color: #000000;
+}
+.CalendarItem7
+{
+    background: #45a5bd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#45a5bd), to(#066d87));
+    background: -moz-linear-gradient(top, #45a5bd, #066d87);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45a5bd', endColorstr='#066d87');
+    color: #000000;
+}
+.CalendarItem8
+{
+    background: #dc9dbe;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc9dbe), to(#bf7ba0));
+    background: -moz-linear-gradient(top, #dc9dbe, #bf7ba0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc9dbe', endColorstr='#bf7ba0');
+    color: #000000;
+}
+.CalendarItem9
+{
+    background: #bcbcbc;
+    background: -webkit-gradient(linear, left top, left bottom, from(#bcbcbc), to(#9c9c9c));
+    background: -moz-linear-gradient(top, #bcbcbc, #9c9c9c);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bcbcbc', endColorstr='#9c9c9c');
+    color: #000000;
+}
+.CalendarItem10
+{
+    background: #c2dc9d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c2dc9d), to(#a4bf7b));
+    background: -moz-linear-gradient(top, #c2dc9d, #a4bf7b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c2dc9d', endColorstr='#a4bf7b');
+    color: #000000;
+}
+.CalendarItem11
+{
+    background: #dc9dda;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dc9dda), to(#bf7abe));
+    background: -moz-linear-gradient(top, #dc9dda, #bf7abe);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dc9dda', endColorstr='#bf7abe');
+    color: #000000;
+}
+.CalendarItem12
+{
+    background: #5959c4;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5959c4), to(#222194));
+    background: -moz-linear-gradient(top, #5959c4, #222194);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5959c4', endColorstr='#222194');
+    color: #000000;
+}
+.CalendarItem13
+{
+    background: #45bd63;
+    background: -webkit-gradient(linear, left top, left bottom, from(#45bd63), to(#068725));
+    background: -moz-linear-gradient(top, #45bd63, #068725);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45bd63', endColorstr='#068725');
+    color: #000000;
+}
+.CalendarItem14
+{
+    background: #efe9d0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#efe9d0), to(#d8cb8f));
+    background: -moz-linear-gradient(top, #efe9d0, #d8cb8f);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efe9d0', endColorstr='#d8cb8f');
+    color: #000000;
+}
+.CalendarItem15
+{
+    background: #eba576;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eba576), to(#dd5c08));
+    background: -moz-linear-gradient(top, #eba576, #dd5c08);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eba576', endColorstr='#dd5c08');
+    color: #000000;
+}
+.CalendarItem16
+{
+    background: #eccd77;
+    background: -webkit-gradient(linear, left top, left bottom, from(#eccd77), to(#dda307));
+    background: -moz-linear-gradient(top, #eccd77, #dda307);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eccd77', endColorstr='#dda307');
+    color: #000000;
+}
+.CalendarItem17
+{
+    background: #99e1f3;
+    background: -webkit-gradient(linear, left top, left bottom, from(#99e1f3), to(#4e99e4));
+    background: -moz-linear-gradient(top, #99e1f3, #4e99e4);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99e1f3', endColorstr='#4e99e4');
+    color: #000000;
+}
+.CalendarItem18
+{
+    background: #ce8973;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ce8973), to(#a65b46));
+    background: -moz-linear-gradient(top, #ce8973, #a65b46);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce8973', endColorstr='#a65b46');
+    color: #000000;
+}
+.CalendarItem19
+{
+    background: #c3585b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c3585b), to(#942127));
+    background: -moz-linear-gradient(top, #c3585b, #942127);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c3585b', endColorstr='#942127');
+    color: #000000;
+}
+.CalendarItem20
+{
+    background: #cea474;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cea474), to(#a67647));
+    background: -moz-linear-gradient(top, #cea474, #a67647);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cea474', endColorstr='#a67647');
+    color: #000000;
+}
+.CalendarItem21
+{
+    background: #ce7588;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ce7588), to(#a6475f));
+    background: -moz-linear-gradient(top, #ce7588, #a6475f);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce7588', endColorstr='#a6475f');
+    color: #000000;
+}
+.CalendarItem22
+{
+    background: #fcbebe;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcbebe), to(#fcbebe));
+    background: -moz-linear-gradient(top, #fcbebe, #fcbebe);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcbebe', endColorstr='#fcbebe');
+    color: #000000;
+}
+.filter_bg
+{
+    background: #f78d1d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e9f4ff), to(#bbd3eb));
+    background: -moz-linear-gradient(top, #e9f4ff, #bbd3eb);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9f4ff', endColorstr='#bbd3eb');
+    border: 0px none;
+    height: 30px;
+    text-align: right;
+    padding: 5px 10px 5px 0px;
+}
+.filter_bg span
+{
+    color: #005a86;
+}
+.filter_bg select
+{
+    width: 150px;
+}
+.option_bg
+{
+    border: 0px none;
+    height: 40px;
+}
+.option_bg input
+{
+    background: #77ccf8;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#e0e0e0));
+    background: -moz-linear-gradient(top, #f0f0f0, #e0e0e0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0f0', endColorstr='#e0e0e0');
+    border: 0px none;
+    border-radius: .3em;
+    height: 20px;
+    width: 50px;
+    color: #353535;
+}
+.ms-acal-header
+{
+    margin: 0px;
+    background: #e8eff6;
+    height: 30px;
+    padding: 7px 10px 0 10px;
+}
+.calendar_body
+{
+    border: 0px none;
+}
+tr td div.ms-acal-today
+{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4aaadb', endColorstr='#3483ab');
+}
+.calendar_body th
+{
+    background: #fffcf0;
+    border: 1px solid #D9DDE1;
+}
+.ms-acal-rootdiv
+{
+    margin: 0px;
+}
+
+/*------------------------- Role Management */
+.ScrollRoleDiv
+{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+/*------------------------- Self Assessmrnt Form css */
+.assessment_box
+{
+    border: 1px solid #6d96c6;
+    border-radius: 7px;
+    margin-top: 30px;
+    padding: 1%;
+    margin-bottom: 5px;
+}
+.assessment_box fieldset
+{
+    border: 0px none;
+    margin: 10px 0 7px 0;
+    float: left;
+    clear: both;
+    width: 100%;
+}
+.assessment_box .overflow_auto_checkbox
+{
+    width: 100%;
+}
+.assessment_box input[type="checkbox"], .assessment_box input[type="radio"]
+{
+    margin: 0 5px 0 6px;
+}
+.num_space
+{
+    margin-left: 3px;
+}
+.overflow_auto_checkbox table
+{
+    width: 100%;
+}
+.overflow_auto_checkbox td
+{
+    width: 25%;
+    vertical-align: top;
+}
+.overflow_auto_checkbox
+{
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.overflow_auto_checkbox td label
+{
+    padding-left: 8px;
+    padding-bottom: 5px;
+    display: block;
+    width: 85%;
+}
+.overflow_auto_checkbox input
+{
+    float: left;
+}
+.error_margin140
+{
+    margin-left: 160px;
+    float: left;
+    clear: both;
+}
+.error_search
+{
+    margin-left: 6px;
+    float: left;
+    clear: both;
+}
+/*----Help Glossary-----*/
+table[summary="Glossary"]
+{
+    border-spacing: 0;
+}
+table[summary="Glossary "].ms-listviewtable
+{
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table[summary="Glossary "].ms-listviewtable tr td
+{
+    padding: 10px;
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+table[summary="Glossary "] tr.ms-alternating
+{
+    background: #F1F1F1;
+}
+.td table.ms-listviewtable
+{
+    border-collapse: collapse;
+}
+table.ms-listviewtable > tbody > tr > td
+{
+    border: 1px solid transparent;
+}
+.ms-rtestate-field > div > p
+{
+    margin: 0;
+}
+.RadMenu .rmSlide .rmVertical .rmLast .rmLeftImage + .rmText, .RadMenu_Context .rmGroup .rmLeftImage + .rmText
+{
+    padding: 0;
+}
+/*------------------------- RadGrid (ServicePlan) */
+html body .RadInput_Default .riTextBox, html body .RadInputMgr_Default, .RadGrid .rgFilterBox
+{
+    height: 17px;
+    text-indent: 5px;
+    color: #555;
+    background: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+tr.rgFilterRow td input
+{
+    height: 20px;
+}
+.RadGrid .rgFilterRow td
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.RadComboBox .rcbInputCell .rcbInput
+{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    vertical-align: middle;
+    padding: 2px 0 1px;
+    outline: 0;
+    -webkit-appearance: none;
+    height: 19px;
+}
+.RadComboBox .rcbReadOnly td.rcbArrowCell a
+{
+    width: 16px;
+    text-indent: -9999px;
+}
+
+/*------------------------- Send a Comment css */
+.sendComment
+{
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    padding: 10px 0;
+    width: 100%;
+    border-top: none;
+}
+.sendComment div > label
+{
+    float: left;
+    width: 370px;
+    margin: 0;
+    vertical-align: middle;
+}
+.sendComment div > input[type='text']
+{
+    float: left;
+    width: 266px;
+}
+.error_Margin10
+{
+    float: left;
+    clear: both;
+    margin-left: 160px;
+    margin-top: 5px;
+}
+.sendComment div > span.error_Margin10
+{
+    float: left;
+    clear: both;
+    margin-left: 370px;
+    margin-top: 5px;
+}
+.sendComment div > label > label
+{
+    float: left;
+}
+.sendComment textarea
+{
+    width: 250px;
+    float: left;
+}
+.sendCommentSubmit
+{
+    float: right;
+}
+.RadCaptcha label
+{
+    float: left;
+    margin-left: 10px;
+}
+.rcRefreshImage
+{
+    margin-top: 10px;
+}
+#ctl00_m_g_c430156b_55c9_4485_a27f_25013532a3c1_ctl00_RadCaptcha_CaptchaTextBox
+{
+    float: left;
+}
+/*---------------------DataFilterSettings */
+.rad_Width
+{
+    width: 68%;
+}
+span.lblCount
+{
+    float: left;
+    width: 26%;
+    clear: both;
+}
+span.ckhAny
+{
+    margin: 5px 0 0 0;
+    width: 68%;
+}
+span.lblCount + .select_multi
+{
+    margin: 5px 0 0 0;
+}
+.datafilter label
+{
+    width: 25%;
+}
+.datafilter input[type="text"]
+{
+    width: 68%;
+}
+.datafilter input[type="checkbox"]
+{
+    float: left;
+}
+span.ckhAny input[type="checkbox"]
+{
+    margin: 1px 8px 0 0;
+}
+.ajax__tab_xp .ajax__tab_body
+{
+    padding: 10px 7px 0px 7px;
+}
+#skm_LockPane > div > .user-mar-bottom
+{
+    margin-bottom: 15px;
+}
+.user-ctrl-butt
+{
+    margin-bottom: 70px;
+}
+.user-ctrl-butt-submit
+{
+    float: right;
+    margin-right: 35px;
+}
+
+/*---------------------Resource Center NearYou*/
+TABLE.ms-listviewtable > TBODY > TR > TD.ms-stylebox
+{
+}
+
+/*--------------------Consumer home*/
+.nav_dropdown
+{
+    width: 150px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+}
+.nav_dropdown
+{
+    width: 150px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+}
+.welcomeAdmin .userName
+{
+    width: 170px;
+    word-wrap: break-word;
+}
+.welcomeAdmin > span
+{
+    font-weight: bold;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.welcomeAdmin
+{
+    margin: 0px 0 0px 15px;
+    padding-top: 13px;
+}
+.consumer_label
+{
+    margin: 5px 0 0 15px;
+}
+.banner_head
+{
+    color: #F79646;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.tabmenu_static
+{
+    padding: 0px 3px;
+    height: 35px;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+/*------------------------- tell as your friend*/
+.ms-standardheader
+{
+    margin: 0em;
+    text-align: left;
+    color: #333;
+}
+.ms-formvalidation
+{
+    color: #ff0000;
+}
+.ms-standardheader span
+{
+    color: #ff0000;
+    margin-left: 0px;
+}
+.ms-formbody .ms-rtefield
+{
+    border-radius: 4px;
+}
+.ms-dlgContent
+{
+    border: none;
+}
+.ms-dlgBorder
+{
+    background: #fff;
+}
+.ms-formbody
+{
+    vertical-align: top;
+    background: none;
+    border-top: none;
+    padding: 0px 6px 12px 6px;
+}
+.ms-formlabel
+{
+    text-align: left;
+    border-top: none;
+    padding-top: 3px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    color: #525252;
+    font-weight: bold;
+}
+.ms-formline
+{
+    border-top: none;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.ms-dlgBorder .ms-dlgTitle
+{
+    background-image: none;
+    height: auto;
+    padding: 1px 0 10px;
+}
+.ms-dlgTitleText
+{
+    padding-top: 3px;
+}
+.img-responsive
+{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.ms-formbodysurvey input[type='text']
+{
+    margin-top: 10px;
+}
+td.ms-toolbar
+{
+    float: none;
+}
+#onetIDListForm img
+{
+    display: none;
+}
+.ms-ButtonHeightWidth
+{
+    padding: 0px 5px 3px 5px;
+    cursor: pointer;
+    border: 0px none;
+    border-radius: .3em;
+    width: auto;
+    font-weight: bold;
+    margin-right: 5px;
+    height: auto;
+}
+.ms-toolbar
+{
+    float: left;
+}
+.ms-separator
+{
+    float: left;
+}
+
+/*----------------Manage Settings*/
+.ActiveMapping > div > div > span > label
+{
+    width: 93px;
+}
+.test_float
+{
+    float: left;
+    clear: both;
+}
+.ms-rtestate-field a
+{
+    text-decoration: underline;
+}
+#MSO_ContentTable
+{
+    margin-top: 0px;
+}
+.ms-titlerowborder
+{
+    border-right: 1px solid #000;
+}
+.imgOnline
+{
+    margin: 10px 0 0 10px;
+    border-width: 0px;
+}
+.box_2col > .inner_2col > fieldset > .rolemangemnt-select
+{
+    width: 150px;
+}
+.box_2col > .inner_2col > fieldset > .rolemangemnt-label
+{
+    width: 100px;
+}
+.check_div > .managestored-label
+{
+    width: 216px;
+}
+.check_div > .managestored-label label
+{
+    width: 130px;
+}
+/*Schedule Summary */
+.RadScheduler .ServiceDelivery .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 50px;
+    background: #00B0F0;
+}
+.RadScheduler .ServicePlan .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 50px;
+    background: #7030a0;
+}
+.RadScheduler .Activities .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 50px;
+    background: #ffc000;
+}
+.RadScheduler .Assessments .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 150px;
+    background: #00b050;
+}
+.RadScheduler .ServiceSuspension .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 50px;
+    background: #ff0000;
+}
+.ServiceDeliveriesBg, .rsApt.ServiceDelivery.rsAptSimple
+{
+    background: #ffe79c !important;
+}
+.ServicePlansBg, .rsApt.ServicePlan.rsAptSimple
+{
+    background: #deebf7 !important;
+}
+.AssessmentsBg, .rsApt.Assessments.rsAptSimple
+{
+    background: #add38c !important;
+}
+.ActivitiesBg, .rsApt.Activities.rsAptSimple
+{
+    background: #ffe7d6 !important;
+}
+.ServiceSuspensionBg, .rsApt.ServiceSuspension.rsAptSimple
+{
+    background: #ff7563 !important;
+}
+.RadScheduler .rsContentScrollArea, .RadScheduler .rsContentWrapper
+{
+    height: 100% !important;
+}
+.RadScheduler .rsMonthView .rsApt, .RadScheduler .rsWeekView .rsApt
+{
+    width: 100% !important;
+}
+.RadScheduler .rsMonthView .rsShowMore, .RadScheduler .rsWeekView .rsApt, .rsApt.rsAptSimple, .RadScheduler .rsMonthView div.rsWrap
+{
+    height: auto !important;
+}
+.RadScheduler .rsWeekView .rsApt
+{
+    left: 0 !important;
+}
+.RadScheduler .rsMonthView .rsShowMore
+{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.RadScheduler .rsAptSimple .rsAptContent, .RadScheduler .rsMonthView .rsShowMore
+{
+    float: left;
+    line-height: normal;
+}
+.RadScheduler .rsWeekView .rsAptSimple .rsAptContent, .RadScheduler .rsMonthView .rsAptSimple .rsAptContent
+{
+    width: 91%;
+    max-height: 125px;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+.RadScheduler .rsAptSimple
+{
+    background: #f2f2f2;
+}
+.ms-WPBody .RadScheduler .rsDateHeader
+{
+    padding: 1px 4px 3px;
+    text-decoration: none;
+    color: #333333;
+}
+.RadScheduler .rsMonthView .rsApt
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+}
+.RadScheduler .ServicePlan .rsAptContent
+{
+    background: url(/media%20library/his.wrc/webresource.axd.png);
+    background-size: auto 50px;
+    background: #7030a0;
+}
+.RadScheduler .Assessments .rsAptContent, .RadScheduler .ServicePlan .rsAptContent, .RadScheduler .ServiceDelivery .rsAptContent, .RadScheduler .Activities .rsAptContent, .RadScheduler .ServiceSuspension .rsAptContent
+{
+    background: transparent;
+    padding: 2px 5px;
+}
+.s4-pr.s4-widecontentarea.smallFont .s4-ba
+{
+    width: 100%;
+}
+.RadScheduler .rsInnerFix
+{
+    margin-right: 0 !important;
+}
+.RadScheduler .rsAptSimple .rsAptIn, .RadScheduler .rsAptSimple .rsAptMid
+{
+    width: 100%;
+}
+.rsContentScrollArea
+{
+    overflow-y: hidden !important;
+}
+.fetchData > span
+{
+    word-wrap: break-word;
+}
+#ctl00_PlaceHolderLeftNavBar_CGLeftNavigation1_ctl00_lblchangeConsumer
+{
+    display: none;
+}
+#ctl00_PlaceHolderLeftNavBar_CGLeftNavigation1_ctl00_ddlConsumer
+{
+    display: none;
+}
+.RadScheduler .rsAptSimple
+{
+    background: #f2f2f2;
+}
+.RadScheduler .rsMonthView .rsDateBox
+{
+    display: block;
+    height: auto;
+    white-space: nowrap;
+    background-repeat: repeat-x;
+    background-position: 0 -299px;
+    border-bottom: 1px solid #fff;
+}
+.RadScheduler_Default .rsContentTable td
+{
+    border-bottom-style: solid;
+    height: 150px;
+}
+.RadScheduler_Default .rsMonthView .rsOtherMonth
+{
+    background: #f9f9f9;
+}
+.RadScheduler_Default
+{
+    border-right: 1px solid #e8eaec;
+}
+.RadScheduler .rsAmPm
+{
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 10px;
+    text-transform: uppercase;
+    position: relative;
+    top: 0;
+    padding: 0 1px;
+}
+.RadScheduler .rsAptIn, .RadScheduler .rsAptMid, .RadScheduler .rsAptContent, .RadScheduler .rsApt
+{
+    position: relative;
+    float: left;
+}
+.RadScheduler .rsAptMid
+{
+    border-width: 1px;
+    background: none;
+    top: 0;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+}
+.RadPicker
+{
+    float: left;
+}
+.eligibleWrap
+{
+    border: 1px solid #9E9E9E;
+}
+.RadWindow .rwWindowContent .radalert
+{
+    background-image: none;
+}
+.RadWindow .rwDialogPopup
+{
+    padding: 0;
+}
+.RadWindow .rwDialogText
+{
+    margin-bottom: 10px;
+    padding-left: 46px;
+    padding-bottom:25px;
+}
+.RadWindow .rwDialogPopup .rwPopupButton
+{
+    float: right;
+    margin: 8px 8px 16px 0;
+}
+.RadWindow .rwWindowContent .rwPopupButton:hover
+{
+    margin: 8px 8px 16px 0;
+}
+
+/*cousumer Ribbon*/
+.rsWeekView th a:link
+{
+    color: black;
+}
+
+/*Provider search*/
+.searchResultsHighlightedItems
+{
+    /*background-image: url(/_layouts/images/his.wrc/bestbet.gif);     background-color: #FFFF99;*/
+    background-repeat: no-repeat;
+    background-size: 120px auto;
+    background-position: left center;
+}
+.searchResultsHighlightedItems td
+{
+    /* border-bottom: 1px solid #ddd;*/
+}
+.searchResultsHighlightedItems > td > div
+{
+    /*margin-left: 120px;*/
+}
+.searchResultTbl tr td hr
+{
+    display: none;
+}
+.provDetails
+{
+    border: 0px none;
+    padding: 20px;
+}
+.light_hr
+{
+    margin: 2px 0;
+    height: 1px;
+    clear: both;
+}
+.provDetails fieldset
+{
+    border: 0px none;
+    float: left;
+    clear: both;
+    padding-left: 0px;
+}
+.provDetails .column
+{
+    float: left;
+    font-weight: bold;
+    padding: 0 5px 0 0px;
+    width: 175px;
+    white-space: nowrap;
+}
+.provDetails fieldset div.column > span
+{
+    padding-left: 0;
+    white-space: normal;
+}
+.provDetails .data
+{
+    float: left;
+    padding: 0 0 0 5px; /*white-space: nowrap;*/
+}
+.provDetails .RadGrid_Default
+{
+    background: transparent;
+    color: #333333;
+    clear: both;
+}
+.providerWrap > div > fieldset
+{
+    float: left;
+    width: 45.8%;
+    margin-right: 1%;
+}
+.ExternalClass1AE1C2EE4FA04E7B9751C0BE4AB008C0 .ms-WPBody a:link
+{
+    margin-left: 0;
+    text-decoration: underline;
+}
+.providerWrap > div > fieldset.hoursofOperation
+{
+    margin: 0;
+    float: right;
+}
+.spamControlWrap
+{
+    float: left;
+}
+.providerWrap fieldset, .spamControlWrap
+{
+    padding: 0 8px 8px; /*    width: 47%;*/
+    margin-bottom: 8px;
+}
+.providerWrap fieldset > div
+{
+    margin-top: 10px;
+}
+.providerWrap fieldset > div > table
+{
+    width: 100%;
+    border: 1px solid #000;
+}
+.providerWrap fieldset > div > table > tbody > tr > td, .providerWrap fieldset > div > table > tbody > tr > th
+{
+    padding: 5px 5px;
+}
+.providerWrap fieldset td input[type="text"]
+{
+    width: 70%;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.class_ProviderInfo div span
+{
+    width: 25%;
+    display: inline-block;
+}
+.class_ProviderInfo div span.test_float
+{
+    width: 140px;
+    word-wrap: break-word;
+}
+.providerWrap .descrptionWrap
+{
+    clear: both;
+    margin-top: 10px;
+    padding: 0;
+    width: 50%;
+}
+.descrptionWrap li textarea
+{
+    width: 63%;
+}
+.descrptionWrap li span, .descrptionWrap li textarea
+{
+    float: left;
+}
+.descrptionWrap li span
+{
+    width: 35%;
+}
+.rightBottomBlock
+{
+    float: right;
+    margin-top: 5%;
+}
+.rightBottomBlock span
+{
+    display: block;
+    text-align: right;
+    margin-bottom: 3px;
+}
+.rightBottomBlock ul
+{
+    float: right;
+    margin-top: 5px;
+    list-style: none;
+}
+
+.providerListResults .fetchData strong
+{
+    float: left;
+    margin: 0 12px 0 0;
+}
+.providerListResults .fetchData
+{
+    margin-top: 6px;
+}
+.providerListResults .services
+{
+    margin: 0;
+    clear: both;
+}
+.services > tbody > tr
+{
+    display: inline-block;
+    min-width: 400px;
+}
+body #s4-workspace
+{
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.password-control
+{
+    width: 183px;
+}
+.rgWrap.rgAdvPart
+{
+    width: 210px;
+}
+.wp_box
+{
+    margin-bottom: 20px;
+}
+/*.rgAdvPart > span
+{
+    color: #fff;
+}*/
+#skm_LockPane .ms-WPBody a:link
+{
+    margin-top: 5px;
+}
+#skm_LockPane
+{
+    border-radius: 7px;
+}
+#skm_LockPane .inner_box
+{
+    border-radius: 7px;
+    width: 96%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-top: 5px;
+}
+.tab-links
+{
+    margin-left: -5px;
+}
+.tab-links:after
+{
+    display: block;
+    clear: both;
+    content: '';
+}
+.tab-links li
+{
+    margin: 0px 1px;
+    list-style: none;
+    display: inline;
+}
+.tab-links a
+{
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0px 0px;
+    background: #dfe0e5;
+    font-weight: 600;
+    color: #000;
+    transition: all linear 0.15s;
+    margin-top: 5px;
+}
+#skm_LockPane li.active a, li.active a:hover
+{
+    border: solid 1px #dfe0e5;
+    border-bottom: none;
+}
+.pnl_hide
+{
+    display: none;
+}
+.pnl_show
+{
+    display: block;
+}
+.tabs
+{
+    margin-left: 25px;
+}
+#skm_LockPane input[type="checkbox"]
+{
+    float: left;
+}
+.divWaiting
+{
+    position: absolute;
+    background: #FAFAFA;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+}
+.LockOff
+{
+    display: none;
+    visibility: hidden;
+}
+.LockOn
+{
+    display: block;
+    visibility: visible;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    width: 99%;
+    height: 99%;
+    background: #ccc;
+    text-align: center;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+}
+#dvLoading
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -32px 0 0 -32px;
+}
+#skm_LockPane div.RadListBox .rlbText
+{
+    white-space: nowrap;
+    display: inline-block;
+}
+#WebPartWPQ1 ul, .emailOptions ul, #skm_LockPane ul, .formContainer ul, .despBlock ul, .consumer-details-box ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.user_control label
+{
+    width: 31%;
+}
+
+/*EULA Popup*/
+.agreeLabel, .agreeFootLabel
+{
+    display: block;
+    margin-bottom: 10px;
+}
+.licenseparent
+{
+    border: 1px solid black;
+    height: 330px;
+    overflow-y: auto;
+    padding: 10px;
+}
+.RadMenu
+{
+    overflow: hidden;
+}
+.ms-dlgOverlay
+{
+    position: fixed;
+}
+#ctl00_MSO_ContentDiv .ms-rtestate-write
+{
+    outline: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+#ctl00_MSO_ContentDiv .ms-rtefield
+{
+    border: none;
+    min-width: inherit;
+}
+.RadGrid.RadGrid_Default
+{
+    overflow: auto;
+}
+.RadGrid.RadGrid_Default.optKeyuser
+{
+    overflow-x: hidden;
+}
+.ms-wpContentDivSpace .inner_box .left_form
+{
+    margin: 0 0 15px 0;
+    padding-top: 0;
+    clear: both;
+}
+fieldset.right_form
+{
+    clear: none;
+}
+.s4-titlerowhidetitle.header_bg
+{
+    border-right: 1px solid #9BBB59;
+}
+.consumer-details-box
+{
+    max-width: 1060px;
+    margin-top: 0;
+}
+.consumer-details-box .left_form
+{
+    width: 45%;
+}
+.consumer-details-box .right_form
+{
+    width: 50%;
+    padding: 0px;
+}
+.consumer-details-box .left_form
+{
+    margin: 0 10px 0 0;
+    float: left;
+}
+.consumer-details-box .right_form
+{
+    float: left;
+    clear: right;
+}
+.consumer-details-box li
+{
+    width: 100%;
+    padding: 5px 0;
+    float: left;
+}
+.consumer-details-box li span
+{
+    margin-right: 20px;
+    min-width: 35%;
+}
+.consumer-details-box li span select
+{
+    float: left;
+}
+select.nav_dropdown
+{
+    /*background: url(/_layouts/images/HIS.WRC/select-arrow.jpg) no-repeat right transparent;*/
+    border: none;
+    font-weight: bold;
+    margin-left: -4px;
+    -webkit-appearance: none;
+}
+select.nav_dropdown option
+{
+    background: #fff;
+}
+select.nav_dropdown:focus
+{
+    outline: none;
+}
+.RadGrid .rgGroupItem input, .RadGrid .rgCommandRow img, .RadGrid .rgHeader input, .RadGrid .rgFilterRow img, .RadGrid .rgFilterRow input, .RadGrid .rgPager img
+{
+    vertical-align: text-top;
+}
+.RadPicker td a
+{
+    margin: 0 2px 0 3px;
+}
+.RadPicker table.rcTable .rcInputCell
+{
+    padding: 0;
+}
+.RadPicker_Default .rcCalPopup, .RadPicker_Default a.rcDisabled.rcCalPopup:hover
+{
+    background-position: 0 -50px;
+}
+.RadGrid .rgNumPart
+{
+    margin: 0px 5px 0 5px;
+}
+.rgMasterTable .rgFilterRow td
+{
+    vertical-align: top;
+    position: relative;
+    padding-right: 30px;
+}
+.RadGrid .rgFilter
+{
+    position: absolute;
+}
+.rgFilterRow .rgFilterBox, html body .RadInput_Default .riTextBox
+{
+    width: 80px !important;
+}
+.rgFilterRow .rgFilterBox:focus, html body .RadInput_Default .riTextBox:focus
+{
+    border-color: #66afe9;
+}
+.data_details a.LinkPaging
+{
+    padding: 2px 8px;
+    border: solid SkyBlue 1px;
+    margin: 2px;
+}
+.data_details a
+{
+    text-align: center;
+}
+span [title="This business is out of business. Please remove from the directory"]
+{
+    margin-top: 10px;
+    display: block;
+}
+.ResourceServed .divHeader
+{
+    height: auto;
+    border-left: #9bbb59 1px solid;
+}
+.optKeyuser a.input_button
+{
+    background: transparent;
+    padding: 5px 10px;
+    box-shadow: none;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.service-label
+{
+    margin-top: 5px;
+    float: left;
+}
+.keyword-mapping
+{
+    float: left;
+    clear: both;
+    margin-top: 10px;
+}
+
+/* chat css */
+.chat-startup
+{
+    width: 480px;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+.chat-welcome-note
+{
+    color: #E48118;
+    text-align: center;
+    margin: 10px 0 50px;
+    font-weight: bold;
+    border-bottom: solid rgba(0,0,0,.15) 2px;
+    padding-bottom: 40px;
+}
+.chat-startup-table
+{
+    width: 100%;
+}
+.chat-startup input
+{
+    width: 100%;
+    margin: 4px 0;
+    padding: 3px 0;
+    text-indent: 10px;
+}
+.chat-startup textarea
+{
+    margin: 4px 0;
+    text-indent: 0px;
+}
+.chat-startup input[type='submit']
+{
+    width: auto;
+    padding: 7px 20px;
+    text-indent: 0;
+    margin-top: 20px;
+    color: #fff;
+}
+.chat-startup-table span, .chat-startup-table span label
+{
+    display: block;
+    margin: 0 0 15px;
+}
+.chat-startup-table td
+{
+    vertical-align: top;
+}
+.chating-block
+{
+    color: #000;
+    float: right;
+    padding: 8px 10px;
+    white-space: normal;
+    word-wrap: break-word;
+    width: 310px;
+    background: #fff;
+    border-radius: 5px;
+}
+.chat-start-time
+{
+    color: #999;
+}
+.chat-user-block
+{
+    color: #000;
+    float: left;
+}
+.chat-section
+{
+    width: 100%;
+    margin-bottom: 20px;
+    float: left;
+}
+.chatBoxWrap
+{
+    clear: both;
+}
+.character-count
+{
+    float: left;
+    margin: 10px 0 5px;
+    border-top: solid rgba(0,0,0,.15) 2px;
+    width: 100%;
+    padding-top: 10px;
+}
+.chat-page
+{
+    width: 490px;
+    padding: 30px;
+}
+.chat-display-panel
+{
+    float: left;
+    height: 225px;
+    overflow: auto;
+    margin-bottom: 20px;
+}
+.text-popup
+{
+    overflow: auto;
+    height: 240px;
+    padding-right: 10px;
+}
+.chat-startup.chat-page textarea
+{
+    margin-bottom: 5px;
+}
+.chat_errormsg_css
+{
+    margin-bottom: 5px;
+    color: red;
+}
+.chat_limited_word_msg
+{
+    clear: both;
+}
+.chat_textbox
+{
+    width: 96%;
+    padding: 7px;
+}
+.chat-textbox
+{
+    width: 97%;
+    padding: 7px;
+}
+fieldset.TextWrapWidth
+{
+    margin: 0 15px 0 0;
+}
+fieldset.TextWrapWidth .input-btn-margin
+{
+    margin-left: 5px;
+}
+fieldset.TextWrapWidth .invalidformat
+{
+    float: left;
+    margin-left: 18%;
+}
+fieldset.TextWrapWidth label
+{
+    margin-right: 90px;
+}
+/*
+#WebPartWPQ1, .right_webcol
+{
+    margin-top: 10px;
+}*/
+.left_webcol, .right_webcol
+{
+    margin-top: 10px;
+}
+.error_marginsearch160
+{
+    margin-left: 160px;
+    color: red;
+}
+
+/*----------------Consumer Ribbon*/
+.conmenu-item
+{
+    position: relative;
+    float: left;
+}
+
+/*ul Styles*/
+.conmenu-item ul
+{
+    background: #fff;
+    line-height: 30px;
+    height: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+}
+.conmenu-item:hover ul
+{
+    height: auto;
+}
+.conselemenu
+{
+    float: left;
+    width: 50%;
+    margin-right: 15px;
+    word-wrap: break-word;
+}
+.ms-MenuUILabel, .ms-MenuUILabelRtL, .ms-menuuilabelcompact, .ms-menuuilabelcompactRtl
+{
+    color: #000;
+}
+/*li Styles*/
+.conmenu-item li
+{
+    border-bottom: 1px solid #eee;
+}
+
+.conmenu-item li:hover
+{
+    background: #eee;
+}
+.conmenu-item ul a
+{
+    margin: 0 10px;
+    text-decoration: none;
+    display: block;
+    width: 200px;
+}
+.conmenu-item ul li a, .conmenu-item ul li a :hover
+{
+    text-decoration: none !important;
+}
+.RadGrid_Default .rgAltRow, .RadGrid.RadGrid_Default.rgrollmgt .rgRow
+{
+    background: #f2f2f2;
+}
+/*First Item Styles*/
+.alpha p
+{
+    padding: 8px 12px;
+    color: #aaa;
+}
+
+.alpha p a
+{
+    color: #aaa;
+    font-style: italic;
+}
+
+.alpha p a:hover
+{
+    color: #ccc;
+}
+.conmenu-item > .input_button
+{
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.conmenu-item > .input_button > .arrow
+{
+    margin-left: 10px;
+    margin-right: 0px;
+    float: none;
+}
+/* themeable css */
+a:visited, .ms-viewheadertr th a, .menu, .title .titleLink, .topics a, .topicsTD a, .headerList p, .inlineLinks a, .paraLink, .tabmenu_static a, .ms-rte-wpbox a, a:link, .alphalist li a, input[type='submit'], input[type="button"], button, .butStyle, .input_button, .input_button2, input[type='submit'], input[type="button"], .butStyle, .chat_button, .ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link, .ms-vb a:visited, .ms-vb2 a:visited, .ms-vb-user a:visited, input.chat-button
+{
+    
+    color: #30518A;
+}
+.ms-vb-user a:link, .ms-vb-user a:link:hover, .grid_button, .ms-ButtonHeightWidth
+{
+    
+    color: #30518A !important;
+}
+h4.search_pro_title, .ms-WPBody a:link, .s4-ql ul.root ul > li > a, .assessment_box, .left_col ul li ul li, .box, .s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited, h3.ms-WPBody, h5.ms-WPBody, .search_result_box, .submenu, .errorbox, input, select, textarea, h4.sendComment_details, .sideDrop ul.static > li > ul.static li a, .sideDrop ul.static > li > ul.static li a:hover, .ms-WPBody, h4.search_pro_title, .box_2col_2, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:hover, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:active, .box_2col, .ms-disc .ms-vh2 .ms-selectedtitle .ms-vb, table.ms-disc-bar, .RadMenu.RadMenu_Default > ul > li > a, .rgCaption, .ms-vb a:link, a:link, table.ms-disc td, .RadGrid .rgNumPart span:focus, .RadGrid .rgNumPart span:hover, .RadGrid_Default .rgNumPart a.rgCurrentPage span, .ms-WPBody a:visited, .pageTellAFriend a, .pagePrint a, .pageFav a, .BackMemberSite a
+{
+    
+    color: #3C3C3C;
+}
+.RadGrid .rgGroupHeader td.grp_button p a, .ms-vh table.ms-selectedtitle, .ms-vh2 table.ms-selectedtitle, .ms-vh-icon table.ms-selectedtitle, .ms-welcomeMenu, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink:hover, .s4-toplinks, .footer, .s4-ql a.selected, .RadMenu > ul > li > a:active, .RadMenu > ul > li > a:hover, .RadMenu > ul > li > a:focus, .ms-viewheadertr th, tr td div.ms-acal-today, .ms-dlgTitle, .rgPager td, .ms-disc .ms-vh2 .ms-selectedtitle .ms-vb, .ms-disc .ms-vh2 .ms-unselectedtitle .ms-vb, table.ms-disc-bar, .table_heading_chat, .tr.ms-viewheadertr > th.ms-vh, tr.ms-viewheadertr > th.ms-vh2, .tr.ms-viewheadertr > th.ms-vh, tr.ms-viewheadertr > th.ms-vh2:hover, .rgSelectedRow, .MasterTable_Default .GridHeader_Default, .MasterTable_Default .ResizeHeader_Default, input.chat-button, .table_heading, .chatuserHeader, .table_heading, .header_bg, .footer, .s4-ql ul.root .static .selected.menu-item:hover, .s4-toplinks .RadMenu_Default a.rmLink:hover, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink:hover, .leftcol .RadMenu_Default a.rmSelected, .RadMenu_Default a.rmLink.rmSelected:hover span, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a.rmSelected, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a.rmSelected, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a.rmSelected:hover, table[summary="Message Board"] .ms-disc-padabove .ms-disc-bar tr, tr.ms-viewheadertr > th.ms-vh:hover, .fontsizer-active, .customHeader
+{
+    
+    background-color: #536FAE;
+}
+.RadGrid .rgHeader, .RadGrid th.rgResizeCol, .tblWhatPage th, .s4-toplinks .RadMenu_Default a.rmFocused, .s4-toplinks .RadMenu_Default a.rmSelected, .tab-links a:hover, li.active a, li.active a:hover, .optionHeader, .resultHeader, .table_heading, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink.rmSelected, .radHeader th, .v2sGrid .pagination-wrapper, #topMenu ul li.active a, #topMenu ul li:active a, #topMenu ul li:hover a
+{
+    
+    background-color: #536FAE !important;
+}
+.v2sGrid .pagination > div.page-no.active a
+{
+    color: #fff;
+}
+.RadGrid_Default .rgSelectedRow
+{
+    
+    background-color: #536FAE !important;
+    background-image: none;
+}
+.light_hr
+{
+    
+    color: #536FAE;
+}
+.welcomeAdmin
+{
+    
+    color: #41588B;
+}
+.response-option, .table_heading_chat, #skm_LockPane, #skm_LockPane .inner_box
+{
+    
+    border: 1px solid #536FAE;
+}
+.home_box, .chat-startup, .wp_box
+{
+    
+    border: 2px solid #536FAE;
+}
+.header_bg
+{
+    
+    border-bottom: 1px solid #536FAE;
+}
+.ms-WPBody th a:link, .ms-vh2, .ms-vh div a:link, .ms-vh2 div a:link, .table_heading, .chatuserHeader, .RadGrid .rgHeader, .RadGrid th.rgResizeCol, .tblWhatPage th, .footer p, .footer p a:hover, .CalendarItem1, .button_container a, .button_container2px a, .rgHeader, .rgHeader a, #pagination-flickr .active, .white_text, .table_heading_chat, .ms-cal-monthMultiDay, .ms-cal-monthMultiDay a, .ms-cal-monthMultiDay a:link, .ms-cal-monthMultiDay a:active, .ms-cal- monthMultiDay a:visited, .ms-cal-weekitem a:hover, .title .submitInput, .title .textInput, .tabmenu_static > ul > li > a, .RadMenu_Default a.rmLink.rmSelected:hover span, .RadMenu_Default a.rmLink.rmSelected span, .RadMenu_Default.tabmenu_static .rmHorizontal .rmRootLink span.rmText:hover, .RadMenu_Default.tabmenu_static .rmHorizontal .rmRootLink:hover span.rmText, .RadMenu_Default a.rmLink.rmSelected.rmFocused span, table[summary="Message Board"] .ms-disc-padabove .ms-disc-bar tr, table[summary="Message Board"] .ms-disc-padabove .ms-disc-bar tr div, table[summary="Message Board"] .ms-disc-padabove .ms-disc-bar tr a, .ms-disc .ms-vh2 .ms-unselectedtitle .ms-vb, th .ms-vb, .radHeader th, .RadGrid_Default .rgInfoPart, .RadGrid_Default .rgInfoPart strong, .RadGrid .rgPagerLabel, .RadGrid .rgNumPart span, .RadGrid .rgGroupHeader td.grp_button p a, .RadGrid_Default .rgSelectedRow td , .customHeader
+{
+    
+    color: #fff;
+}
+.s4-ql a.selected, .tabmenu_static, .PrimaryLogoTitle, .s4-toplinks .RadMenu_Default a.rmLink:hover, .s4-toplinks .RadMenu_Default a.rmFocused, .s4-toplinks .RadMenu_Default a.rmSelected, .tab-links a:hover, li.active a, li.active a:hover, .rgSelectedRow, .MasterTable_Default .GridHeader_Default, .MasterTable_Default .ResizeHeader_Default, .optionHeader, .resultHeader
+{
+    
+    color: #fff !important;
+}
+.box_2col_2, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:hover, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:active, .box_2col, tr.ms-viewheadertr > th .s4-ctx-show:hover, .odd_row, .ms-bodyareacell, .selected_tabmenu, TABLE.ms-listviewtable > TBODY > TR > TD.ms-stylebox, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:hover, .leftcol .rmHorizontal .rmSlide > .rmVertical > li > a:active, .RadGrid tr.rgRow
+{
+    
+    background-color: #fff;
+}
+.item_selected, tr.s4-itm-selected > td, tr.s4-itm-selected:hover > td
+{
+    
+    background-color: #fff !important;
+}
+#pagination-flickr .next a, #pagination-flickr .previous a
+{
+    
+    border: solid 1px #fff;
+}
+.data_details table
+{
+    border-bottom: 0px solid #dcdcdc; 
+    border-right: 0px solid #fff; 
+    border-top: 0px solid #fff; 
+    border-left: 0px solid #fff;
+}
+.GridFilterRow_Default td
+{
+    
+    border-left: 1px solid #fff;
+}
+.data_cell
+{
+    
+    border-right: 1px solid #fff;
+}
+.assessOptions, .importantLinks li, .fontSizer li, .quickLinksSocial li, .ms-cui-topBar2
+{
+    
+    border-bottom: 2px solid #A5A5A5;
+}
+.topics li
+{
+    
+    border: 2px solid rgba(0,0,0,.3);
+}
+.headerList li, .topicsTD, .chat-wrap
+{
+    
+    border: 1px solid #A5A5A5;
+}
+.s4-ql ul.root ul > li, .left_col li, .secondaryLogoTitle
+{
+    
+    color: #DFE0E5;
+}
+.blue_hr, body #s4-leftpanel-content, .ms-itmhover td, .consumer-details-box, .RadGrid_Default .rgGroupHeader, .RadGrid_Default .rgMasterTable td.rgGroupCol, .RadGrid_Default .rgMasterTable td.rgExpandCol, .home_box, .chat-startup, .wp_box, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink, #topMenu ul li a
+{
+    
+    background-color: #DFE0E5;
+}
+.grid_button, .ms-ButtonHeightWidth, input[type='submit'], input[type="button"], button, .butStyle, .input_button, .input_button2, input[type='submit'], input[type="button"], .butStyle, .chat_button
+{
+    
+    background: #B9BBC6;
+}
+input[type='submit']:disabled
+{
+    background: #CACBD2;
+    color: #8C8D92;
+    cursor: default;
+}
+.forgot a, .article h2
+{
+    
+    color: #8A8A8A;
+}
+/*.s4-ql li
+{
+    [ReplaceColor(themeColor:"Accent1")]
+    border-bottom: 1px solid #D7CA8D;
+}
+*/
+.radgridParentRow, .detail_bg, .tblWhatPage tr:nth-child(odd)
+{
+    
+    background-color: #65697C;
+}
+.alt_row
+{
+    
+    background-color: #8064A2;
+}
+.title .submitInput, .topics .topicsTD .themeBg, .headerList .themeBg
+{
+    
+    background-color: #4BACC6;
+}
+.box_2col_2, .box_2col, .mainsintakediv, .ajax__tab_xp .ajax__tab_body
+{
+    
+   /*border: 1px solid #348DA5 !important;*/
+}
+.sintakedivhead
+{
+    
+    border-bottom: 1px solid #348DA5;
+}
+.ms-WPTitle, .surveyDetail p, .title h1, .ms-WPBody h1
+{
+    
+    color: #F79646;
+}
+span.titleSpan, .ms-rte-layoutszone-outer .titleSpan, .home_inner_left > .titleSpan, .ms-rte-layoutszone-inner > .title > span, .ms-wpContentDivSpace > span.titleSpan
+{
+    
+    color: #F3730A;
+}
+.ribbonRow
+{
+    
+    color: #F7F7F7;
+}
+tr.ms-viewheadertr > th .s4-ctx-show:hover
+{
+    
+   
+    border-right-color: #65697C;
+}
+.table_provider_reg_text td span, .inner_2col span.width_auto, .inner_2col span.checkbox, .width_auto, .securityQ .mandatory_field_provider label, .mandatory_field_provider span, .provider-prof .inner_2col span.valid_msg, .s4-toplinks .RadMenu_Default ul.rmRootGroup li a.rmRootLink, html body .RadInput_Default .riTextBox, html body .RadInputMgr_Default, TABLE.ms-listviewtable > TBODY > TR > TD.ms-stylebox, .RadCaptcha label, .RadPicker.RadPicker_Default, .RadPicker.RadPicker_Default .rcInputCell, .consumer-details-box li span, .data_details a.LinkPaging
+{
+    width: auto !important;
+}
+.table_heading_date, .table_heading_open
+{
+    width: 10%;
+}
+.table_heading_from, .table_heading_to
+{
+    width: 40%;
+}
+#ctl00_m_g_9f51bd40_37ab_4374_a4cc_d9948ac33698_ctl00_pnlAdvancesearch > fieldset > .search_col_left, #ctl00_m_g_aab7b95f_a0e7_4aa6_89e0_44e7d3e4d9cf_ctl00_pnlAdvancesearch > fieldset > .search_col_left
+{
+    width: 43%;
+    padding: 0;
+}
+.advsearch-mar, #quickSearchPanel
+{
+    margin-top: 10px;
+    padding:10px;
+}
+.loc_errormsg
+{
+    color: red;
+}
+table.ms-toolbar
+{
+    border: 0px none;
+    background: none;
+}
+.forgottextbox
+{
+    width: 250px;
+}
+.forgot_lablewidth
+{
+    width: 160px;
+    float: left;
+}
+.valid_msg_forgot
+{
+    margin-top: 5px;
+    margin-left: 160px;
+}
+.divErrSearchBox
+{
+    margin-left: 80px;
+    color: Red;
+}
+ul.root.static > li > ul > li > .static.selected.menu-item > span > span
+{
+    padding-left: 5px;
+}
+
+ul.root.static > li > ul > li > a > span
+{
+    font-weight: normal;
+}
+ul.root.static > li > ul > li > a > span:hover
+{
+    text-decoration: underline;
+}
+.whatsthispageWrap > a
+{
+    color: blue;
+}
+.BarIndicator_TextBox2_weak, .BarIndicator_TextBox2_average, .BarIndicator_TextBox2_good
+{
+    margin-left: -10px;
+}
+.popup_close
+{
+    float: right !important;
+    position: relative;
+    right: -22px;
+    top: -25px;
+}
+.rolemanage_but
+{
+    margin-top: 20px;
+}
+.reset-errorpop
+{
+    float: left;
+    width: 450px;
+    clear: both;
+    margin-left: 160px;
+    margin-top: 5px;
+}
+input#ctl00_m_g_fb90de85_c87f_4977_b87d_0964cbcd3b39_ctl00_btnSave
+{
+    float: right;
+    margin-right: 10px;
+}
+.prov-email-error
+{
+    float: left;
+    margin-left: 25%;
+    clear: both;
+}
+.marlef-3
+{
+    margin-left: 3px;
+}
+.rgRow a.input_button, .rgAltRow a.input_button
+{
+    word-break: normal;
+    word-wrap: normal;
+    padding: 0px;
+}
+.btnright
+{
+    width: 160px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+input.btnleft
+{
+    width: 72px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 4px 12px;
+}
+span.ckhAny label
+{
+    height: 20px;
+}
+.datafiltersucessmsg
+{
+    color: #5F8F00;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.pro_userlabel
+{
+    float: left;
+    width: 18%;
+}
+fieldset.pro .input-btn-margin
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#ulResetPassword
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.resetpasserror
+{
+    margin-left: 160px;
+    margin-top: 5px;
+}
+.resetfirstbut
+{
+    margin-left: 252px;
+    float: left;
+}
+.updateprovemail
+{
+    width: 42%;
+    float: left;
+    border: none;
+}
+/*self intake-------------------*/
+.mainsintakediv
+{
+    border-radius: 7px;
+}
+.sintakedivhead
+{
+    padding: 7px;
+    font-weight: bold;
+}
+.sintakefieldset_div
+{
+    padding: 0 20px;
+}
+.intakebut
+{
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.radHeader th
+{
+    border: none;
+    padding-left: 5px;
+    text-align: left;
+}
+.formHolder > li
+{
+    margin: 0 5% 2% 0;
+    position: relative;
+}
+.userform
+{
+    float: left;
+    width: 100%;
+}
+.text-under
+{
+    float: right;
+    clear: both;
+    margin: 10px 0px 0 0;
+}
+.formContainer li.agency_width
+{
+    padding: 0px;
+}
+.formContainer li.agency_width input
+{
+    float: right;
+}
+.intakeselect
+{
+    width: 85%;
+    word-wrap: normal;
+}
+.fieldsetmartop > .formContainer
+{
+    margin-bottom: 10px;
+}
+.config_table td
+{
+    border: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.alter_bg
+{
+    background: #f2f2f2;
+}
+.sintake_error
+{
+    margin-left: 0px;
+    color: Red;
+    font-weight: bold;
+}
+.text-under a:link, a#ctl00_m_g_c87d932b_58ad_4b97_a790_4837bd6ad55e_ctl00_btnAssessCancel
+{
+    text-decoration: underline;
+}
+.RadGrid_Default .rgRow td span, .rgAltRow span
+{
+    /*font-weight: normal;*/
+}
+.careteamfieldtop
+{
+    margin-top: 10px;
+}
+.searchassis .input_button
+{
+    background: none;
+    text-decoration: underline;
+    padding-right: 10px;
+}
+#ctl00_m_g_7f1578c3_11de_4413_a1a3_3838d70e4b72_ctl00_toolBarTbl.ms-formtoolbar
+{
+    float: left;
+    width: inherit;
+}
+fieldset.enrollMentAction
+{
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+}
+.ms-wikicontent.ms-rtestate-field
+{
+    padding-right: 0 !important;
+}
+/* Popup Button Alignments*/
+#ctl00_m_g_569be290_1a4f_4c20_829b_606a7f82d046_ctl00_toolBarTbltop td.ms-toolbar, #ctl00_m_g_569be290_1a4f_4c20_829b_606a7f82d046_ctl00_toolBarTbl td.ms-toolbar, #ctl00_m_g_92b74eb5_849f_4a7f_8f10_ab19dbfc1e9e_ctl00_toolBarTbltop td.ms-toolbar, #ctl00_m_g_92b74eb5_849f_4a7f_8f10_ab19dbfc1e9e_ctl00_toolBarTbl td.ms-toolbar
+{
+    float: left;
+}
+input#ctl00_m_g_7f1578c3_11de_4413_a1a3_3838d70e4b72_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+{
+    margin-right: 0px;
+}
+input#ctl00_m_g_0e8fec0c_f97b_4c15_9e2c_a7069d7fbb28_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_f7d6e92d_4450_4677_9d0a_20a0a492e43e_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_ffa4a501_22c3_4418_87f9_4bd23fd33b03_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+{
+    margin-right: 9px;
+}
+div#ctl00_m_g_315fe1a7_7b3e_4bce_b165_3db905fa4893_ctl00_tabContainerCaregiver_body
+{
+    float: left;
+}
+input#ctl00_m_g_1f2d670e_708f_4139_9a63_12ed59a98bc3_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+{
+    margin-right: 28px;
+}
+#ctl00_m_g_14d9e8dd_33b1_4ea0_ab37_76c6da5a550f_ctl00_grdProviderSites .rgMasterTable tr.rgRow
+{
+    background: transparent;
+}
+.chatRefreshBtn
+{
+    margin-top: 10px;
+}
+.std_span span.seqval
+{
+    margin-left: 42%;
+    width: auto;
+    margin-top: 5px;
+}
+.assessNeeds .assessOptions
+{
+    padding: 5px 5px 5px 0px;
+}
+.assessOptions
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.assessOptions .inlineLabel
+{
+    width: 195px;
+    float: left;
+}
+.assessOptions input[type='text']
+{
+    float: left;
+}
+.rfvZiperror
+{
+    margin-top: 5px;
+    float: left;
+    clear: both;
+    margin-left: 160px;
+}
+.rfvZiperrorhide
+{
+    float: left;
+    clear: both;
+    margin-left: 160px;
+}
+td.topics ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+.RadGrid .rgFilterRow img
+{
+    vertical-align: text-top;
+    margin-left: 2px;
+}
+.reset_pop_padding_profile
+{
+    overflow-x: hidden;
+    width: 100%;
+}
+table.ms-formtable p input[type='text'], .ms-formtable
+{
+    float: left;
+}
+.inner_box .formContainer > fieldset.left_form, .inner_box .formContainer > fieldset.right_form
+{
+    width: 95%;
+}
+.s4-ql ul.root > li > a.static.selected.menu-item
+{
+    padding-left: 14px !important;
+}
+fieldset.left_form.chat-fieldset
+{
+    padding: 0;
+}
+fieldset.left_form.chat-fieldset > .chatnote
+{
+    width: 400px;
+}
+.add-provaddcont
+{
+    height: 295px;
+}
+.descrptionWrap ul
+{
+    list-style: none;
+    padding-left: 0;
+}
+.add-provider-error
+{
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+    clear: both;
+}
+.providerWrap > div > fieldset.add-provider td .add-provider-input
+{
+    width: 80%;
+}
+.RadCaptcha input
+{
+    float: left;
+}
+.miss-prov
+{
+    margin-bottom: 10px;
+    float: right;
+    font-weight: bold;
+}
+.miss-prov a:link, .miss-prov a:hover
+{
+    text-decoration: underline;
+    font-weight: normal;
+}
+.rightBottomBlock ul li
+{
+    display: inline;
+    float: left;
+    padding-right: 5px;
+}
+.overflow_auto.add-provaddcont table
+{
+    border: none;
+}
+.left_footer
+{
+    margin-left: 10px;
+}
+.provideprof table td
+{
+    word-wrap: break-word;
+    padding: 10px;
+}
+.provideprof table th
+{
+    word-wrap: break-word;
+    padding: 5px;
+}
+.box_2col fieldset.width_resetpopup
+{
+    margin: 0;
+}
+fieldset.spamControlWrap.prov_add_spam
+{
+    width: 47%;
+}
+.home_left a:hover
+{
+    text-decoration: underline;
+}
+.clear-left
+{
+    clear: left;
+}
+.divFindOrgFooter
+{
+    margin-top: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+/*-----------update provider*/
+
+.providerWrapupdate > div > fieldset
+{
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+.descrptionWrapupdate li span
+{
+    width: 35%;
+}
+.descrptionWrapupdate ul
+{
+    list-style: none;
+    padding-left: 0;
+}
+.providerWrapupdate fieldset > div > table
+{
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+}
+
+.providerWrapupdate .descrptionWrapupdate
+{
+    clear: both;
+    margin-top: 10px;
+    padding: 0;
+    width: 50%;
+}
+.descrptionWrapupdate li span, .descrptionWrapupdate li textarea
+{
+    float: left;
+}
+
+.providerWrapupdateupdate fieldset > div
+{
+    margin-top: 10px;
+}
+
+.providerWrapupdate fieldset > div > table > tbody > tr > td, .providerWrapupdate fieldset > div > table > tbody > tr > th
+{
+    padding: 5px 5px;
+}
+.providerWrapupdate fieldset td input[type="text"]
+{
+    width: 70%;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+fieldset.search_col_left div.panelsearchradio input[type="radio"]
+{
+    float: right;
+    width: auto;
+}
+
+fieldset.search_col_left div.panelsearchradio label, fieldset.assessOptions div.assessma label, .panelsearchradio label
+{
+    width: auto;
+    margin-right: 35px;
+}
+.panelsearch-error
+{
+    margin-left: 160px;
+    margin-top: 5px;
+    float: left;
+    clear: both;
+}
+.required
+{
+    color: red;
+}
+fieldset
+{
+    padding-top: 0px;
+}
+.assistneed > fieldset.search_col_left.inner_box_2col
+{
+    border: none;
+}
+fieldset.assessOptions.clearfix
+{
+    margin-bottom: 10px;
+}
+/*--AJAX AutoComplete Extender---*/
+.completionList
+{
+    border: solid 1px Gray;
+    margin: 0px;
+    padding: 5px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.listItem
+{
+    color: #191919;
+    line-height: normal;
+    padding: 5px;
+}
+.providerWrapupdate fieldset, .spamControlWrap
+{
+    padding: 0 8px 8px 8px;
+    margin-bottom: 8px;
+}
+.dis-fieldset
+{
+    width: 46.8%;
+    float: left;
+    margin-right: 1%;
+}
+/* place holder text color */
+input::-webkit-input-placeholder
+{
+    color: #a0a0a0;
+}
+input:-moz-placeholder
+{
+    /* FF 4-18 */
+    color: #a0a0a0;
+}
+input::-moz-placeholder
+{
+    /* FF 19+ */
+    color: #a0a0a0;
+}
+input:-ms-input-placeholder
+{
+    /* IE 10+ */
+    color: #a0a0a0;
+}
+.search_zipDistance
+{
+    margin-right: 20px;
+}
+.itemHighlighted
+{
+    background-color: #ADD6FF;
+    line-height: normal;
+    padding: 5px;
+}
+.ajax__tab_xp .ajax__tab_tab
+{
+    height: 23px;
+}
+.ajax__tab_xp .ajax__tab_header
+{
+    background: none;
+}
+a.rmLink.rmRootLink.rmImageOnly.rmDisabled
+{
+    display: none;
+}
+
+.allignZipText
+{
+    float: left;
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+.rgFilterRow input.rgFilterBox
+{
+    padding: 0px;
+    height: 22px;
+}
+.RadGrid_Default .rgNumPart a.rgCurrentPage span
+{
+    padding: 2px 5px 3px 5px;
+    border: none;
+}
+.rgWrap.rgAdvPart > .RadComboBox.RadComboBox_Default
+{
+    width: 70px !important;
+}
+/*.RadComboBox .rcbInputCell .rcbInput{padding-top: 0px;  height: 21px;  margin: 0px;  vertical-align: top;}*/
+.RadScheduler_Default .rsAptCreate, .RadScheduler_Default .rsMonthView .rsAptCreate
+{
+    background-image: none;
+}
+
+div#ctl00_m_g_679cc5cb_019d_4593_b75d_01de583d5ea1_ctl00_ctl01_GridData
+{
+    height: auto !important;
+    overflow-x: scroll !important;
+}
+.riSingle.RadInput.RadInput_Default
+{
+    width: 140px !important;
+}
+.rgFilterRow .riSingle .riTextBox, html body .riSingle .riTextBox[type="text"]
+{
+    width: 138px !important;
+}
+
+.s4-lp.s4-toplinks.smallFont
+{
+    background: transparent;
+    position: relative;
+    top: 4px;
+}
+.ms-WPBody .alphalist li a:link
+{
+    text-decoration: underline;
+}
+.ms-WPBody .alphalist li.active a
+{
+    background: #536FAE;
+    padding: 2px 3px;
+    text-decoration: none;
+}
+.rbListWrap input
+{
+    float: left;
+    margin-left: 20px;
+}
+.rbListWrap label
+{
+    width: auto;
+}
+.chkBoxSearchAssistance label
+{
+    float: inherit;
+}
+.overflow_auto.user-service-offer label
+{
+    width: 91%;
+}
+.overflow_auto.user-service-offer input[type="checkbox"]
+{
+    margin-top: 5px;
+}
+.rcCaptchaAudioLink
+{
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rcRefreshImage
+{
+    line-height: normal;
+}
+.RadCaptcha.RadCaptcha_Default div p label
+{
+    line-height: 32px;
+}
+a:focus
+{
+    outline: 0 none;
+    border: 0 none;
+}
+
+.RadioAutoPopulate label
+{
+    float: none;
+}
+.lblAutoPopulate span
+{
+    float: left;
+    width: 160px;
+}
+.RadioAutoPopulate input
+{
+    width: auto;
+}
+
+/* New Search Panel */
+#AtoZSearchPanel ul li ~ li::before
+{
+    content: '|';
+    padding: 0 6px 0 0;
+    color: #ccc;
+}
+#advancedSearchActionLinks ul
+{
+    list-style: none;
+    padding: 0;
+}
+#advancedSearchActionLinks ul li
+{
+    display: inline-block;
+    padding: 0;
+}
+#advancedSearchActionLinks ul li ~ li::before
+{
+    content: '|';
+    padding: 0 5px;
+    color: #ccc;
+}
+
+/* Top Navigation Bar */
+#topMenu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#topMenu ul li
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#topMenu ul li a
+{
+    display: block;
+    background-color: #DFE0E5;
+    vertical-align: middle;
+    border: 1px solid #fff;
+    color: #333;
+    padding: 2px 10px 2px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.select_needs
+{
+    margin: 15px 0 0;
+}
+.site_layout_configuration hr
+{
+    margin: 15px 0;
+}
+
+/*------------------------- ui dialog */
+.ui-dialog
+{
+    z-index: 1000 !important;
+    outline: none;
+}
+.ui-widget-overlay
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+#divSampleTemplate
+{
+    clear: both;
+    height: 600px;
+    overflow-y: auto;
+}
+.ui-dialog-titlebar .ui-button
+{
+    float: right;
+}
+#divSampleTemplate_Content
+{
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #3A7677;
+}
+#divSampleTemplate_Content .header_bg
+{
+    padding: 10px;
+    color: #fff;
+}
+.myCloseIcon
+{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: url(/_layouts/images/his.cgdirect/close-icon.png) no-repeat left top;
+    width: 33px;
+    height: 33px;
+    padding: 0;
+    margin: 0;
+    text-indent: -999px;
+}
+.middle-content
+{
+    max-height: 500px;
+    overflow-y: auto;
+    margin: 5px;
+}
+.left-content
+{
+    width: 15%;
+}
+.left-content ul
+{
+    list-style: none;
+    padding-left: 5px;
+    margin: 0;
+}
+.left-content ul li
+{
+    padding: 5px 0;
+}
+.right-content
+{
+    width: 81%;
+    padding: 10px 5px;
+    border: 1px solid #3A7677;
+}
+.right-content fieldset.box_2col
+{
+    margin: 0 0 10px;
+}
+#divSampleTemplate_Content .footer
+{
+    color: #fff;
+    padding: 5px 0;
+}
+
+/* Provider Search Panel - Search for Needs -> Questions and Responses CSS */
+
+#questionTopPlaceHolder > #questionResponseListPanel
+{
+    padding-bottom: 40px;
+}
+#questionResponseListPanel
+{
+    float: none;
+    clear: both;
+    padding-top: 10px;
+    width: 100%;
+    display: inline-block;
+}
+#questionResponseListPanel #selectedResponseIdsCount ~ .panelsearch-error
+{
+    margin-left: 15px;
+}
+#questionResponseListPanel #lblSpecifyNeeds
+{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#questionResponseListPanel #questionListPanel
+{
+    float: none;
+    clear: both;
+    margin-left: 15px;
+}
+#questionResponseListPanel #questionListPanel .title
+{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#questionResponseListPanel #questionListPanel ~ #questionListPanel .title
+{
+    padding: 10px 0;
+}
+#questionResponseListPanel #questionListPanel ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#questionResponseListPanel #questionListPanel ul li
+{
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#questionResponseListPanel #questionListPanel ul li label
+{
+    width: 100%;
+}
+
+/*  Areas Served CSS on Provider Details page*/
+td.areaservedservices 
+{
+    vertical-align: top;
+}
+td.areaservedservices > div
+{
+    margin-bottom : 10px;
+}
+
+/* Start manageSettings CSS 
+************************************** */
+#manageSettings .searchPanel-loading
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+#manageSettings .searchPanel-loading div
+{
+    padding: 20% 0;
+    font-size: 3em;
+    color: #fff;
+	text-align:center;
+}
+    
+#manageSettings #divMessage {
+	display: none;
+}
+#manageSettings #divMessage .errormsg_css {
+	margin-left: 0;
+}
+#manageSettings .main-container {
+	width: 100%;
+}
+#manageSettings .main-container .tabs {
+	display:block;
+	margin-bottom: 5px;
+	margin-left:0;
+}
+#manageSettings .main-container .tabs .tab {
+	display: inline-block;
+	height: 23px;
+	padding: 5px;		
+		
+	border-top:1px solid #808080;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+		
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+		
+	cursor: pointer;
+		
+	background: gray; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(white, gray); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(white, gray); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(white, gray); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white, gray); /* Standard syntax (must be last) */		
+}	
+#manageSettings .main-container .tabs .tab:hover {
+	border-top:1px solid orange;		
+}
+#manageSettings .main-container .tabs .tab.active {
+	border-top:3px solid orange;		
+	background:none;
+	background-color: #fff;
+	cursor: default;
+}
+#manageSettings .main-container .tabs-content 
+{
+	float:none;
+	clear: both;
+	min-height:500px;
+	padding:15px 10px;
+	border:1px solid #348DA5;
+}	
+#manageSettings .main-container .tab-content 
+{
+	display: none;
+	width:100%;	    
+}
+	
+#manageSettings .tab-content > fieldset {
+	border:1px solid #348DA5;
+	border-radius: 5px;
+	padding: 15px;
+}
+	
+#manageSettings fieldset.left_form > label,
+#manageSettings fieldset.right_form > label {
+	width:40%;
+	padding-right:10px;
+}
+	
+#manageSettings fieldset.left_form > label.man_sett_lal,
+#manageSettings fieldset.right_form > label.man_sett_lal {
+	width:180px;
+}
+	
+#manageSettings table.send-comments-config thead th {
+    text-align:left;
+}
+
+#manageSettings table.send-comments-config tbody tr:nth-child(odd) {
+    background: #fff;
+}
+#manageSettings table.send-comments-config tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+.rgDataDiv {
+    height: auto !important;
+}
+
+/* End manageSettings CSS 
+************************************** */
+
+/*------------------------- tab css */
+@media only screen and (min-width:768px)
+{
+    body #MSO_ContentTable
+    {
+        padding: 10px 0 20px 20px;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        margin-right: 10px;
+    }
+    .right_form, .inner_box fieldset
+    {
+        width: 100%;
+    }
+    .left_form select
+    {
+        width: 51.5%;
+    }
+    .left_form .select_multi
+    {
+        width: 51.5%;
+    }
+    .right_form input
+    {
+        float: left;
+    }
+    .left_form input
+    {
+        float: left;
+    }
+    .topics
+    {
+        float: left;
+        padding: 5px;
+        width: 100%;
+    }
+    .topics li
+    {
+        width: 75%;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px 0 10px 0;
+    }
+    .table_provider_reg_text input[type="text"]
+    {
+        width: 90%;
+        float: left;
+    }
+    .check_div
+    {
+        width: 27.5%;
+    }
+
+    /*------- css ProviderRegistration*/
+    .two_col
+    {
+        width: 100%;
+        float: left;
+        margin-right: 0px;
+    }
+    .box_2col fieldset
+    {
+        width: 94%;
+    }
+    fieldset.search_col_left.inner_box_2col
+    {
+        width: 94%;
+    }
+    .table_provider_reg_text
+    {
+        width: 98%;
+    }
+    .ajax__tab_body
+    {
+        width: 97%;
+    }
+    .largeFont > .input_button
+    {
+        margin-top: 5px;
+    }
+    .largeFont > .input_button.input-btn-marginT
+    {
+        margin-top: 10px;
+    }
+
+    /*------------------------- forms css CONTACT CARE MANAGER Request for Service */
+    .formContainer
+    {
+        width: 100%;
+        float: left;
+        margin-bottom: 0px;
+    }
+    .box_2col_2
+    {
+        width: 94%;
+    }
+
+    /*------- css contact care Manger*/
+    .emailColumnSeq
+    {
+        padding-right: 0%;
+        width: 100%;
+        float: left;
+        margin-right: 0%;
+        border-right: none;
+    }
+    .emailColumnSeq table
+    {
+        width: 100%;
+        border: solid 1px #000;
+    }
+    .emailtablesubmit
+    {
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    .configSection
+    {
+        float: left;
+        width: 100%;
+    }
+    .configSection ul li label
+    {
+        float: left;
+        width: 50%;
+    }
+    .right_form .select_multi
+    {
+        margin: 0;
+        width: 51.5%;
+        border: 1px solid #CCCCCC;
+    }
+    .mc_emailselect
+    {
+        margin-top: -10px;
+        width: 40%;
+    }
+    .error_margin140
+    {
+        margin-left: 160px;
+        float: left;
+        clear: both;
+    }
+    .overflow_auto_checkbox td label
+    {
+        padding-left: 8px;
+        padding-bottom: 5px;
+        display: block;
+        width: 75%;
+    }
+    .modalBackground
+    {
+        top: 0px;
+        left: 0px;
+        background: Black;
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+    }
+    .eligibleWrap > span
+    {
+        text-align: center;
+        font-weight: bold;
+        padding: 11px 0;
+    }
+    .eligibleWrap > label
+    {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+    .eligibleWrap > span, .eligibleWrap > label
+    {
+        display: block;
+        background: #fff;
+    }
+
+    /*-----care date error message--*/
+    #ctl00_m_g_795381e3_4e22_47f2_9280_00827b97659b_ctl00_mev_meetxt1008
+    {
+        float: left;
+        margin-left: 220px;
+    }
+    .error_normal
+    {
+        float: left;
+        margin-left: 160px;
+        clear: both;
+    }
+
+    /*---------------------DataFilterSettings */
+    .ajax__tab_xp .ajax__tab_body
+    {
+        padding: 10px 7px 0px 7px;
+    }
+    .ResourceServed
+    {
+        margin: 0px auto;
+        width: 500px;
+    }
+    .user_control .valid_mess
+    {
+        clear: both;
+        margin-left: 31%;
+        float: left;
+    }
+
+    /*-------------------------Add Care Team Member*/
+    .display, .display_none
+    {
+        display: none;
+    }
+
+    .formHolder .valid_msg_cg
+    {
+        clear: both;
+        margin-left: 42%;
+        float: left;
+        margin-top: 5px;
+    }
+
+    /*--------------------------Self assesment form css*/
+    .assessment_box label
+    {
+        float: left;
+        width: 42%;
+        margin-bottom: 10px;
+    }
+    .width_400
+    {
+        float: left;
+    }
+
+    /*--------------------------Add consumer care giver form css*/
+    .std_span span
+    {
+        width: 128px;
+        float: left;
+    }
+    .mandatory_normal_div
+    {
+        width: 44%;
+    }
+    .sendcommentmandatory
+    {
+        width: 100%;
+        float: left;
+    }
+    .valid_msg_sendcomment
+    {
+        margin-top: 5px;
+        margin-left: 0;
+    }
+    .valid_msg_cg
+    {
+        margin-top: 5px;
+        margin-left: 44%;
+    }
+    .assessment_box
+    {
+        width: 96.8%;
+    }
+    .RadGrid.RadGrid_Default.optKeyuser
+    {
+        overflow-x: hidden;
+    }
+    .quicklink
+    {
+        width: 28%;
+    }
+    .sintake_error
+    {
+        margin-left: 0px;
+    }
+    .fieldsetmartop > .formContainer
+    {
+        width: 100%;
+    }
+    .textboxAdd
+    {
+        width: 48%;
+    }
+    #ctl00_MSO_ContentDiv .ms-rtestate-write
+    {
+        width: 96%;
+    }
+    input#ctl00_m_g_7f1578c3_11de_4413_a1a3_3838d70e4b72_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+    {
+        margin-right: 50px;
+    }
+    input#ctl00_m_g_0e8fec0c_f97b_4c15_9e2c_a7069d7fbb28_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_f7d6e92d_4450_4677_9d0a_20a0a492e43e_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_ffa4a501_22c3_4418_87f9_4bd23fd33b03_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+    {
+        margin-right: 27px;
+    }
+    .providerWrapupdate > div > fieldset
+    {
+        width: 97%;
+    }
+    .dis-fieldset
+    {
+        width: 46.8%;
+    }
+    .providerWrapupdate > div > fieldset.hoursofOperation
+    {
+        float: left;
+    }
+    .left_form label.man_sett_lal, .right_form label.man_sett_lal
+    {
+        width: 303px;
+    }
+    .search_enterzip
+    {
+        margin-left: 12px;
+    }
+    div.RadPicker.RadPicker_Default
+    {
+        width: auto !important;
+    }
+    fieldset.box_2col.clearfix div.two_col.inner_box_2col
+    {
+        width: 65%;
+        margin-bottom: 20px;
+        padding: 0 0 0 0;
+        margin-left: 170px;
+    }
+}
+@media only screen and (min-width: 1024px)
+{
+    body #MSO_ContentTable
+    {
+        padding: 10px 0 20px 15px;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        margin-right: 10px;
+    }
+    .table_provider_reg_text input[type='text']
+    {
+        width: 100%;
+    }
+    .login_container .float_left
+    {
+        width: 28%;
+    }
+    .right_form, .inner_box fieldset
+    {
+        width: 100%;
+    }
+    .left_form select
+    {
+        width: 52%;
+    }
+    .left_form .select_multi
+    {
+        width: 52%;
+    }
+    .table_provider_reg_text input[type="text"]
+    {
+        width: 90%;
+        float: left;
+    }
+    .check_div
+    {
+        width: 19%;
+    }
+    .topics
+    {
+        float: left;
+        padding: 5px;
+        width: 100%;
+    }
+    .topics li
+    {
+        width: 75%;
+        margin: 10px 0 10px 0;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        border: 2px solid rgba(0, 0, 0, .3);
+    }
+
+    /*------- css ProviderRegistration*/
+    .two_col
+    {
+        width: 100%;
+        float: left;
+        margin-right: 0px;
+    }
+    .box_2col fieldset
+    {
+        width: 96%;
+    }
+    fieldset.search_col_left.inner_box_2col
+    {
+        width: 96%;
+    }
+    .table_provider_reg_text
+    {
+        width: 98%;
+    }
+    .ajax__tab_body
+    {
+        width: 98%;
+    }
+    .largeFont > .input_button
+    {
+        margin-top: 0px;
+    }
+    .largeFont > .input_button.input-btn-marginT
+    {
+        margin-top: 10px;
+    }
+
+    /*------------------------- forms css CONTACT CARE MANAGER Request for Service */
+    .formContainer
+    {
+        width: 100%;
+        float: left;
+        margin-bottom: 0px;
+    }
+    .box_2col_2
+    {
+        width: 96%;
+    }
+
+    /*------- css contact care Manger*/
+    .emailColumnSeq
+    {
+        padding-right: 0%;
+        width: 100%;
+        float: left;
+        margin-right: 0%;
+        border-right: none;
+    }
+    .emailColumnSeq table
+    {
+        width: 100%;
+        border: solid 1px #000;
+    }
+    .emailtablesubmit
+    {
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    .right_form .select_multi
+    {
+        margin: 0;
+        width: 52%;
+        border: 1px solid #CCCCCC;
+    }
+    .configSection
+    {
+        float: left;
+        width: 100%;
+    }
+    .configSection ul li label
+    {
+        float: left;
+        width: 50%;
+    }
+    .mc_emailselect
+    {
+        margin-top: -10px;
+    }
+    .RadGrid_Default .rgPager
+    {
+        background: #536FAE;
+    }
+
+    /*-----care date error message--*/
+    #ctl00_m_g_795381e3_4e22_47f2_9280_00827b97659b_ctl00_mev_meetxt1008
+    {
+        float: left;
+        margin-left: 260px;
+    }
+    .error_normal
+    {
+        float: left;
+        margin-left: 160px;
+        clear: both;
+    }
+
+    /*---------------------DataFilterSettings */
+    .ajax__tab_body
+    {
+        padding: 10px 14px 0px 7px;
+    }
+    .ResourceServed
+    {
+        margin: 0px auto;
+        width: 600px;
+    }
+    .user_control .valid_mess
+    {
+        clear: both;
+        margin-left: 31%;
+        float: left;
+    }
+
+    /*-------------------------Add Care Team Member*/
+    .display
+    {
+        display: none;
+    }
+
+    /*-------------------------profile*/
+    .formHolder .valid_msg_cg
+    {
+        margin-top: 5px;
+        clear: both;
+        margin-left: 42%;
+        float: left;
+    }
+
+    /*--------------------------Self assesment form css*/
+    .assessment_box label
+    {
+        float: left;
+        width: 34%;
+        margin-bottom: 10px;
+    }
+
+    /*--------------------------Add consumer care giver form css*/
+    .std_span span
+    {
+        width: 135px;
+        float: left;
+    }
+    .mandatory_normal_div
+    {
+        width: 42%;
+    }
+
+    .valid_msg_cg
+    {
+        margin-top: 5px;
+        margin-left: 42%;
+    }
+    .sendcommentmandatory
+    {
+        width: 55%;
+        float: left;
+    }
+    .valid_msg_sendcomment
+    {
+        margin-top: 5px;
+        margin-left: 55%;
+    }
+    .assessment_box
+    {
+        width: 96.8%;
+    }
+    .RadGrid.RadGrid_Default.optKeyuser
+    {
+        overflow-x: hidden;
+    }
+    table.ms-listviewtable tbody tr td.ms-vb-lastCell .ms-rtestate-field
+    {
+        width: 325px;
+    }
+    .quicklink
+    {
+        width: 28%;
+    }
+    .sintake_error
+    {
+        margin-left: 0px;
+    }
+    .fieldsetmartop > .formContainer
+    {
+        width: 100%;
+    }
+    .textboxAdd
+    {
+        width: 49.4%;
+    }
+    #ctl00_MSO_ContentDiv .ms-rtestate-write
+    {
+        width: 96%;
+    }
+    input#ctl00_m_g_0e8fec0c_f97b_4c15_9e2c_a7069d7fbb28_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_f7d6e92d_4450_4677_9d0a_20a0a492e43e_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_ffa4a501_22c3_4418_87f9_4bd23fd33b03_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+    {
+        margin-right: 37px;
+    }
+    input#ctl00_m_g_1f2d670e_708f_4139_9a63_12ed59a98bc3_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+    {
+        margin-right: 28px;
+    }
+    .providerWrapupdate > div > fieldset
+    {
+        width: 96%;
+    }
+    .dis-fieldset
+    {
+        width: 46.8%;
+    }
+    .providerWrapupdate > div > fieldset.hoursofOperation
+    {
+        float: left;
+    }
+    .left_form label.man_sett_lal, .right_form label.man_sett_lal
+    {
+        width: 303px;
+    }
+    .search_enterzip
+    {
+        margin-left: 12px;
+    }
+    div.RadPicker.RadPicker_Default
+    {
+        width: auto !important;
+    }
+    fieldset.box_2col.clearfix div.two_col.inner_box_2col
+    {
+        width: 75%;
+        margin-bottom: 20px;
+        padding: 0 0 0 0;
+        margin-left: 170px;
+    }
+}
+
+/*------------------------- desktop css */
+@media only screen and (min-width:1280px)
+{
+    body #MSO_ContentTable
+    {
+        padding: 10px 0 20px 20px;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+        margin-right: 20px;
+    }
+    .home_right_top
+    {
+        margin-left: 20px;
+    }
+    .left_webcol
+    {
+        float: left;
+        width: 60%;
+    }
+    .right_webcol
+    {
+        float: left;
+        width: 40%;
+    }
+    .right_form, .inner_box fieldset
+    {
+        width: 46%;
+    }
+    .inner_box fieldset
+    {
+        clear: none;
+    }
+    /*.box_2col fieldset
+        {
+            width: 98%;
+        }*/
+    fieldset.search_col_left.inner_box_2col
+    {
+        width: 48%;
+    }
+    .ajax__tab_body
+    {
+        width: 99%;
+    }
+    .topics
+    {
+        float: left;
+        padding: 5px;
+        width: 45%;
+    }
+    .topics li
+    {
+        width: 85%;
+        margin: 10px 0 10px 0;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        border: 2px solid rgba(0, 0, 0, .3);
+    }
+
+    /*------------------------- forms css CONTACT CARE MANAGER Request for Service */
+    .formContainer
+    {
+        width: 50%;
+        float: left;
+        margin-bottom: 15px;
+    }
+    .box_2col_2
+    {
+        width: 97%;
+    }
+
+    /*------- css ProviderRegistration*/
+    .two_col
+    {
+        width: 47%;
+        float: left;
+        margin-right: 0px;
+    }
+    /*------- css contact care Manger*/
+    .emailColumnSeq
+    {
+        padding-right: 1%;
+        width: 30%;
+        float: left;
+        margin-right: 4%;
+        border-right: 1px solid #000;
+    }
+    .emailtablesubmit
+    {
+        margin-right: 0px;
+        margin-top: 15px;
+    }
+    .configSection
+    {
+        float: left;
+        width: 64%;
+    }
+    .configSection ul li label
+    {
+        float: left;
+        width: 35%;
+    }
+    .mc_emailselect
+    {
+        margin-top: -10px;
+        width: 20%;
+    }
+    .error_margin140
+    {
+        margin-left: 160px;
+        float: left;
+        clear: both;
+    }
+    .overflow_auto_checkbox td label
+    {
+        padding-left: 8px;
+        padding-bottom: 5px;
+        display: block;
+        width: 75%;
+    }
+
+    /*-----care date error message--*/
+    #ctl00_m_g_795381e3_4e22_47f2_9280_00827b97659b_ctl00_mev_meetxt1008
+    {
+        float: left;
+        margin-left: 475px;
+    }
+
+    /*---------------------DataFilterSettings */
+    .ajax__tab_xp .ajax__tab_body
+    {
+        padding: 10px 2px 0px 7px;
+    }
+    .user_control .valid_mess
+    {
+        clear: both;
+        margin-left: 31%;
+        float: left;
+    }
+
+    /*-------------------------Add Care Team Member*/
+    .display
+    {
+        visibility: hidden;
+        display: inherit;
+    }
+
+    /*-------------------------profile*/
+    .formHolder .valid_msg_cg
+    {
+        clear: both;
+        margin-left: 42%;
+        float: left;
+        margin-top: 5px;
+    }
+
+    /*--------------------------Self assesment form css*/
+    .assessment_box label
+    {
+        float: left;
+        width: 34%;
+        margin-bottom: 10px;
+    }
+
+    /*--------------------------Add consumer care giver form css*/
+    .std_span span
+    {
+        width: 125px;
+        float: left;
+    }
+    .mandatory_normal_div
+    {
+        width: 42%;
+    }
+    .valid_msg_cg
+    {
+        margin-left: 42%;
+        margin-top: 5px;
+    }
+    .assessment_box
+    {
+        width: 97.8%;
+    }
+    table.ms-listviewtable tbody tr td.ms-vb-lastCell .ms-rtestate-field
+    {
+        width: 500px;
+    }
+    .quicklink
+    {
+        width: 28%;
+    }
+    #wrapper .right_col fieldset.box_2col
+    {
+        width: 97%;
+    }
+    #ctl00_m_g_21b19fb1_0ec1_4ae2_bf7e_d7a0d8ce9d1f_ctl00_divNewOption .inner_box .left_form, #ctl00_m_g_21b19fb1_0ec1_4ae2_bf7e_d7a0d8ce9d1f_ctl00_divNewOption .inner_box .right_form
+    {
+        width: 40%;
+        padding: 0;
+    }
+    .check_div
+    {
+        width: 28%;
+    }
+    .textboxAdd
+    {
+        width: 48%;
+    }
+    .sintake_error
+    {
+        margin-left: 0px;
+    }
+    .emailColumnSeq table
+    {
+        width: 85%;
+        border: solid 1px #000;
+    }
+    .fieldsetmartop > .formContainer
+    {
+        width: 75%;
+    }
+    input#ctl00_m_g_0e8fec0c_f97b_4c15_9e2c_a7069d7fbb28_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_f7d6e92d_4450_4677_9d0a_20a0a492e43e_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack, input#ctl00_m_g_ffa4a501_22c3_4418_87f9_4bd23fd33b03_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+    {
+        margin-right: 50px;
+    }
+    .providerWrapupdate > div > fieldset
+    {
+        width: 97%;
+    }
+    .dis-fieldset
+    {
+        width: 46.8%;
+    }
+    .providerWrapupdate > div > fieldset.hoursofOperation
+    {
+        float: left;
+    }
+    .left_form label.man_sett_lal, .right_form label.man_sett_lal
+    {
+        width: 180px;
+    }
+    .search_enterzip
+    {
+        margin-left: 0;
+    }
+    div.RadPicker.RadPicker_Default
+    {
+        width: auto !important;
+    }
+    fieldset.box_2col.clearfix div.two_col.inner_box_2col
+    {
+        width: 46%;
+        margin-bottom: 20px;
+        padding: 0 0 0 0px;
+        margin-left: 0px;
+    }
+
+    /*------------------------- Provider Search*/
+    #icons_right_link
+    {
+        margin: 0 0 5px;
+        float: right;
+    }
+
+}
+
+/*------------------------- desktop css */
+@media only screen and (min-width:1360px)
+{
+    .left_webcol
+    {
+        float: left;
+        width: 70%;
+    }
+    .right_webcol
+    {
+        float: left;
+        width: 30%;
+    }
+    .right_form, .inner_box fieldset
+    {
+        width: 46%;
+    }
+    .inner_box fieldset
+    {
+        clear: none;
+    }
+    table.ms-listviewtable tbody tr td.ms-vb-lastCell .ms-rtestate-field
+    {
+        width: 500px;
+    }
+    .ajax__tab_xp .ajax__tab_body
+    {
+        padding: 10px 5px 0px 7px;
+    }
+    #wrapper .right_col fieldset.box_2col
+    {
+        width: 98%;
+    }
+    .quicklink
+    {
+        width: 26.7%;
+    }
+    .sintake_error
+    {
+        margin-left: 0px;
+    }
+    .fieldsetmartop > .formContainer
+    {
+        width: 55%;
+    }
+    .textboxAdd
+    {
+        width: 49%;
+    }
+    .providerWrapupdate > div > fieldset
+    {
+        width: 46.8%;
+    }
+    .dis-fieldset
+    {
+        width: 46.8%;
+    }
+    .providerWrapupdate > div > fieldset.hoursofOperation
+    {
+        float: right;
+        margin-right: 0;
+    }
+    .left_form label.man_sett_lal, .right_form label.man_sett_lal
+    {
+        width: 180px;
+    }
+    div.RadPicker.RadPicker_Default
+    {
+        width: auto !important;
+    }
+    fieldset.box_2col.clearfix div.two_col.inner_box_2col
+    {
+        width: 46%;
+        margin-bottom: 0px;
+        padding: 0 0 0 0px;
+        margin-left: 0px;
+    }
+}
+@media only screen and (min-width: 1680px)
+{
+    .box_2col_2
+    {
+        width: 98%;
+    }
+    .right_form, .inner_box fieldset
+    {
+        width: 47%;
+    }
+    table.ms-listviewtable tbody tr td.ms-vb-lastCell .ms-rtestate-field
+    {
+        width: auto;
+    }
+}
+
+/*------------------------- max desktop css */
+@media screen and (max-width: 1500px )
+{
+    .consumer-details-box
+    {
+        width: 95.7%;
+    }
+}
+@media screen and (max-width: 1200px )
+{
+    .consumer-details-box .right_form
+    {
+        float: none;
+    }
+}
+
+@media (max-width:1280px)
+{
+    .allignZipText
+    {
+        float: none;
+        margin-left: 14px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1680px)
+{
+    .as_search_by_location .RadioAutoPopulate
+    {
+        display: inline-block;
+    }
+    .as_search_by_location .RadioAutoPopulate > span
+    {
+        display: block;
+    }
+    .as_search_by_location .RadioAutoPopulate > label
+    {
+        display: block;
+    }
+    .RadioAutoPopulate.largeFont input[type="radio"]
+    {
+        margin: 0px 6px 0px 4px;
+    }
+}
+
+/*------------------------- ie browser css */
+@media screen\0
+{
+    select.nav_dropdown option
+    {
+        background: transparent;
+    }
+}
+
+/*------------------------- print css */
+@media print
+{
+    body #s4-leftpanel
+    {
+        display: inline-block;
+        width: 200px;
+    }
+    body #MSO_ContentTable
+    {
+        margin-left: 210px !important;
+        margin-right: 0 !important;
+    }
+}
+.RadWindow .rwDialogText
+{
+    margin-bottom: 10px;
+    padding-left: 56px;
+    background: url(/_layouts/images/his.cgdirect/information_symbol_icon.png) no-repeat left !important;
+    padding-bottom:25px;
+}
+
+/*Added css for Allservice listing*/
+    .show-hidebtn
+    {        
+    color: #2dbae6; 
+     font-weight:bold;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 3px;
+    padding: 0px;
+    }
+    
+
+/*DE site logo center alignment*/
+.s4-titletable .s4-titlelogo {
+    width: 100%;
+    text-align: center;
+}
+
+
+.s4-titletable .s4-titlelogo > a {
+    display: inline-block;
+}
+  
+  .ShowAllList
+  {
+      padding: 10px;float: left; width:200px; padding-top:0px;
+  }
+  
+ 
+  
+  
+  /*DE site print issue*/
+  @media print {
+    body #s4-topheader2 {
+    background-color: #101C7B;
+    display:block;
+    clear:both;
+    -webkit-print-color-adjust: exact; 
+    -webkit-print-width-adjust: exact; 
+    left:0;
+    width:100%;
+    padding:0 5px;
+}
+#s4-titlerow{
+    width:100%!important;
+}
+.s4-toplinks{
+    clear:both;
+}
+.s4-title{
+    padding:0;
+}
+ .ms-formvalidation
+{
+    color: Red !important;
+}
+.s4-toplinks {
+    padding: 7px 5px 0 0;
+}
+#s4-leftpanel-content,.home_box,.wp_box{
+   -webkit-print-color-adjust: exact; 
+}
+}
+
