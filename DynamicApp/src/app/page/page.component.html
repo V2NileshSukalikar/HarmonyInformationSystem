@@ -3,7 +3,7 @@
   orientation {{pagedata?.Orientation}}</h4>
 <div class="row">
 
-  <div *ngFor="let item of pagedataobj;let i=index" class="col-md-12">
+  <div *ngFor="let item of pagedataobj;let i=index" class="col-md-12" style="overflow: hidden;">
 
     <div *ngFor="let dataitem of item" [style.width]="dataitem.width + '%'" style="float:left;min-width: 170px;" class="the-box welcome-section">
       <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'">
