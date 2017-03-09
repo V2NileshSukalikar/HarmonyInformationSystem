@@ -2,7 +2,6 @@
 .fa-a:before {
     font-family: Arial; /* your font family here! */
     font-weight: bold;
-    content: 'H';
 }   
 
 .flex-container {
