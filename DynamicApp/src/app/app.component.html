@@ -156,7 +156,7 @@
             <ul class="list-unstyled navigation">
                 <li  [class.active] ="isDisabled(['/page',item.Value])" *ngFor="let item of globalservice.GlobalData?.Menu">
                     <a [routerLink]="['/page',item.Value]" routerLinkActive="active" (click)="setlink(['/page',item.Value])" >{{item.Name}} 
-                    <span class="nav-icon"><span class="fa fa-a"></span></span></a></li>
+                    <span class="nav-icon"><span class="fa fa-a">{{createMenuFontContent(item.Name)}}</span></span></a></li>
             </ul>
             <img src="src/images/customer-support.jpg" class="hidden-xs">
         </nav>
