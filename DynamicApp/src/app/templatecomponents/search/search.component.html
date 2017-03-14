@@ -1,48 +1,27 @@
-<div id="AtoZSearchPanel" class="" *ngIf="SearchNo==1">
+<a (click)="selectedSearch=0">Reset</a>
+<div *ngFor="let search of SearchNo" class="row" style="padding:5px">
+  
+<div id="AtoZSearchPanel" class="" *ngIf="search==0" [hidden]="!(selectedSearch==0||selectedSearch==1)">
     <fieldset class="box_2col clearfix">
         <legend><span>Alphabetical Listing</span> </legend>
-
+{{indexno}}
         <div id="AtoZLinks" class="the-box mt-none search-provider text-center">
-            <ul class="list-inline sorting-word hidden-xs">
-                <li><a data-val="9" title="0-9" (click)="searchDatabyString('0')">0-9</a></li>
-                <li><a data-val="A" title="A" (click)="searchDatabyString('A')"> A</a></li>
-                <li><a data-val="B" title="B" (click)="searchDatabyString('B')">B</a></li>
-                <li><a data-val="C" title="C" (click)="searchDatabyString('c')">C</a></li>
-                <li><a data-val="D" title="D" (click)="searchDatabyString('D')">D</a></li>
-                <li><a data-val="E" title="E" (click)="searchDatabyString('E')">E</a></li>
-                <li><a data-val="F" title="F" (click)="searchDatabyString('F')">F</a></li>
-                <li><a data-val="G" title="G" (click)="searchDatabyString('G')">G</a></li>
-                <li><a data-val="H" title="H" (click)="searchDatabyString('H')">H</a></li>
-                <li><a data-val="I" title="I" (click)="searchDatabyString('I')">I</a></li>
-                <li><a data-val="J" title="J" (click)="searchDatabyString('J')">J</a></li>
-                <li><a data-val="K" title="K" (click)="searchDatabyString('K')">K</a></li>
-                <li><a data-val="L" title="L" (click)="searchDatabyString('L')">L</a></li>
-                <li><a data-val="M" title="M" (click)="searchDatabyString('M')">M</a></li>
-                <li><a data-val="N" title="N" (click)="searchDatabyString('N')">N</a></li>
-                <li><a data-val="O" title="O" (click)="searchDatabyString('O')">O</a></li>
-                <li><a data-val="P" title="P" (click)="searchDatabyString('P')">P</a></li>
-                <li><a data-val="Q" title="Q" (click)="searchDatabyString('Q')">Q</a></li>
-                <li><a data-val="R" title="R" (click)="searchDatabyString('R')">R</a></li>
-                <li><a data-val="S" title="S" (click)="searchDatabyString('S')">S</a></li>
-                <li><a data-val="T" title="T" (click)="searchDatabyString('T')">T</a></li>
-                <li><a data-val="U" title="U" (click)="searchDatabyString('U')">U</a></li>
-                <li><a data-val="V" title="V" (click)="searchDatabyString('V')">V</a></li>
-                <li><a data-val="W" title="W" (click)="searchDatabyString('W')">W</a></li>
-                <li><a data-val="X" title="X" (click)="searchDatabyString('X')">X</a></li>
-                <li><a data-val="Y" title="Y" (click)="searchDatabyString('Y')">Y</a></li>
-                <li><a data-val="Z" title="Z" (click)="searchDatabyString('Z')">Z</a></li>
+           
+             <ul class="list-inline sorting-word hidden-xs" >
+                <li *ngFor="let alpha of alphabetarr"><a title="{{alpha}}" (click)="searchDatabyString(alpha,indexno,1)" >{{alpha}}</a></li>
+               
             </ul>
         </div>
     </fieldset>
 </div>
 
-<div *ngIf="SearchNo==2" class="the-box mt-none search-provider text-center">
-
+<div *ngIf="search==1" class="the-box mt-none search-provider text-center" [hidden]="!(selectedSearch==0||selectedSearch==2)">
+  <legend><span style="color: white">Quick Listing</span> </legend>
     <p class="hidden-xs">Quickly find a service provider by entering key words (such as name, service or ZIP code) and then press <b><i>"Search"</i></b>.</p>
     <div class="input-group search-btn">
         <input type="text" class="form-control" placeholder="Search Provider Here . . . ." [(ngModel)]="quickSearchtext">
         <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search" (click)="searchDatabyString(quickSearchtext)"></i></button>
+                                    <button class="btn btn-default" type="button"><i class="glyphicon glyphicon-search" (click)="searchDatabyString(quickSearchtext,indexno,2)"></i></button>
                                 </span>
 
     </div>
@@ -54,7 +33,7 @@
 
 
 
-<div id="advancedSearchPanel" class="advsearch-mar ClearBoth smallFont" *ngIf="SearchNo==3" align="">
+<div id="advancedSearchPanel" class="advsearch-mar ClearBoth smallFont" *ngIf="search==2" align="" [hidden]="!(selectedSearch==0||selectedSearch==3)">
     <fieldset class="box_2col clearfix">
         <legend id="legendAdvanced">Advanced Search</legend>
         <div id="questionTopPlaceHolder" class="smallFont">
@@ -202,7 +181,7 @@
                                 <div id="divSearchButtons" class="right smallFont">
                                     <div class="login-button text-right">
 
-                                        <button id="btnAdvancedSearch" type="submit" data-default-button="true" value="Search" title="Click to Search" (click)="searchDatabyString('a')">Click to Search</button>
+                                        <button id="btnAdvancedSearch" type="submit" data-default-button="true" value="Search" title="Click to Search" (click)="searchDatabyString('a',indexno,3)">Click to Search</button>
                                     </div>
 
 
@@ -400,8 +379,9 @@
     </fieldset>
 </div>
 
+</div>
 
-<div id="searchResultPanel" class="smallFont" style="display: none;">
+<!--<div id="searchResultPanel" class="smallFont" style="display: none;">
 
     <div id="questionResponseMessagePlaceHolder" class="smallFont"></div>
     <h4 class="resultHeader">
@@ -413,4 +393,39 @@
     </div>
     <div id="grdSearch" class="v2sGrid providerListResults smallFont"></div>
 
+</div>-->
+
+
+<div class="row" id="section-{{indexno}}">
+<div class="welcome-section col-md-12" style="background-color:cornflowerblue;color: white ">
+  <h1 style="padding:10px!important; " >Search Result</h1>
+  </div>
+  <div *ngFor="let item of searchData" class="the-box welcome-section col-md-12">
+
+
+    <a href=""><h3 class="search_provider_hyperlink" title="item.ProviderName">{{item.ProviderName}}</h3></a>
+    <a data-provider-id="4c922a32-43f1-4a34-b122-f221a3812562"><span class="clickfordetails" title="A - 1 Cleaning"> (Click for details) </span></a>
+    <div class="fetchData"><span>{{item.Address}}</span></div>
+    <div class="fetchData"><span title="item.Phone">{{item.Phone}}</span></div>
+    <div>
+      <div class="fetchData"><span><strong>Website: </strong><a  target="_blank"><span class="websiteLink">{{item.WebSite}}</span></a>
+        </span>
+      </div>
+      <div class="fetchData"><strong>Detailed Description: </strong><span title="">{{item.LongDescription}}</span></div>
+      <div class="fetchData"><strong>Notes: </strong><span title="Test">{{item.Neighborhood}}</span></div>
+      <div class="fetchData"><strong>Services: </strong>
+        <table>
+          <tr *ngFor="let ser of item.Service">
+            <td>{{serv}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <hr>
+  </div>
+  {{pagedataService.searchData.lenght}}
+  <div *ngIf="pagedataService.searchData.length==0"  class="the-box welcome-section col-md-12"  >
+
+    <h4>Record not found</h4>
+  </div>
 </div>

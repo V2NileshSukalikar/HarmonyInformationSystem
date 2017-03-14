@@ -4,48 +4,14 @@
   <div *ngFor="let item of pagedataobj;let i=index" class="row" style="overflow: hidden;margin:-10px">
 <!--{{item | json}} -->
 <!--[ngClass]="{dataitem.class: dataitem.width==0 }"-->
-    <div *ngFor="let dataitem of item"  [ngClass]="dataitem.class" [style.width]="dataitem.width + '%'" style="float:left;min-width: 300px;margin:10px" class="the-box welcome-section">
-     
+    <div *ngFor="let dataitem of item;let j=index"  [ngClass]="dataitem.class" [style.width]="dataitem.width + '%'" style="float:left;min-width: 300px;margin:10px" class="the-box welcome-section">
+     {{ i+j}}
       <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'" >
       </app-html>
       <app-coc [CocData]="dataitem.Data" *ngIf="dataitem.Data.Type=='COC'"></app-coc>
-      <app-search [SearchNo]="dataitem.Data.Search" *ngIf="dataitem.Data.Type=='Search'"></app-search>
+      <app-search [SearchNo]="dataitem.Data.Search"  *ngIf="dataitem.Data.Type=='Search'"></app-search>
     </div>
 
   </div>
 </div>
 
-<hr>
-<div class="row" id="section2">
-<div class="welcome-section col-md-12" style="background-color:cornflowerblue;color: white ">
-  <h1 style="padding:10px!important; " >Search Result</h1>
-  </div>
-  <div *ngFor="let item of pagedataService.searchData" class="the-box welcome-section col-md-12">
-
-
-    <a href=""><h3 class="search_provider_hyperlink" title="item.ProviderName">{{item.ProviderName}}</h3></a>
-    <a data-provider-id="4c922a32-43f1-4a34-b122-f221a3812562"><span class="clickfordetails" title="A - 1 Cleaning"> (Click for details) </span></a>
-    <div class="fetchData"><span>{{item.Address}}</span></div>
-    <div class="fetchData"><span title="item.Phone">{{item.Phone}}</span></div>
-    <div>
-      <div class="fetchData"><span><strong>Website: </strong><a  target="_blank"><span class="websiteLink">{{item.WebSite}}</span></a>
-        </span>
-      </div>
-      <div class="fetchData"><strong>Detailed Description: </strong><span title="">{{item.LongDescription}}</span></div>
-      <div class="fetchData"><strong>Notes: </strong><span title="Test">{{item.Neighborhood}}</span></div>
-      <div class="fetchData"><strong>Services: </strong>
-        <table>
-          <tr *ngFor="let ser of item.Service">
-            <td>{{serv}}</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <hr>
-  </div>
-  {{pagedataService.searchData.lenght}}
-  <div *ngIf="pagedataService.searchData.length==0"  class="the-box welcome-section col-md-12"  >
-
-    <h4>Record not found</h4>
-  </div>
-</div>
