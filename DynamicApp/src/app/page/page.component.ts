@@ -25,6 +25,7 @@ export class PageComponent implements AfterViewInit, OnInit {
         this.data = {} as any;
         this.pagecounter = 0 as number;
         this.pagedataobj = [];
+        this.pagedataService.searchData=[];
         this.pagedataService.selectedlink = '/page/' + params['token'];
         this.getpagedata(params['token']);
 
@@ -64,57 +65,119 @@ export class PageComponent implements AfterViewInit, OnInit {
           this.pagedataService.GlobalData = session.GlobalData;
           var content = this.pagedata.Data.length;
 
-          this.pagedata.Orientation = this.pagedata.Orientation.split(',').map(function (item) {
-            return parseInt(item, 10);
-          });
-          var orient = this.pagedata.Orientation.reduce((a, b) => a + b, 0);
 
+          var datacount = 0;
+          if (this.pagedata.Data.length > this.pagedata.Orientation.length) {
+            var count = this.pagedata.Data.length - this.pagedata.Orientation.length;
+            for (var i = 0; i < count; i++) {
+             
+              this.pagedata.Orientation.push(this.pagedata.Orientation[this.pagedata.Orientation.length - 1]);
 
-          if (content > orient) {
-            var difference = content - orient;
-            var lastdata = this.pagedata.Orientation[this.pagedata.Orientation.length - 1];
-            var counter = 0;
-            if (difference > lastdata) {
-              counter = Math.ceil(difference / lastdata);
             }
-            else if (difference > 0) {
-              counter = 1;
-            }
-
-            for (var i = 0; i < counter; i++) {
-
-              this.pagedata.Orientation.push(lastdata);
-            }
-
           }
 
-          var h = 0;
-          for (var i = 0; i < this.pagedata.Orientation.length; i++) {
 
-            var contentdata = [];
-
-            for (var z = 1; z <= this.pagedata.Orientation[i]; z++) {
-              var data = 100 / this.pagedata.Orientation[i];
-              this.widthofele.push(data);
-              var subdata = { width: data, Data: this.pagedata.Data[h] };
-              contentdata.push(subdata);
-              h++;
-              if (h == this.pagedata.Data.length) {
+          for (var z = 0; z < this.pagedata.Orientation.length; z++) {
+            if (this.pagedata.Orientation[z].Type == "Percentage") {
+              var mainData = [];
+              for (var h = 0; h < this.pagedata.Orientation[z].Order.length; h++) {
+                if(this.pagedata.Data.length==datacount)
                 break;
+
+                var subdata = { class: "", width: this.pagedata.Orientation[z].Order[h]-1.5, Data: this.pagedata.Data[datacount] };
+                mainData.push(subdata);
+                 datacount++;
+              }
+
+            }
+            else if (this.pagedata.Orientation[z].Type == "Number") {
+              var mainData = [];
+              var colNo = parseInt(this.pagedata.Orientation[z].Order[0]);
+              var colwidth = 98 / colNo;
+              for (var h = 0; h < colNo; h++) {
+                 if(this.pagedata.Data.length==datacount)
+                break;
+
+                var subdata1 = { class: "", width: colwidth, Data: this.pagedata.Data[datacount] };
+                mainData.push(subdata1);
+                 datacount++;
+              }
+            }
+            else if (this.pagedata.Orientation[z].Type == "Class") {
+              var mainData = [];
+              for (var h = 0; h < this.pagedata.Orientation[z].Order.length; h++) {
+                 if(this.pagedata.Data.length==datacount)
+                break;
+
+                var subdata2 = { class: this.pagedata.Orientation[z].Order[h], width: "", Data: this.pagedata.Data[datacount] };
+                mainData.push(subdata2);
+                 datacount++;
               }
             }
 
 
-            this.pagedataobj.push(contentdata);
-            if (h == this.pagedata.Data.length) {
-              break;
-            }
-
-            // this.pagedata.Orientation.push(lastdata);
+            this.pagedataobj.push(mainData);
+             if(this.pagedata.Data.length==datacount)
+                break;
+           
           }
+          console.log(this.pagedataobj);
+
+
+
+          // this.pagedata.Orientation = this.pagedata.Orientation.split(',').map(function (item) {
+          //   return parseInt(item, 10);
+          // });
+          // var orient = this.pagedata.Orientation.reduce((a, b) => a + b, 0);
+
+
+          // if (content > orient) {
+          //   var difference = content - orient;
+          //   var lastdata = this.pagedata.Orientation[this.pagedata.Orientation.length - 1];
+          //   var counter = 0;
+          //   if (difference > lastdata) {
+          //     counter = Math.ceil(difference / lastdata);
+          //   }
+          //   else if (difference > 0) {
+          //     counter = 1;
+          //   }
+
+          //   for (var i = 0; i < counter; i++) {
+
+          //     this.pagedata.Orientation.push(lastdata);
+          //   }
+
+          // }
+
+          // var h = 0;
+          // for (var i = 0; i < this.pagedata.Orientation.length; i++) {
+
+          //   var contentdata = [];
+
+          //   for (var z = 1; z <= this.pagedata.Orientation[i]; z++) {
+
+
+          //     var data = 100 / this.pagedata.Orientation[i];
+          //     this.widthofele.push(data);
+          //     var subdata = { width: data, Data: this.pagedata.Data[h] };
+          //     contentdata.push(subdata);
+          //     h++;
+          //     if (h == this.pagedata.Data.length) {
+          //       break;
+          //     }
+          //   }
+
+
+          //   this.pagedataobj.push(contentdata);
+          //   if (h == this.pagedata.Data.length) {
+          //     break;
+          //   }
+
+          // this.pagedata.Orientation.push(lastdata);
+          //}
 
           console.log(this.pagedataobj);
-          this.cdRef.detectChanges();
+          // this.cdRef.detectChanges();
         }
           , 100);
       }

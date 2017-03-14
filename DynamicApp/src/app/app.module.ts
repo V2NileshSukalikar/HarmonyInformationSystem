@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HtmlComponent } from './templatecomponents/html/html.component';
+import { HtmlComponent,SafeHtmlPipe } from './templatecomponents/html/html.component';
 import { CocComponent } from './templatecomponents/coc/coc.component';
 import { SearchComponent } from './templatecomponents/search/search.component';
 import { PageComponent } from './page/page.component';
@@ -21,7 +21,8 @@ import { AppRoutingModule } from './routingmodule';
     PageComponent,
     HtmlComponent,
     CocComponent,
-    SearchComponent
+    SearchComponent,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
