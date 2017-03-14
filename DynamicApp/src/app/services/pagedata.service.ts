@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/observable/of';
-import 'rxjs/add/operator/share';
-import 'rxjs/add/operator/map';
+import '../extensions/rxjs-extensions';
 
 import { Config } from '../models/config';
 import { Data } from '../models/data';
@@ -24,19 +20,14 @@ export class PagedataService {
     constructor(private http: Http) {
     };
 
+    getsearchData(searchText: string, typeId: number): any {
 
-    getsearchData(searchText: string): any {
-        const headers = new Headers();
-
-        headers.append('Content-Type', 'application/json');
-        // create the request, store the `Observable` for subsequent subscribers
-        const url = this.config.Searchurl + '/' + searchText;
-
-        return this.http.get(url).toPromise().then
-            (
-            response => response.json() as any[]
-
-            ).catch(this.handleError);
+        const url = this.config.Searchurl + '/' + searchText + '/' + typeId;
+        return this.http
+            .get(url)
+            .map((response: Response) => response.json() as any[])
+            .do(data => console.log(data))
+            .catch(this.handleError);
     }
 
     getData(pageName: string, isHeader: boolean): any {

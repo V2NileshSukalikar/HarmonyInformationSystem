@@ -13,42 +13,36 @@ export class SearchComponent implements OnInit {
   indexno: number;
   quickSearchtext: string = "";
   searchData = [];
-  selectedSearch:number=0;
-  alphabetarr:string[]=["0-9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"];
+  selectedSearch: number = 0;
+  alphabetarr: string[] = ["0-9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"];
 
   constructor(private pagedataService: PagedataService, ) {
 
     this.getrandomumber();
-   }
+  }
 
   ngOnInit() {
   }
 
-  getrandomumber():void{
+  getrandomumber(): void {
 
-this.indexno = Math.floor(Math.random()*1000);
+    this.indexno = Math.floor(Math.random() * 1000);
   }
 
-  searchDatabyString(searchText: string,index:number,selected:number): void {
+  searchDatabyString(searchText: string, index: number, selected: number): void {
     this.pagedataService.searchData = [];
-this.selectedSearch=selected;
-    this.pagedataService.getsearchData(searchText).then(
+    this.selectedSearch = selected;
+    this.pagedataService.getsearchData(searchText, selected).subscribe(
       session =>
         setTimeout(() => {
           this.pagedataService.searchData = session.data;
           this.searchData = session.data;
-          // var WH = $(window).height();
-          // var SH = $('body').prop("scrollHeight") + 500;
-          // $('html, body').stop().animate({ scrollTop: SH - WH }, 1000);
-let element = document.getElementById('section-'+index);
+          let element = document.getElementById('section-' + index);
           $("body, html").animate({
-            
-            scrollTop:$(element).offset().top
+            scrollTop: $(element).offset().top
           }, 600);
 
         }, 500)
-
-
     );
   }
 

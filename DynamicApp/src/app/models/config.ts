@@ -9,6 +9,6 @@ export class Config {
     constructor() {
         this.headers = new Headers({ 'Content-Type': 'application/json' });
         this.apiURl = 'http://harmonyservice/api/CMSData/GetCMSJsonData';
-        this.Searchurl = 'http://harmonyservice/api/CMSData/GetFilteredRecords';
+        this.Searchurl = 'http://harmonyservice/api/GetFilteredRecords';
     }
 }
