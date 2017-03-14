@@ -19,7 +19,7 @@ export class SafeHtmlPipe implements PipeTransform  {
 export class HtmlComponent implements OnInit {
 
   theHtmlString = 'Loading' as string;
-  @Input() htmlstring: safeHtml;
+  @Input() htmlstring: SafeHtmlPipe;
 
   constructor() { }
 
