@@ -1,0 +1,10 @@
+.show{
+opacity: 1;
+display: block;
+}
+.step{
+    display: none !important;
+opacity: 0 !important;
+transition: .5s ease-in-out all;
+
+}

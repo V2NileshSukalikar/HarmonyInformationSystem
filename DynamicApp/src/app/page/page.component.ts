@@ -1,5 +1,5 @@
 
-import { Component, OnInit, AfterViewInit, ChangeDetectorRef, NgZone, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef, NgZone, OnChanges, ChangeDetectionStrategy ,style, state, animate, transition, trigger } from '@angular/core';
 import { PagedataService } from '../services/pagedata.service';
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -7,7 +7,18 @@ import { ActivatedRoute, Params } from '@angular/router';
   selector: 'app-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.Default,
+  animations: [
+  trigger('fadeInOut', [
+    transition(':enter', [   // :enter is alias to 'void => *'
+      style({opacity:0}),
+      animate(500, style({opacity:1})) 
+    ]),
+    transition(':leave', [   // :leave is alias to '* => void'
+      animate(500, style({opacity:0})) 
+    ])
+  ])
+]
 
 })
 export class PageComponent implements AfterViewInit, OnInit {

@@ -6,10 +6,10 @@
 <!--[ngClass]="{dataitem.class: dataitem.width==0 }"-->
     <div *ngFor="let dataitem of item;let j=index"  [ngClass]="dataitem.class" [style.width]="dataitem.width + '%'" style="float:left;min-width: 300px;margin:10px" class="the-box welcome-section">
      {{ i+j}}
-      <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'" >
+      <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'" [@fadeInOut] >
       </app-html>
-      <app-coc [CocData]="dataitem.Data" *ngIf="dataitem.Data.Type=='COC'"></app-coc>
-      <app-search [SearchNo]="dataitem.Data.Search"  *ngIf="dataitem.Data.Type=='Search'"></app-search>
+      <app-coc [CocData]="dataitem.Data" *ngIf="dataitem.Data.Type=='COC'" [@fadeInOut]></app-coc>
+      <app-search [SearchNo]="dataitem.Data.Search"  *ngIf="dataitem.Data.Type=='Search'" [@fadeInOut]></app-search>
     </div>
 
   </div>

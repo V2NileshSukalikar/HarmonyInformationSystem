@@ -1,10 +1,11 @@
-<a href="#" (click)="selectedSearch=0">Reset</a>
+
+   <h4 style="float: right" (click)="selectedSearch=0"> <a style="cursor:pointer" ><i class="fa fa-refresh" aria-hidden="true"></i> Reset</a></h4>
 <div *ngFor="let search of SearchNo" class="row" style="padding:5px">
   
-<div id="AtoZSearchPanel" class="" *ngIf="search==0" [hidden]="!(selectedSearch==0||selectedSearch==1)">
-    <fieldset class="box_2col clearfix">
+<div id="AtoZSearchPanel" class="show" *ngIf="search==0"  [class.show]="!(selectedSearch==0||selectedSearch==1)" [@fadeInOut]>
+    <div class="box_2col clearfix">
         <legend><span>Alphabetical Listing</span> </legend>
-{{indexno}}
+<!--{{indexno}}-->
         <div id="AtoZLinks" class="the-box mt-none search-provider text-center">
            
              <ul class="list-inline sorting-word hidden-xs" >
@@ -12,10 +13,10 @@
                
             </ul>
         </div>
-    </fieldset>
+    </div>
 </div>
-
-<div *ngIf="search==1" class="the-box mt-none search-provider text-center" [hidden]="!(selectedSearch==0||selectedSearch==2)">
+{{!(selectedSearch==0||selectedSearch==2)}}
+<div *ngIf="search==1" class="show the-box mt-none search-provider text-center"  [class.step]="!(selectedSearch==0||selectedSearch==2)" [@fadeInOut]>
   <legend><span style="color: white">Quick Listing</span> </legend>
     <p class="hidden-xs">Quickly find a service provider by entering key words (such as name, service or ZIP code) and then press <b><i>"Search"</i></b>.</p>
     <div class="input-group search-btn">
@@ -33,7 +34,7 @@
 
 
 
-<div id="advancedSearchPanel" class="advsearch-mar ClearBoth smallFont" *ngIf="search==2" align="" [hidden]="!(selectedSearch==0||selectedSearch==3)">
+<div id="advancedSearchPanel" class="show advsearch-mar ClearBoth smallFont" *ngIf="search==2" align=""  [class.step]="!(selectedSearch==0||selectedSearch==3)" [@fadeInOut] >
     <fieldset class="box_2col clearfix">
         <legend id="legendAdvanced">Advanced Search</legend>
         <div id="questionTopPlaceHolder" class="smallFont">
@@ -396,7 +397,7 @@
 </div>-->
 
 
-<div class="row" id="section-{{indexno}}">
+<div class="row" id="section-{{indexno}}" [hidden]="selectedSearch==0" >
 <div class="welcome-section col-md-12" style="background-color:cornflowerblue;color: white ">
   <h1 style="padding:10px!important; " >Search Result</h1>
   </div>
