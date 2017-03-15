@@ -14,6 +14,7 @@ import { PagedataService } from './services/pagedata.service';
 
 import { AppRoutingModule } from './routingmodule';
 
+import { SpinnerModule } from 'angular2-spinner/dist';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,8 @@ import { AppRoutingModule } from './routingmodule';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    SpinnerModule
   ],
 
   providers: [PagedataService],

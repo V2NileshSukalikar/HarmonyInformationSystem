@@ -52,8 +52,8 @@ export class PagedataService {
 
     private isLocalStorageDataAvailable(pageName: string, isHeader: boolean): any {
         const storagedata: any = {};
-        const isGlobalDataAvailable = localStorage.getItem('global') == 'undefined' ? null : localStorage.getItem('global');
-        const isPageDataAvailable = localStorage.getItem(pageName) == 'undefined' ? null : localStorage.getItem(pageName);
+        const isGlobalDataAvailable = localStorage.getItem('global') === 'undefined' ? null : localStorage.getItem('global');
+        const isPageDataAvailable = localStorage.getItem(pageName) === 'undefined' ? null : localStorage.getItem(pageName);
 
         storagedata.GlobalData = JSON.parse(isGlobalDataAvailable);
         if (isPageDataAvailable != null) {
@@ -85,7 +85,7 @@ export class PagedataService {
                     this.data.GlobalData = result.g;
                     this.data.pagespecificData = result.s;
                     this.data.PageName = result.pageName;
-                    if (localStorage.getItem('global') == null || localStorage.getItem('global') == "undefined") {
+                    if (localStorage.getItem('global') == null || localStorage.getItem('global') === 'undefined') {
                         localStorage.setItem('global', JSON.stringify(this.data.GlobalData));
                     }
                     if (this.data.pagespecificData.isCacheble) {
