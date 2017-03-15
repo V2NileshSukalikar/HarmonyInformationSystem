@@ -2,6 +2,7 @@
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef, NgZone, OnChanges, ChangeDetectionStrategy ,style, state, animate, transition, trigger } from '@angular/core';
 import { PagedataService } from '../services/pagedata.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 @Component({
   selector: 'app-page',
@@ -22,7 +23,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 })
 export class PageComponent implements AfterViewInit, OnInit {
-
+@BlockUI() blockUI: NgBlockUI;
   headerData: any = {};
   isHeader: boolean;
   widthofele: number[] = [];
@@ -30,8 +31,10 @@ export class PageComponent implements AfterViewInit, OnInit {
 
   constructor(private pagedataService: PagedataService, private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef, public zone: NgZone) {
+
     this.route.params
       .subscribe((params: Params) => {
+         this.blockUI.start('Loading...'); 
         this.pagedata = {};
         this.data = {} as any;
         this.pagecounter = 0 as number;
@@ -189,6 +192,7 @@ export class PageComponent implements AfterViewInit, OnInit {
 
           console.log(this.pagedataobj);
           // this.cdRef.detectChanges();
+          this.blockUI.stop(); 
         }
           , 100);
       }

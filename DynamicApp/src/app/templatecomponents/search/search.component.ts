@@ -1,5 +1,6 @@
 import { Component, OnInit, Input,style, state, animate, transition, trigger } from '@angular/core';
 import { PagedataService } from '../../services/pagedata.service';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 declare var $: JQueryStatic;
 
 @Component({
@@ -19,7 +20,7 @@ declare var $: JQueryStatic;
 ]
 })
 export class SearchComponent implements OnInit {
-
+@BlockUI() blockUI: NgBlockUI;
   @Input() SearchNo: number[] = [];
   indexno: number;
   quickSearchtext: string = "";
@@ -41,17 +42,20 @@ export class SearchComponent implements OnInit {
   }
 
   searchDatabyString(searchText: string, index: number, selected: number): void {
+    this.blockUI.start('Loading...'); 
     this.pagedataService.searchData = [];
     this.selectedSearch = selected;
     this.pagedataService.getsearchData(searchText, selected).subscribe(
       session =>
         setTimeout(() => {
+          
           this.pagedataService.searchData = session.data;
           this.searchData = session.data;
           let element = document.getElementById('section-' + index);
           $("body, html").animate({
             scrollTop: $(element).offset().top
           }, 600);
+           this.blockUI.stop(); 
 
         }, 500)
     );

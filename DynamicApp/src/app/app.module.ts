@@ -15,6 +15,7 @@ import { PagedataService } from './services/pagedata.service';
 import { AppRoutingModule } from './routingmodule';
 
 import { SpinnerModule } from 'angular2-spinner/dist';
+import { BlockUIModule } from 'ng-block-ui';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SpinnerModule } from 'angular2-spinner/dist';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    SpinnerModule
+    SpinnerModule,
+    BlockUIModule
   ],
 
   providers: [PagedataService],

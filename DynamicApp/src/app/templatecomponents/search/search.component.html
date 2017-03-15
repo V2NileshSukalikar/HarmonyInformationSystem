@@ -15,7 +15,7 @@
         </div>
     </div>
 </div>
-{{!(selectedSearch==0||selectedSearch==2)}}
+
 <div *ngIf="search==1" class="show the-box mt-none search-provider text-center"  [class.step]="!(selectedSearch==0||selectedSearch==2)" [@fadeInOut]>
   <legend><span style="color: white">Quick Listing</span> </legend>
     <p class="hidden-xs">Quickly find a service provider by entering key words (such as name, service or ZIP code) and then press <b><i>"Search"</i></b>.</p>
