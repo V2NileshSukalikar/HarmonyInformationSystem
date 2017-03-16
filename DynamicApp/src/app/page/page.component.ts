@@ -1,5 +1,8 @@
 
-import { Component, OnInit, AfterViewInit, ChangeDetectorRef, NgZone, OnChanges, ChangeDetectionStrategy ,style, state, animate, transition, trigger } from '@angular/core';
+import {
+  Component, OnInit, AfterViewInit, ChangeDetectorRef, NgZone,
+  OnChanges, ChangeDetectionStrategy, style, state, animate, transition, trigger
+} from '@angular/core';
 import { PagedataService } from '../services/pagedata.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
@@ -10,40 +13,39 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
   styleUrls: ['./page.component.css'],
   changeDetection: ChangeDetectionStrategy.Default,
   animations: [
-  trigger('fadeInOut', [
-    transition(':enter', [   // :enter is alias to 'void => *'
-      style({opacity:0}),
-      animate(500, style({opacity:1})) 
-    ]),
-    transition(':leave', [   // :leave is alias to '* => void'
-      animate(500, style({opacity:0})) 
+    trigger('fadeInOut', [
+      transition(':enter', [   // :enter is alias to 'void => *'
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 }))
+      ]),
+      transition(':leave', [   // :leave is alias to '* => void'
+        animate(500, style({ opacity: 0 }))
+      ])
     ])
-  ])
-]
+  ]
 
 })
 export class PageComponent implements AfterViewInit, OnInit {
-@BlockUI() blockUI: NgBlockUI;
+  @BlockUI() blockUI: NgBlockUI;
   headerData: any = {};
   isHeader: boolean;
   widthofele: number[] = [];
   pagedataobj: any[] = [];
-  
+
 
   constructor(private pagedataService: PagedataService, private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef, public zone: NgZone) {
 
     this.route.params
       .subscribe((params: Params) => {
-         this.blockUI.start('Loading...'); 
+        this.blockUI.start('Loading...');
         this.pagedata = {};
         this.data = {} as any;
         this.pagecounter = 0 as number;
         this.pagedataobj = [];
-        this.pagedataService.searchData=[];
+        this.pagedataService.searchData = [];
         this.pagedataService.selectedlink = '/page/' + params['token'];
         this.getpagedata(params['token']);
-
       });
   }
   ngOnInit() {
@@ -54,7 +56,7 @@ export class PageComponent implements AfterViewInit, OnInit {
     this.resertcounter();
 
     this.pagecounter = 0;
-     
+
   }
 
   resertcounter() {
@@ -62,10 +64,10 @@ export class PageComponent implements AfterViewInit, OnInit {
     this.pagecounter = 0;
   }
 
-  setImage(){
+  setImage() {
 
-     $('table Img'  ).attr('src','https://wrcstaging.harmonyis.net/_layouts/images/square.gif')
-  } 
+    $('table Img').attr('src', 'https://wrcstaging.harmonyis.net/_layouts/images/square.gif')
+  }
 
   pagedata: any = {};
   data = {} as any;
@@ -85,13 +87,11 @@ export class PageComponent implements AfterViewInit, OnInit {
           this.pagedata = session.pagespecificData;
           this.pagedataService.GlobalData = session.GlobalData;
           var content = this.pagedata.Data.length;
-
-
           var datacount = 0;
           if (this.pagedata.Data.length > this.pagedata.Orientation.length) {
             var count = this.pagedata.Data.length - this.pagedata.Orientation.length;
             for (var i = 0; i < count; i++) {
-             
+
               this.pagedata.Orientation.push(this.pagedata.Orientation[this.pagedata.Orientation.length - 1]);
 
             }
@@ -101,49 +101,49 @@ export class PageComponent implements AfterViewInit, OnInit {
           for (var z = 0; z < this.pagedata.Orientation.length; z++) {
             if (this.pagedata.Orientation[z].Type == "Percentage") {
               var mainData = [];
-         var margine=     (0.4*this.pagedata.Orientation[z].Order.length)
-         var realwidth = 100-margine;
+              var margine = (0.4 * this.pagedata.Orientation[z].Order.length)
+              var realwidth = 100 - margine;
               for (var h = 0; h < this.pagedata.Orientation[z].Order.length; h++) {
-                if(this.pagedata.Data.length==datacount)
-                break;
-                      var calculatedwidth = (realwidth * this.pagedata.Orientation[z].Order[h])/100;
+                if (this.pagedata.Data.length == datacount)
+                  break;
+                var calculatedwidth = (realwidth * this.pagedata.Orientation[z].Order[h]) / 100;
                 var subdata = { class: "", width: calculatedwidth, Data: this.pagedata.Data[datacount] };
                 mainData.push(subdata);
-                 datacount++;
+                datacount++;
               }
 
             }
             else if (this.pagedata.Orientation[z].Type == "Number") {
               var mainData = [];
               var colNo = parseInt(this.pagedata.Orientation[z].Order[0]);
-              
-              var colwidth = (100-(0.4*colNo) )/ colNo;
+
+              var colwidth = (100 - (0.4 * colNo)) / colNo;
               for (var h = 0; h < colNo; h++) {
-                 if(this.pagedata.Data.length==datacount)
-                break;
+                if (this.pagedata.Data.length == datacount)
+                  break;
 
                 var subdata1 = { class: "", width: colwidth, Data: this.pagedata.Data[datacount] };
                 mainData.push(subdata1);
-                 datacount++;
+                datacount++;
               }
             }
             else if (this.pagedata.Orientation[z].Type == "Class") {
               var mainData = [];
               for (var h = 0; h < this.pagedata.Orientation[z].Order.length; h++) {
-                 if(this.pagedata.Data.length==datacount)
-                break;
+                if (this.pagedata.Data.length == datacount)
+                  break;
 
                 var subdata2 = { class: this.pagedata.Orientation[z].Order[h], width: "", Data: this.pagedata.Data[datacount] };
                 mainData.push(subdata2);
-                 datacount++;
+                datacount++;
               }
             }
 
 
             this.pagedataobj.push(mainData);
-             if(this.pagedata.Data.length==datacount)
-                break;
-           
+            if (this.pagedata.Data.length == datacount)
+              break;
+
           }
           console.log(this.pagedataobj);
 
@@ -202,10 +202,10 @@ export class PageComponent implements AfterViewInit, OnInit {
 
           console.log(this.pagedataobj);
           // this.cdRef.detectChanges();
-          
-          
-          this.blockUI.stop(); 
-        
+
+
+          this.blockUI.stop();
+
         }
           , 100);
       }

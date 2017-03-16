@@ -5,6 +5,7 @@ import '../extensions/rxjs-extensions';
 
 import { Config } from '../models/config';
 import { Data } from '../models/data';
+import { CacheService, CacheStoragesEnum } from 'ng2-cache/ng2-cache';
 
 @Injectable()
 export class PagedataService {
@@ -16,12 +17,18 @@ export class PagedataService {
     searchData: any[] = [];
     private data: any = {};
     private observable: Observable<any>;
+    private sessionCacheService: any;
+    private localStoragecacheService: any;
+    private inMemoryStorageService: any;
 
-    constructor(private http: Http) {
+    constructor(private http: Http, private _cacheService: CacheService) {
+        this.inMemoryStorageService = this._cacheService.useStorage(CacheStoragesEnum.MEMORY);
+        this.sessionCacheService = this._cacheService.useStorage(CacheStoragesEnum.SESSION_STORAGE);
+        this.localStoragecacheService = this._cacheService.useStorage(CacheStoragesEnum.LOCAL_STORAGE);
     };
 
+    // Search Filter
     getsearchData(searchText: string, typeId: number): any {
-
         const url = this.config.Searchurl + '/' + searchText + '/' + typeId;
         return this.http
             .get(url)
@@ -30,51 +37,10 @@ export class PagedataService {
             .catch(this.handleError);
     }
 
-    getData(pageName: string, isHeader: boolean): any {
-        if (this.data) {
-            if (this.data.PageName === pageName) {
-                if (this.data.pagespecificData.isCacheble) {
-                    return Observable.of(this.data);
-                } else {
-                    return this.getDataFromServe(pageName, isHeader);
-                }
-            } else {
-                return this.isLocalStorageDataAvailable(pageName, isHeader);
-            }
-        } else if (this.observable) {
-            // if `this.observable` is set then the request is in progress
-            // return the `Observable` for the ongoing request
-            return this.observable;
-        } else {
-            return this.isLocalStorageDataAvailable(pageName, isHeader);
-        }
-    }
-
-    private isLocalStorageDataAvailable(pageName: string, isHeader: boolean): any {
-        const storagedata: any = {};
-        const isGlobalDataAvailable = localStorage.getItem('global') === 'undefined' ? null : localStorage.getItem('global');
-        const isPageDataAvailable = localStorage.getItem(pageName) === 'undefined' ? null : localStorage.getItem(pageName);
-
-        storagedata.GlobalData = JSON.parse(isGlobalDataAvailable);
-        if (isPageDataAvailable != null) {
-            storagedata.pagespecificData = JSON.parse(isPageDataAvailable);
-            storagedata.PageName = pageName;
-            this.data = storagedata;
-            return Observable.of(this.data);
-        } else {
-            return this.getDataFromServe(pageName, isHeader);
-        }
-    }
-
-    private getDataFromServe(pageName: string, isHeader: boolean): any {
+    getCMSDatafromServeByPageID(pageName: string, isHeader: boolean): any {
         const url = this.config.apiURl + '/' + pageName + '/' + isHeader;
-        // example header (not necessary)
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        // create the request, store the `Observable` for subsequent subscribers
-        this.observable = this.http.get(url, {
-            headers: headers
-        })
+        return this.observable = this.http
+            .get(url)
             .map(response => {
                 // when the cached data is available we don't need the `Observable` reference anymore
                 this.observable = null;
@@ -84,23 +50,102 @@ export class PagedataService {
                     const result = response.json() as any;
                     this.data.GlobalData = result.g;
                     this.data.pagespecificData = result.s;
-                    this.data.PageName = result.pageName;
-                    if (localStorage.getItem('global') == null || localStorage.getItem('global') === 'undefined') {
-                        localStorage.setItem('global', JSON.stringify(this.data.GlobalData));
-                    }
-                    if (this.data.pagespecificData.isCacheble) {
-                        localStorage.setItem(pageName, JSON.stringify(this.data.pagespecificData));
-                    } else {
-                        if (localStorage.getItem(pageName) != null) {
-                            localStorage.removeItem(pageName);
-                        }
-                    }
+                    this.data.PageName = pageName;
                     return this.data;
                 }
                 // make it shared so more than one subscriber can get the result
             })
-            .share();
-        return this.observable;
+            .share()
+            .do(data => {
+                return this.observable;
+            })
+            .catch(this.handleError);
+    }
+
+    // Get CMS Data
+    getData(pageName: string, isHeader: boolean): any {
+        if (this.data) {
+            if (this.data.PageName === pageName) {
+                if (this.data.pagespecificData.isCacheble) {
+                    return Observable.of(this.data);
+                } else {
+                    this.requestServerData(pageName, isHeader);
+                    return Observable.of(this.data);
+                }
+            } else {
+                this.getDataFromCacheService(pageName, isHeader);
+                return Observable.of(this.data);
+            }
+        } else if (this.observable) {
+            // if `this.observable` is set then the request is in progress
+            // return the `Observable` for the ongoing request
+            return this.observable;
+        } else {
+            this.getDataFromCacheService(pageName, isHeader);
+            return Observable.of(this.data);
+        }
+    }
+
+
+
+    private requestServerData(pageName: string, isHeader: boolean) {
+        this.getCMSDatafromServeByPageID(pageName, isHeader)
+            .subscribe((data) => {
+                this.data = data;
+                this.localStoragecacheService.set('global', this.data.GlobalData);
+                if (this.data.pagespecificData.isCacheble) {
+                    this.setInMemoryData(pageName);
+                    this.setSessionMemorydata(pageName);
+                    this.setLocalStorageData(pageName);
+
+                } else {
+                    const exists: boolean = this.localStoragecacheService.exists(pageName);
+                    if (exists) {
+                        this.localStoragecacheService.remove(pageName);
+                    }
+                }
+            });
+    }
+
+    private setInMemoryData(pageName: string) {
+
+        this.inMemoryStorageService.set(pageName, this.data.pagespecificData);
+    }
+
+    private setSessionMemorydata(pageName: string) {
+
+        this.sessionCacheService.set(pageName, this.data.pagespecificData);
+    }
+
+    private setLocalStorageData(pageName: string) {
+
+
+        this.localStoragecacheService.set(pageName, this.data.pagespecificData);
+    }
+
+    private getDataFromCacheService(pageName: string, isHeader: boolean) {
+        const storagedata: any = {};
+        storagedata.GlobalData = this.localStoragecacheService.get('global');
+        if (this.inMemoryStorageService.exists(pageName)) {
+            storagedata.pagespecificData = this.inMemoryStorageService.get(pageName);
+            storagedata.PageName = pageName;
+            this.data = storagedata;
+            return;
+        } else if (this.sessionCacheService.exists(pageName)) {
+            storagedata.pagespecificData = this.sessionCacheService.get(pageName);
+            storagedata.PageName = pageName;
+            this.data = storagedata;
+            this.setInMemoryData(pageName);
+            return;
+        } else if (this.localStoragecacheService.exists(pageName)) {
+            storagedata.pagespecificData = this.localStoragecacheService.get(pageName);
+            storagedata.PageName = pageName;
+            this.data = storagedata;
+            this.setSessionMemorydata(pageName);
+            return;
+        } else {
+            this.requestServerData(pageName, isHeader);
+        }
     }
 
     private handleError(error: Response | any) {
