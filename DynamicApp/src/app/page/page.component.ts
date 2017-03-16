@@ -28,6 +28,7 @@ export class PageComponent implements AfterViewInit, OnInit {
   isHeader: boolean;
   widthofele: number[] = [];
   pagedataobj: any[] = [];
+  
 
   constructor(private pagedataService: PagedataService, private route: ActivatedRoute,
     private cdRef: ChangeDetectorRef, public zone: NgZone) {
@@ -53,12 +54,18 @@ export class PageComponent implements AfterViewInit, OnInit {
     this.resertcounter();
 
     this.pagecounter = 0;
+     
   }
 
   resertcounter() {
 
     this.pagecounter = 0;
   }
+
+  setImage(){
+
+     $('table Img'  ).attr('src','https://wrcstaging.harmonyis.net/_layouts/images/square.gif')
+  } 
 
   pagedata: any = {};
   data = {} as any;
@@ -94,11 +101,13 @@ export class PageComponent implements AfterViewInit, OnInit {
           for (var z = 0; z < this.pagedata.Orientation.length; z++) {
             if (this.pagedata.Orientation[z].Type == "Percentage") {
               var mainData = [];
+         var margine=     (0.4*this.pagedata.Orientation[z].Order.length)
+         var realwidth = 100-margine;
               for (var h = 0; h < this.pagedata.Orientation[z].Order.length; h++) {
                 if(this.pagedata.Data.length==datacount)
                 break;
-
-                var subdata = { class: "", width: this.pagedata.Orientation[z].Order[h]-1.5, Data: this.pagedata.Data[datacount] };
+                      var calculatedwidth = (realwidth * this.pagedata.Orientation[z].Order[h])/100;
+                var subdata = { class: "", width: calculatedwidth, Data: this.pagedata.Data[datacount] };
                 mainData.push(subdata);
                  datacount++;
               }
@@ -107,7 +116,8 @@ export class PageComponent implements AfterViewInit, OnInit {
             else if (this.pagedata.Orientation[z].Type == "Number") {
               var mainData = [];
               var colNo = parseInt(this.pagedata.Orientation[z].Order[0]);
-              var colwidth = 98 / colNo;
+              
+              var colwidth = (100-(0.4*colNo) )/ colNo;
               for (var h = 0; h < colNo; h++) {
                  if(this.pagedata.Data.length==datacount)
                 break;
@@ -192,7 +202,10 @@ export class PageComponent implements AfterViewInit, OnInit {
 
           console.log(this.pagedataobj);
           // this.cdRef.detectChanges();
+          
+          
           this.blockUI.stop(); 
+        
         }
           , 100);
       }

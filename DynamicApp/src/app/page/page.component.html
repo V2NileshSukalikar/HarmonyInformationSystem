@@ -1,10 +1,10 @@
 <block-ui>
   <div>
 
-    <div *ngFor="let item of pagedataobj;let i=index" class="row" style="overflow: hidden;margin:-10px">
+    <div *ngFor="let item of pagedataobj;let i=index" class="row" style="overflow: hidden;">
       <!--{{item | json}} -->
       <!--[ngClass]="{dataitem.class: dataitem.width==0 }"-->
-      <div *ngFor="let dataitem of item;let j=index" [ngClass]="dataitem.class" [style.width]="dataitem.width + '%'" style="float:left;min-width: 300px;margin:10px"
+      <div *ngFor="let dataitem of item;let j=index" [ngClass]="dataitem.class" [style.width]="dataitem.width + '%'" style="float:left;min-width: 300px;margin:0.2%"
         class="the-box welcome-section">
         
         <app-html [htmlstring]="dataitem.Data.Descr" *ngIf="dataitem.Data.Type=='Static'" [@fadeInOut]>
@@ -15,4 +15,4 @@
 
     </div>
   </div>
-</block-ui>
+</block-ui>{{setImage()}}
