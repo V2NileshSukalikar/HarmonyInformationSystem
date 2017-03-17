@@ -15,6 +15,7 @@ export class PagedataService {
     pagecounter = 0 as number;
     selectedlink: string;
     searchData: any[] = [];
+
     private data: any = {};
     private observable: Observable<any>;
     private sessionCacheService: any;
@@ -63,7 +64,9 @@ export class PagedataService {
     }
 
     // Get CMS Data
-    getData(pageName: string, isHeader: boolean): any {
+    getData(pageName: string): any {
+        const isGlobalDataexisists: boolean = this.localStoragecacheService.exists('global');
+        const isHeader: boolean = isGlobalDataexisists === true ? false : true;
         if (this.data) {
             if (this.data.PageName === pageName) {
                 if (this.data.pagespecificData.isCacheble) {
@@ -108,18 +111,14 @@ export class PagedataService {
     }
 
     private setInMemoryData(pageName: string) {
-
         this.inMemoryStorageService.set(pageName, this.data.pagespecificData);
     }
 
     private setSessionMemorydata(pageName: string) {
-
         this.sessionCacheService.set(pageName, this.data.pagespecificData);
     }
 
     private setLocalStorageData(pageName: string) {
-
-
         this.localStoragecacheService.set(pageName, this.data.pagespecificData);
     }
 

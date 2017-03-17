@@ -78,9 +78,7 @@ export class PageComponent implements AfterViewInit, OnInit {
     this.pagecounter = 0;
     this.data = {};
     pagename = name;
-    this.headerData = localStorage.getItem('global');
-    this.isHeader = this.headerData == null ? true : false;
-    this.pagedataService.getData(pagename, this.isHeader).subscribe(
+    this.pagedataService.getData(pagename).subscribe(
       (session) => {
         setTimeout(() => {
           this.pagedataService.pagecounter = 0;
