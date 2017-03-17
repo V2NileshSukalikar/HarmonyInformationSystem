@@ -3,8 +3,8 @@ import { Headers, Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import '../extensions/rxjs-extensions';
 
-import { Config } from '../models/config';
-import { Data } from '../models/data';
+import { Config } from '../utils/config';
+import { Data } from '../utils/data';
 import { CacheService, CacheStoragesEnum } from 'ng2-cache/ng2-cache';
 
 @Injectable()
