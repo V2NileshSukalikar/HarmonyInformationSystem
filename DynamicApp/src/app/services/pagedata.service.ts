@@ -95,6 +95,9 @@ export class PagedataService {
         this.getCMSDatafromServeByPageID(pageName, isHeader)
             .subscribe((data) => {
                 this.data = data;
+                if (!isHeader) {
+                    this.data.GlobalData = this.localStoragecacheService.get('global');
+                }
                 this.localStoragecacheService.set('global', this.data.GlobalData);
                 if (this.data.pagespecificData.isCacheble) {
                     this.setInMemoryData(pageName);
